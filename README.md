@@ -1,4 +1,4 @@
-This repository contains a Chrome Extension I developed called Rocket Evaluation which is used to accelerate evaluation processes and standardize evaluation texts for WGU Evaluation Faculty. This is a work in progress and by no means complete. If you have suggestions or feedback, please feel free to email me. -Thanks
+This repository is for Rocket Evaluation (a Chrome Extension). This extension is being developed to accelerate evaluation processes and standardize evaluation texts for WGU Evaluation Faculty. This is a work in progress and by no means complete. If you have suggestions or feedback, please feel free to email me. -Thanks
 
 ****Rocket Evaluation Extension Installation****
 
