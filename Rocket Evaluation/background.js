@@ -1,16 +1,11 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
+// Copyright (c) 2018 by Steve Kozakoff. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
 'use strict';
 
-//var port = chrome.runtime.connect({name: "knockknock"});
-
 var thisTask = "";
 var gradeTexts = [];
-
-//chrome.runtime.onStartup.addListener(init);
-//chrome.runtime.onInstalled.addListener(init);
 
 function init()
 {
@@ -26,11 +21,11 @@ function init()
 	{
 		var n2,t = null;
 		
-		for(var i = 0; i < tasks.length; i++) 
+		for(var i = 0; i < CRD.length; i++) 
 		{
-			if((thisTask.indexOf(tasks[i].name) > -1) || (thisTask.indexOf(tasks[i].tsname) > -1))
+			if((thisTask.indexOf(CRD[i].name) > -1) || (thisTask.indexOf(CRD[i].tsname) > -1))
 			{
-				t = tasks[i];
+				t = CRD[i];
 				break;
 			}
 		}
@@ -75,13 +70,6 @@ function init()
 			}
 		}
 	}
-	else
-	{
-		//chrome.contextMenus.create({"title": "No Documentation", "parentId": parent2, "contexts": contexts, "id": "child2"});
-		//chrome.contextMenus.create({"title": "Reference List, but no In-Text Citations", "parentId": parent2, "contexts": contexts, "id": "child3"});
-		//chrome.contextMenus.create({"title": "In-Text Citations, No Reference List", "parentId": parent2, "contexts": contexts, "id": "child4"});
-		//chrome.contextMenus.create({"title": "Major Errors", "parentId": parent2, "contexts": contexts, "id": "child5"});
-	}
 }
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) 
@@ -96,6 +84,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
     sendResponse("Thanks! "+request.text);
 });
 
+// Get the date formatted like "MM/DD/YYYY:"
 function dateToDDMMYYYY(date) 
 {
     var d = date.getDate();
@@ -104,7 +93,7 @@ function dateToDDMMYYYY(date)
     return (m<=9 ? '0' + m : m) + '/' + (d <= 9 ? '0' + d : d) + '/' + y + ': ';
 }
 
-// A generic onclick callback function.
+// A onclick callback function.
 function onClick(info, tab) {
 	console.log('info: ' + JSON.stringify(info));
 	chrome.tabs.query({currentWindow: true, active: true}, 
@@ -124,10 +113,6 @@ function onClick(info, tab) {
 						chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date()) + gradeTexts[x].title}, function(response) {}); 
 						break;
 					}
-					else
-					{
-						//console.log("Not menuItemId: "+gradeTexts[x].id);
-					}
 				}
 			}
 			
@@ -136,11 +121,6 @@ function onClick(info, tab) {
 				// Something went wrong
 				console.log("Whoops.. " + chrome.runtime.lastError.message);
 			} 
-			else 
-			{ 
-				//console.log("Message sent!");
-				// No errors, you can use entry 
-			}
 		});
 }
 
@@ -512,29 +492,38 @@ var crdCIMTask2 =
 	]
 };
 
+//Template CRD Object
 var crdXXXTaskX = 
 {
 	"name": "CRDX Task X", 	//CRD name as it appears in EMA
 	"tsname": "CRD Task X",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
-			"name":"AspectName", 
-			"grades": [
+			"name":"AspectName", //Repeat the aspect object for as many aspect as there on the page. AspectName is what appears on the context menu.
+			"grades": [			 //Repeat the grade object for as many (or few) grades as needed. "name" is what appears on the context menu.
+				{"name":"Not Evident","text":[""]}, //The text property for a grade is an array so you can have multiple text on the menu.
+				{"name":"Approaching","text":[""]},	//If you only have one text for a grade, I hook the text to the grade on the menu to save a an extra click.
 				{"name":"Competent","text":[""]}
 			]
 		},
+		//The sources aspects are define elsewhere and reused in multiple locations. Its worth it to mention this could be done 
+		//with other aspects, like PC, that are shared with multiple CRDs as well. There is a placeholder object for PC above, pcAspect,
+		//it just needs to be fleshed out. 
+		sourcesAspectTS,	//Usually use either EMA or TS, but, it's okay to use   
+		sourcesAspectEMA, 	//both for CRDs that are in both systems.
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":[""]}
+				{"name":"Passing","text":[""]},
+				{"name":"Not Passing","text":[""]}
 			]
-		},
-		sourcesAspectTS,
-		sourcesAspectEMA //Usually just one or the other, but, can use both.
+		}
 	]
 };
 
-var tasks = 
+//After adding a CRD object, it needs to get added to the list below. 
+//I'm working on a better way to manage the data in the future.
+var CRD = 
 [
 	crdBEMTask1,
 	crdEWPTask1,

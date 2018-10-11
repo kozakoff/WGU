@@ -1,9 +1,11 @@
-//Authored: Steve Kozakoff
+// Copyright (c) 2018 by Steve Kozakoff. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 
 {
   "name": "Rocket Evaluation",
-  "version": "1.1",
-  "description": "Adds evaluation templates to the context menu in Chrome.",
+  "version": "1.2",
+  "description": "Adds evaluation templates to the context menu in Chrome for EMA and TaskStream.",
   "permissions": ["activeTab","declarativeContent","storage","contextMenus","tabs"],
   "background": {
       "scripts": ["background.js"],
