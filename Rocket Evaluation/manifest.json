@@ -1,0 +1,30 @@
+//Authored: Steve Kozakoff
+
+{
+  "name": "Rocket Evaluation",
+  "version": "1.1",
+  "description": "Adds evaluation templates to the context menu in Chrome.",
+  "permissions": ["activeTab","declarativeContent","storage","contextMenus","tabs"],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+  "content_scripts": [
+    {
+      "matches": [
+					"https://ema.wgu.edu/*",
+					"https://staffdev.taskstream.com/*"
+				 ],
+	  "run_at": "document_idle",
+	  "all_frames": true,
+      "js": ["content.js"]
+    }
+   ],
+  "icons": {
+      "16": "images/speed16.png",
+      "32": "images/speed32.png",
+      "64": "images/speed64.png",
+      "128": "images/speed128.png"
+    },
+  "manifest_version": 2
+}
