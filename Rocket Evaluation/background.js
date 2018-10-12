@@ -500,65 +500,93 @@ var crdLQTTask3 =
 		{
 			"name":"ARTICULATION OF RESPONSE", 
 			"grades": [	
-				{"name":"Not Evident","text":["This aspect will be assessed when all task requirements are in place."]}
+				{"name":"Not Evident","text":["This aspect will be assessed when all task requirements are in place."]},
+				{"name":"Competent","text":["The work is mechanically sound and free of major errors."]}
+			]
+		},
+		{
+			"name":"A1. IMPORTANT ASPECTS",
+			"grades": [
+				{"name":"Competent","text":["The salient points of the information security realignment project for Top Care Medical, including it actual outcomes, are intelligently summarized in the Abstract of the report."]}
+			]
+		},
+		{
+			"name":"D1. PROJECT REQUIREMENTS",
+			"grades": [
+				{"name":"Competent","text":["The submission presents adequately detailed summaries of the functional and detailed requirements that emerged after the process and system audit and the gaps the project aimed to fill."]}
+			]
+		},
+		{
+			"name":"F1. APPROACH EXPLANATION",
+			"grades": [
+				{"name":"Competent","text":["The four phases of the project methodology are succinctly outlined."]}
 			]
 		},
 		{
 			"name":"G2. RESOURCES USED", 
 			"grades": [
-				{"name":"Not Evident","text":["The Resources section states the resources used are identified in the Project Design section. A logical justification for the resources is not observed."]}
+				{"name":"Not Evident","text":["The Resources section states the resources used are identified in the Project Design section. A logical justification for the resources is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound justification for the labor, hardware, and software resources to implement the solution."]}
 			]
 		},
 		{
-			"name":"AspectName",
+			"name":"H1. QUALITY ASSURANCE APPROACH",
 			"grades": [	
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Approaching","text":["The submission states the phases were implemented to increase troubleshooting efficiency. A detailed discussion of the approach to quality assurance and specifies the quality assurance criteria is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound explanation of how the quality assurance was implemented during the project development process."]}			
 			]
 		},
 		{
-			"name":"AspectName",
-			"grades": [	
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+			"name":"H2. SOLUTION TESTING",
+			"grades": [
+				{"name":"Approaching","text":["The Solution Testing section includes a table that clearly organizes the each test and its purpose. A justification for the test case and scenarios, and the acceptance criteria, are not observed."]},
+				{"name":"Competent","text":["The submission provides a sound overview of the solution testing and clearly identifies the acceptance criteria for the user and administration."]}
 			]
 		},
 		{
-			"name":"AspectName",
-			"grades": [	
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+			"name":"I1. IMPLEMENTATION PLAN",
+			"grades": [
+				{"name":"Approaching","text":["The Implementation Plan section provides a sound overview of the user training. A detailed discussion of the phases of the rollout and details of the go-live is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound explanation of the implementation phases and issues with a Skype user during the go-live event."]}
 			]
 		},
 		{
-			"name":"AspectName",
-			"grades": [	
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+			"name":"J1. RISK ASSESSMENT",
+			"grades": [
+				{"name":"Competent","text":["Assessments of the risks of Intranet unavailability, corrupt files, and malicious employees are presented in a clear table."]}
 			]
 		},
 		{
-			"name":"AspectName",
-			"grades": [	
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+			"name":"J3. RISK MITIGATION",
+			"grades": [
+				{"name":"Not Evident","text":["The Risk Mitigation section clearly states the importance of personnel. A logical explanation of how the two risks will be mitigated is not observed."]},
+				{"name":"Competent","text":["The submission provides a clear explanation of how the equipment and personnel-related risks will be mitigated."]}
 			]
 		},
-		//The sources aspects are define elsewhere and reused in multiple locations. Its worth it to mention this could be done 
-		//with other aspects, like PC, that are shared with multiple CRDs as well. There is a placeholder object for PC above, pcAspect,
-		//it just needs to be fleshed out. 
-		sourcesAspectTS,	//Usually use either EMA or TS, but, it's okay to use   
-		sourcesAspectEMA, 	//both for CRDs that are in both systems.
+		{
+			"name":"K3. MAINTENANCE PLAN",
+			"grades": [
+				{"name":"Approaching","text":["The submission includes a table that clearly organizes the project maintenance. A well-developed short- and long-term maintenance plan is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound explanation of the short- and long-term maintenance plans that includes technical manuals and a maintenance support package."]}
+			]
+		},
+		{
+			"name":"L1A. DELIVERABLES",
+			"grades": [
+				{"name":"Competent","text":["A sample output of the gap analysis provided in Appendix A as an actual project artifact adequately supports the explanations in the narrative."]}
+			]
+		},
+		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":[""]},
-				{"name":"Not Passing","text":[""]}
+				{"name":"Passing","text":
+					[
+						"The submission successfully describes the implementation of a secure wireless network solution for North Gate Studios, provides a sound explanation of the mitigation for the two identified risks, and includes a clear summary of the short- and long-term maintenance plans. All task requirements have been met.",
+						"A Capstone Report that describes the implementation of an Information Security Policy solution for Top Care Medical after a completed merger is provided in the submission. The work adequately outlines the project approach and methodology, as well as the phases of the completed project and provides a succinct summary of the lessons learned from the capstone experience. All sections of the work, including Postimplementation Support, are complete and meet standards."
+					]
+				},
+				{"name":"Not Passing","text":["The submission describes a network security solution for North Gate Studios, provides a sound overview of the project in the Abstract, and includes screenshots and diagrams as project deliverables. A justification for the resources used, an explanation of the quality assurance approach, and a detailed discussion of the risk mitigations, solution testing, and maintenance plans are not observed. These areas need further development to meet task requirements."]}
 			]
 		}
 	]
@@ -602,7 +630,8 @@ var CRD =
 	crdEWPTask2,
 	crdIYPTask1,
 	crdCIMTask1,
-	crdCIMTask2
+	crdCIMTask2,
+	crdLQTTask3
 ];
 
 
