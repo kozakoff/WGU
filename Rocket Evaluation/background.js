@@ -492,6 +492,78 @@ var crdCIMTask2 =
 	]
 };
 
+var crdLQTTask3 = 
+{
+	"name": "LQT2 Task 3", 	//CRD name as it appears in EMA
+	"tsname": "LQT2 Task 3",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE", 
+			"grades": [	
+				{"name":"Not Evident","text":["This aspect will be assessed when all task requirements are in place."]}
+			]
+		},
+		{
+			"name":"G2. RESOURCES USED", 
+			"grades": [
+				{"name":"Not Evident","text":["The Resources section states the resources used are identified in the Project Design section. A logical justification for the resources is not observed."]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		//The sources aspects are define elsewhere and reused in multiple locations. Its worth it to mention this could be done 
+		//with other aspects, like PC, that are shared with multiple CRDs as well. There is a placeholder object for PC above, pcAspect,
+		//it just needs to be fleshed out. 
+		sourcesAspectTS,	//Usually use either EMA or TS, but, it's okay to use   
+		sourcesAspectEMA, 	//both for CRDs that are in both systems.
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":[""]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
 //Template CRD Object
 var crdXXXTaskX = 
 {
