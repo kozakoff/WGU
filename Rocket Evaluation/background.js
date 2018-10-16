@@ -594,6 +594,230 @@ var crdLQTTask3 =
 	]
 };
 
+var crdLQTTask2 = 
+{
+	"name": "LQT2 Task 2", 	//CRD name as it appears in EMA
+	"tsname": "LQT2 Task 2",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The work is mechanically sound and free of major errors."]}
+			]
+		},
+		{
+			"name":"A1: PROBLEM",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"A2: PLAN",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"A3: METHODOLOGY",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The methodology will follow the National Institute of Standards and Technology (NIST) Special Publication 800-53 Security and Privacy Controls for Federal Information Systems and Organizations, which is fitting."]}
+			]
+		},
+		{
+			"name":"A4: IMPLEMENTATION PROPOSAL",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"A5: OUTCOMES",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B1: PROJECT SCOPE",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B2: PROJECT RATIONALE",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B3: PROBLEM SUMMARY",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B4: PROBLEM BACKGROUND",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["Lack of compliance is suitably detailed. The background of the problem within the greater context is not observed."]},
+				{"name":"Competent","text":["The Problem Background section explains that the county government is not PCI DSS compliant and presents historical insights into the reasons that contributed to the emergence of the problem in the context of current needs."]}
+			]
+		},
+		{
+			"name":"B5: NEED FOR THE SOLUTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B6: REASON FOR APPROACH",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The need for the approach clearly includes the lack of skilled personnel. A logical discussion, juxtaposing alternate solutions, with the strengths and weaknesses of each, is not observed."]},
+				{"name":"Competent","text":["A succinct justification for the selected approach that includes hiring of a chief security officer, is provided."]}
+			]
+		},
+		{
+			"name":"B7: PROSPECTUS ORGANIZATION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The Prospectus Organization clearly lists the sections to follow. Content summaries for each of the sections are not found."]},
+				{"name":"Competent","text":["Succinct content outlines of the Problem Statement and the Technology Solution segments that comprise the remainder of the prospectus, are provided."]}
+			]
+		},
+		{
+			"name":"C1: BACKGROUND INFORMATION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The ability to currently only accept cash and check is described, which is valid. Adequate detail for the background information is not found."]},
+				{"name":"Competent","text":["An adequate summary of the context in which the problem exists that situates the problem and provides direction to the project, is provided."]}
+			]
+		},
+		{
+			"name":"C2: CAUSES",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The lack of security is described logically. Adequate detail for the causes of the problem is not observed."]},
+				{"name":"Competent","text":["The lack of an employee with security assurance responsibility is presented as the primary reason behind the problem in an adequate root cause analysis."]}
+			]
+		},
+		{
+			"name":"C3: BUSINESS IMPACTS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["Several impacts are listed, which is fitting. Adequate detail for the business impacts of the problem is not found."]},
+				{"name":"Competent","text":["The impact fo the problem on the country officials are adequately outlined. "]}
+			]
+		},
+		{
+			"name":"C4: COST ANALYSIS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["An estimated cost for salary is listed, which is clear. Adequate detail for a source-supported cost analysis for all the associated costs is not evident."]},
+				{"name":"Competent","text":["The salary of the chief security officer is presented as the primary factor contributing to the costs of the project."]}
+			]
+		},
+		{
+			"name":"C5: RISK ANALYSIS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["A number of risks are identified, which is valid. A logical identification for each of the risks, with level and likelihood for each, is not found."]},
+				{"name":"Competent","text":["Reputational and financial risks associated with the proposed solution are discussed. "]}
+			]
+		},
+		{
+			"name":"C6: ASSUMPTIONS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["This aspect can be more accurately assessed once the other aspects have been revised to meet standards."]},
+				{"name":"Competent","text":["The submission clearly assumes that the county has the infrastructure and the financial resources to complete the project."]}
+			]
+		},
+		{
+			"name":"C7: LIMITATIONS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["This aspect can be more accurately assessed once the other aspects have been revised to meet standards."]},
+				{"name":"Competent","text":["The limited throughput of the CSO that will be hired is presented as a constraint the project will be subjected to during it execution."]}
+			]
+		},
+		{
+			"name":"C8: TERMS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["XX terms are clearly listed and expanded. Source-supported definitions for all the technical terms used in the prospectus are not evident."]},
+				{"name":"Competent","text":["Adequate expansions and explanations of seven technical acronyms, including CSO, VLAN, and PII, are provided."]}
+			]
+		},
+		{
+			"name":"D: TECHNOLOGY SOLUTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["Several reasons for implementing a technology solution are soundly provided. A logical explanation, with adequate detail, for why a technology solution is needed, is not evident."]},
+				{"name":"Competent","text":["The proposed solution and the gaps it intends to fill are summarized in the introductory section of the Technology Solution segment."]}
+			]
+		},
+		{
+			"name":"D1: BUSINESS DRIVERS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["Three business drivers are included, which is clear. Adequate detail for the business drivers is not found."]},
+				{"name":"Competent","text":["The provision of better services to the citizens by the county is described as the primary driver behind the proposed solution."]}
+			]
+		},
+		{
+			"name":"D1A: JUSTIFICATION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["Succinct explanations of the significance of te3h business drivers are presented."]}
+			]
+		},
+		{
+			"name":"D2: NO SOLUTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"D3: SOLUTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The solution includes the priority to hire a CSO, which is insightful. Adequate detail for the solution within business priorities is not found."]},
+				{"name":"Competent","text":["The significance of the project to the county and NIST, PCI DSS, and other standards, are discussed in the concluding section of the prospectus."]}
+			]
+		},
+		sourcesAspectEMA, 	//both for CRDs that are in both systems.
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["A Capstone Prospectus that describes a PCI DSS compliance project for a county government is presented in the submission. the work provides adequate descriptions of the problem under investigation and the proposed technology solution, and includes adequate root cause, costs, risk, business impact, business drivers, and no-solution scenario analyses. All sections of the work, including Causes, are complete and meet standards."]},
+				{"name":"Not Passing","text":["The submission presents the Capstone Proposal for PCI Compliance for a County Government. Some aspects of the submission, such as the clear rationale for the need to provide compliance, are complete and meet standards. Adequate detail is not observed for the following aspects: Problem Background, Reason for Approach, Prospectus Organization, Background Information, Causes, Business Impacts, Cost Analysis, Risk Analysis, Terms, Technology Solution, Business Drivers, as well as the Solution."]}
+			]
+		}
+	]
+};
+
 //Template CRD Object
 var crdXXXTaskX = 
 {
@@ -633,7 +857,8 @@ var CRD =
 	crdIYPTask1,
 	crdCIMTask1,
 	crdCIMTask2,
-	crdLQTTask3
+	crdLQTTask3,
+	crdLQTTask2
 ];
 
 
