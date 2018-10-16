@@ -266,14 +266,14 @@ var crdBEMTask1 =
 				{"name":"Competent","text":["A CSV file that presents the differences between the current and the most recent data sets of population estimates for the U.S. states whose absolute values exceed 10,000 is provided."]}
 			]
 		},
+		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
 				{"name":"Not Passing","text":["The submission presents effective SQL statements that identify the differences between the current and the most recent vintage data sets of population estimates for the U.S. states and R code that builds a suitable linear regression model of the population dynamics for the State of Illinois used to estimate its population in the year 2020. The Python scraper outputs unique and absolute web links from the census.gov domain only. A revised Python program that outputs all the web links from the HTML code of the Current Estimates web page that point out to other HTML pages is needed to meet standards."]},
 				{"name":"Passing","text":["The submission provides a fully functioning suite of tools to extract population data, using Python, SQL, and R. All aspects of the work meet task requirements and standards."]}
 			]
-		},
-		sourcesAspectEMA
+		}
 	]
 };
 
@@ -288,13 +288,14 @@ var crdEWPTask1 =
 				{"name":"Competent","text":["Sound analyses of the topic familiarity, demographics, disposition, cultural background, and language attributes of the members of the three given audiences to whom the new process will be delivered are presented."]}
 			]
 		},
+		sourcesAspectTS,
+		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
 				{"name":"Passing","text":["The submission presents fitting analyses of the audience attributes and the proposed reasonable changes of the presentation for Audience 1 to be delivered to Audience 2. Clear procedural instructions for initiating a Git source code repository are provided. All sections of the assessment, including Justification of Modifying, are complete and meet standards."]}
 			]
-		},
-		sourcesAspectTS
+		}
 	]
 };
 
@@ -333,13 +334,14 @@ var crdEWPTask2 =
 				{"name":"Competent","text":["A compelling description of <SOLUTION> and an explanation of its alignment with the requirements stated in the RFP are provided in the work."]}
 			]
 		},
+		sourcesAspectTS,
+		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
 				{"name":"Passing","text":["The proposal presents a thorough response to the published RFP which describes <SUMMARIZE SOLUTION> and aligns with the company's objectives. The work provides a suitable Title Page, Table of Contents, Abstract, body, and Justification and Highlights of Proposal in APA style and a professional letter of transmittal introducing <STUDENTS COMPANY>. All sections of the work are complete and meet standards."]}
 			]
-		},
-		sourcesAspectEMA
+		}
 	]
 };
 
@@ -443,13 +445,13 @@ var crdCIMTask1 =
 				{"name":"Competent","text":["Sound analyses of the topic familiarity, demographics, disposition, cultural background, and language attributes of the members of the three given audiences to whom the new process will be delivered are presented."]}
 			]
 		},
+		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
 				{"name":"Passing","text":["The submission presents fitting analyses of the audience attributes and the proposed reasonable changes of the presentation for Audience 1 to be delivered to Audience 2. Clear procedural instructions for initiating a Git source code repository are provided. All sections of the assessment, including Justification of Modifying, are complete and meet standards."]}
 			]
-		},
-		sourcesAspectEMA
+		}
 	]
 };
 
@@ -482,13 +484,13 @@ var crdCIMTask2 =
 				{"name":"Competent","text":["A compelling description of <SOLUTION> and an explanation of its alignment with the requirements stated in the RFP are provided in the work."]}
 			]
 		},
+		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
 				{"name":"Passing","text":["The proposal presents a thorough response to the published RFP which describes <SUMMARIZE SOLUTION> and aligns with the company's objectives. The work provides a suitable Title Page, Table of Contents, Abstract, body, and Justification and Highlights of Proposal in APA style and a professional letter of transmittal introducing <STUDENTS COMPANY>. All sections of the work are complete and meet standards."]}
 			]
-		},
-		sourcesAspectEMA
+		}
 	]
 };
 
