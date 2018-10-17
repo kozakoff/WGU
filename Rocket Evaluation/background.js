@@ -440,16 +440,37 @@ var crdCIMTask1 =
 	"tsname": "CIM1 Task 1",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
-			"name":"A:  AUDIENCE ANALYSIS", 
+			"name":"A: Email or Memo", 
 			"grades": [
-				{"name":"Competent","text":["Sound analyses of the topic familiarity, demographics, disposition, cultural background, and language attributes of the members of the three given audiences to whom the new process will be delivered are presented."]}
+				{"name":"Competent","text":["An adequate memorandum that presents a case for the implementation of <SOLUTION> is provided."]}
+			]
+		},
+		{
+			"name":"B: Fact Sheet", 
+			"grades": [
+				{"name":"Competent","text":["A well-organized Procedural Fact Sheet that outlines the rationale or implementation, description of a ??, key metrics, and a summary of the implementation process is presented."]}
+			]
+		},
+		{
+			"name":"C: Writing Process", 
+			"grades": [
+				{"name":"Approaching Competence","text":["It is clear that the email identifies the message and was proofed. Adequate detail for the planning, multiple drafting, and editing is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound summary of the three stages of the writing process for both audiences."]}
+			]
+		},
+		{
+			"name":"D: Audience Summary", 
+			"grades": [
+				{"name":"Approaching Competence","text":["A brief summary of the email and fact sheet is present, which is fitting. Adequate detail for the subject knowledge, position in the organization, personal attitudes, reading style, and types of readers is not observed."]},
+				{"name":"Competent","text":["The submission provides a sound explanation of the attributes for both audiences."]}
 			]
 		},
 		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The submission presents fitting analyses of the audience attributes and the proposed reasonable changes of the presentation for Audience 1 to be delivered to Audience 2. Clear procedural instructions for initiating a Git source code repository are provided. All sections of the assessment, including Justification of Modifying, are complete and meet standards."]}
+				{"name":"Passing","text":["The submission presents a memorandum and a product sheet that outline the need for the implementation of ??. A fitting analysis of the intended audiences of the artifacts and of the writing process are provided. All sections of the work, including Audience Summary, are complete and meet standards."]},
+				{"name":"Not Passing","text":["The submission presents the communication of technical information for ?? to a variety of audiences. Some aspects of the submission, such as the Fact Sheet, are complete and provide suitable detail. Adequate detail is not observed for the following aspects: Writing Process and Audience Summary."]}
 			]
 		}
 	]
@@ -819,6 +840,71 @@ var crdLQTTask2 =
 };
 
 //Template CRD Object
+var crdLQTTask4 = 
+{
+	"name": "LQT2 Task 4", 	//CRD name as it appears in EMA
+	"tsname": "LQT2 Task 4",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE", 
+			"grades": [			 
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The work is mechanically sound and free of major errors."]}
+			]
+		},
+		{
+			"name":"A1. INTRODUCTION", 
+			"grades": [			 
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A succinct summary of the candidate's academic and professional background is presented."]}
+			]
+		},
+		{
+			"name":"A2. OVERVIEW", 
+			"grades": [			 
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The salient points of the completed project are intelligently outlined in the oral defense."]}
+			]
+		},
+		{
+			"name":"A3. DISCUSSION", 
+			"grades": [			 
+				{"name":"Not Evident","text":["The Discussion aspect will be assessed once a link to the Panopto recording of the oral defense of the capstone project is in place."]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["Adequate summaries of the learnings from the capstone experience in the major security domains are presented."]}
+			]
+		},
+		{
+			"name":"B. LINK TO PANOPTO RECORDING", 
+			"grades": [			 
+				{"name":"Not Evident","text":["The Link to Panopto Recording aspect will be assessed once a link to the Panopto recording of the oral defense of the capstone project is in place."]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The work presents the following live link to the oral defense of the capstone project: PANOPTO_LINK"]}
+			]
+		},
+		{
+			"name":"C. COPY OF MULTIMEDIA PRESENTATION", 
+			"grades": [			 
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A clear copy of a XX-slide PowerPoint presentation is presented."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission provides a multimedia presentation and a link to a XX-minute recording of the oral defense of the capstone project that describes the implementation of Cyber Threat Intelligence in an organizational context. The assessment outlines the candidate's background, the project and its phases, and the learning from the capstone experience. All sections of the assessment, including Overview, are complete and meet standards."]},
+				{"name":"Not Passing","text":["The submission provides a clear copy of a multimedia presentation to support the oral defense of the capstone project. A link to the Panopto recording of the oral defense cannot be located. A link to the recording is needed to assess most of the aspects of the work."]}
+			]
+		}
+	]
+};
+
+//Template CRD Object
 var crdXXXTaskX = 
 {
 	"name": "CRDX Task X", 	//CRD name as it appears in EMA
@@ -858,7 +944,8 @@ var CRD =
 	crdCIMTask1,
 	crdCIMTask2,
 	crdLQTTask3,
-	crdLQTTask2
+	crdLQTTask2,
+	crdLQTTask4
 ];
 
 
