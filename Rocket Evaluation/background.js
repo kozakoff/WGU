@@ -904,6 +904,238 @@ var crdLQTTask4 =
 	]
 };
 
+var crdAKM1Task1 = 
+{
+	"name": "AKM1 Task 1", 	//CRD name as it appears in EMA
+	"tsname": "AKM1 Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"A: Dataset Preparation",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission provides a fitting justification of the row removals from the raw data set that resulted in a table that presents 1,045 events captured from the 911 calls to the Seattle Police department."]}
+			]
+		},
+		{
+			"name":"B: Data Preparation Explanation",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission provides a fitting justification of the dimensionality reduction which presents XX attributes for 1,045 events captured from the 911 calls to the Seattle Police Department and effectively supports the distribution analysis of the attributes by date, type, and sector."]}
+			]
+		},
+		{
+			"name":"C: Data Sheets",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["Accurate tables and clear bar charts effectively support the distribution analysis of the 1,045 events represented in the cleaned dataset by date, type, and sector."]}
+			]
+		},
+		{
+			"name":"D: Data Sheets Observations Summary",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["Succinct outlines of observations from the visual inspections of the data sheets, including the observation that Sector H features the highest number of incidents, are provided."]}
+			]
+		},
+		{
+			"name":"E: Fit",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["An adequate description of the fit of the model to its data that observes its coefficient of determination of 88%, is presented."]}
+			]
+		},
+		{
+			"name":"F: Outliers",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission observes an improved coefficient of determination upon the removal of the unnamed sector and Sector H from consideration in the summary of the impact of the outliers on the model."]}
+			]
+		},
+		{
+			"name":"G: Residuals",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The work provides an accurate residual plot. A clear matching explanation that will improve the model is not readily evident."]},
+				{"name":"Competent","text":["A reasonable recommendation to remove the outliers from consideration to improve the fit of the model to its data is summarized in Section G."]}
+			]
+		},
+		{
+			"name":"H: Current Qualification",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"I: Precautions or Behaviors",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["A succinct discussion of the sensitive data in the given dataset is provided in Section H. Adequate descriptions of the specific precautions the precinct is to exercise when both working with and communicating about ist sensitive data are not observed."]},
+				{"name":"Competent","text":["Succinct summaries of precautions to be exercised to safeguard the sensitive data, including XXX, are present."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents adequate summaries of datasheet observations, descriptions of the fit of the model to its data, a succinct explanation that will improve the model, and descriptions of specific precautions to be exercised to safeguard the sensitive data from the given scenario. All sections of the work, including Data Sheets Observations Summary, Fit, Residuals, and Precautions or Behaviors, are complete and meet standards."]},
+				{"name":"Not Passing","text":["The submission presents adequate datasheets that support the distribution analysis of the 1,045 events captured from the 911 calls to the Seattle Police Department represented in the cleaned dataset; descriptions of the impact of the outliers on the regression model; and assessment of the precinct's current ineligibility for additional state funding. Summaries of datasheet observations, descriptions of the fit of the model to its data, a clear explanation that will improve the model, and descriptions of specific precautions to be exercised to safeguard the sensitive data from the given scenario are not observed. Responses or revisions of the responses to the task prompts Data Sheets Observations Summary, Fit, Residuals, and Precautions or Behaviors are needed to meet standards."]}
+			]
+		}
+	]
+};
+
+var crdGWA2Task3 = 
+{
+	"name": "GWA2 Task 3",
+	"tsname": "GWA2 Task 3",
+	"aspects": [
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		sourcesAspectEMA, 	//both for CRDs that are in both systems.
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":[""]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+var crdGWA2Task2 = 
+{
+	"name": "GWA2 Task 2",
+	"tsname": "GWA2 Task 2",
+	"aspects": [
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"AspectName",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		sourcesAspectEMA, 	//both for CRDs that are in both systems.
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":[""]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
 //Template CRD Object
 var crdXXXTaskX = 
 {
@@ -945,7 +1177,10 @@ var CRD =
 	crdCIMTask2,
 	crdLQTTask3,
 	crdLQTTask2,
-	crdLQTTask4
+	crdLQTTask4,
+	crdAKM1Task1,
+	crdGWA2Task2,
+	crdGWA2Task3
 ];
 
 
