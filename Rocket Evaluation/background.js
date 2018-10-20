@@ -1136,6 +1136,635 @@ var crdGWA2Task2 =
 	]
 };
 
+var crdEYP1Task1 = 
+{
+	"name": "EYP1 Task 1", 	//CRD name as it appears in EMA
+	"tsname": "EYP1 Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"A. TOPIC APPROVAL FORM", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B. CAPSTONE RELEASE FORM", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"C. HUMAN SUBJECTS FAQ QUIZ", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"D. IRB COMPLIANCE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		sourcesAspectTS,   
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The Waivers, IRB Quiz and Compliance, as well as the Topic Approval form are all complete and meet standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+var crdEYP1Task2 = 
+{
+	"name": "EYP1 Task 2", 	//CRD name as it appears in EMA
+	"tsname": "EYP1 Task 2",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The work is mechanically sound and free from major errors."]}
+			]
+		},
+		{
+			"name":"TECHNICAL WRITING STYLE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The proposal exhibits a sound technical writing style and appropriate use of terminology."]}
+			]
+		},
+		{
+			"name":"APA FORMATTING", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The formatting of the document generally aligns with the conventions of the American Psychological Association."]}
+			]
+		},
+		{
+			"name":"A1. PROBLEM", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"A2. IT SOLUTION", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The solution aptly describes <SOLUTION>."]}
+			]
+		},
+		{
+			"name":"A3. PLAN OF IMPLEMENTATION", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B. REVIEW OF OTHER WORK", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B1. RELATION OF ARTIFACT TO PROJECT DEVELOPMENT", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"C. RATIONALE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"D. CURRENT PROJECT ENVIRONMENT", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"E. METHODOLOGY", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["<METHODOLOGY> is appropriately selected as the proposed project methodology."]}
+			]
+		},
+		{
+			"name":"F1. GOALS, OBJECTIVES, AND DELIVERABLES TABLE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"F2. GOALS, OBJECTIVES, AND DELIVERABLES DESCRIPTIONS", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A sufficient discussion of the goals, objectives and deliverables is provided in the submission."]}
+			]
+		},
+		{
+			"name":"G. PROJECT TIMELINE WITH MILESTONES", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A complete project timeline with start/end dates and milestones is provided."]}
+			]
+		},
+		{
+			"name":"H. OUTCOME", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		sourcesAspectTS,   
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission describes a capstone proposal for developing <SOLUTION>. All aspects of the capstone proposal including the solution and timeline are complete with excellent detail and meet task requirements."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+var crdEYP1Task3 = 
+{
+	"name": "EYP1 Task 3", 	//CRD name as it appears in EMA
+	"tsname": "EYP1 Task 3",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The work is mechanically sound and free from major errors."]}
+			]
+		},
+		{
+			"name":"TECHNICAL WRITING STYLE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The proposal exhibits a sound technical writing style and appropriate use of terminology."]}
+			]
+		},
+		{
+			"name":"APA FORMATTING", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The formatting of the document generally aligns with the conventions of the American Psychological Association."]}
+			]
+		},
+		{
+			"name":"A. SUMMARY", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission presents a thorough description of the <COMPANY> <SOLUTION> project."]}
+			]
+		},
+		{
+			"name":"B. REVIEW OF OTHER WORK", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"C. CHANGES TO PROJECT ENVIRONMENT", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["Changes such as XX and XX are discussed thoroughly in the submission."]}
+			]
+		},
+		{
+			"name":"D. METHODOLOGY", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"E. PROJECT GOALS AND OBJECTIVES", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"F. PROJECT TIMELINE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A complete timeline with milestones and start/end dates is provided."]}
+			]
+		},
+		{
+			"name":"G. UNANTICIPATED REQUIREMENTS", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"H. CONCLUSION", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"I. PROJECT DELIVERABLES", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		sourcesAspectTS,   
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":[""]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+var crdDDT1Task1 = 
+{
+	"name": "DDT1 Task 1", 	//CRD name as it appears in EMA
+	"tsname": "DDT1 Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"A. IT CAPSTONE WAIVER", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A completed and digitally signed IT Capstone Waiver/Release Form that declares that the project is not based upon and does not include Restricted Information is provided."]}
+			]
+		},
+		{
+			"name":"B. IT CAPSTONE THIRD-PARTY RELEASE TEMPLATE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["As the project is not based upon and does not include Restricted Information, an IT Capstone Third-Party Release letter is not required."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission that includes a declaration that the capstone project is not based upon and does not include Restricted Information in a digitally signed IT Capstone Waiver/Release Form is complete and meets standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+var crdDDT1Task2 = 
+{
+	"name": "DDT1 Task 2", 	//CRD name as it appears in EMA
+	"tsname": "DDT1 Task 2",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The submission has overall sound articulation."]}
+			]
+		},
+		{
+			"name":"A. TOPIC", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The submission identifies the topic as \"<TOPIC>\" and aligns with the Software Development degree program."]}
+			]
+		},
+		{
+			"name":"B1. COVER SHEET", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The proposal begins with a clear cover sheet which includes all four required elements."]}
+			]
+		},
+		{
+			"name":"B2. INTRODUCTION", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The proposal introduction presents a detailed overview of the <SUBMISSION SPECIFIC> process and proposed solution for <COMPANY>."]}
+			]
+		},
+		{
+			"name":"B3. REVIEW OF OTHER WORK", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B4. RATIONALE", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B5A. SYSTEMS ANALYSIS", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B5B. METHODOLOGY", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["<METHODOLOGY> is an appropriate method of execution for the proposed development."]}
+			]
+		},
+		{
+			"name":"B6. PROJECT GOALS AND OBJECTIVES", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B7. PROJECT DELIVERABLES", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B8. PROJECT TIMELINE WITH MILESTONES", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["A complete timeline with milestones and start/end dates is provided."]}
+			]
+		},
+		sourcesAspectTS,   
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission represents a capstone proposal to develop and implement a <SUBMISSION SPECIFIC> application for <COMPANY>. All aspects of the capstone proposal including the solution and timeline are complete with excellent detail and meet task requirements"]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+var crdENT1Task1 = 
+{
+	"name": "ENT1 Task 1", 	//CRD name as it appears in EMA
+	"tsname": "ENT1 Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"A. IT CAPSTONE WAIVER", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A completed and digitally signed IT Capstone Waiver/Release Form that declares that the project is not based upon and does not include Restricted Information is provided."]}
+			]
+		},
+		{
+			"name":"B. IT CAPSTONE THIRD-PARTY RELEASE TEMPLATE", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["As the project is not based upon and does not include Restricted Information, an IT Capstone Third-Party Release letter is not required."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission that includes a declaration that the capstone project is not based upon and does not include Restricted Information in a digitally signed IT Capstone Waiver/Release Form is complete and meets standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+var crdENT1Task2 = 
+{
+	"name": "ENT1 Task 2", 	//CRD name as it appears in EMA
+	"tsname": "ENT1 Task 2",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The submission has overall sound articulation."]}
+			]
+		},
+		{
+			"name":"A. TOPIC", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The submission identifies the topic as \"<TOPIC>\" and aligns with the Software Development degree program."]}
+			]
+		},
+		{
+			"name":"B1. COVER SHEET", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The proposal begins with a clear cover sheet which includes all four required elements."]}
+			]
+		},
+		{
+			"name":"B2. INTRODUCTION", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The proposal introduction presents a detailed overview of the <SUBMISSION SPECIFIC> process and proposed solution for <COMPANY>."]}
+			]
+		},
+		{
+			"name":"B2A. DESCRIPTION OF PROJECT", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B2B. REVIEW OF OTHER WORK", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B2C. RATIONALE", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The <RATIONALE/TOOL> is logically explained in the submission."]}
+			]
+		},
+		{
+			"name":"B2D. SYSTEMS ANALYSIS AND METHODOLOGY", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B3. PROJECT GOALS AND OBJECTIVES", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":["The explanation for the XX goal and XX associated objectives are logically detailed with clear, identified outcomes for each."]}
+			]
+		},
+		{
+			"name":"B3A. GOALS AND OBJECTIVES LIST", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B4. PROJECT TIMELINE", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B5. PROJECT DEVELOPMENT", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		{
+			"name":"B6. EVIDENCE OF PROJECT DELIVERABLES", 
+			"grades": [
+				{"name":"UNSATISFACTORY/NOT PRESENT","text":[""]},
+				{"name":"DOES NOT MEET STANDARD","text":[""]},
+				{"name":"MINIMALLY COMPETENT","text":[""]},
+				{"name":"COMPETENT","text":[""]},
+				{"name":"HIGHLY COMPETENT","text":[""]}
+			]
+		},
+		sourcesAspectTS,   
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents a thorough Capstone Report which describes the implementation of <SOLUTION>. All aspects of the submission, including the exemplary screenshots in the Appendices to document the development and implementation, are complete and meet standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
 //Template CRD Object
 var crdXXXTaskX = 
 {
@@ -1180,7 +1809,14 @@ var CRD =
 	crdLQTTask4,
 	crdAKM1Task1,
 	crdGWA2Task2,
-	crdGWA2Task3
+	crdGWA2Task3,
+	crdENT1Task2,
+	crdENT1Task1,
+	crdDDT1Task2,
+	crdDDT1Task1,
+	crdEYP1Task3,
+	crdEYP1Task2,
+	crdEYP1Task1
 ];
 
 
