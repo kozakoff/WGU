@@ -1428,7 +1428,7 @@ var crdEYP1Task3 =
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":[""]},
+				{"name":"Passing","text":["The submission presents a thorough capstone report which describes the implementation of a <SOLUTION> for <COMPANY>. All aspects of the work, such as the Summary and Timeline, are complete and meet task standards."]},
 				{"name":"Not Passing","text":[""]}
 			]
 		}
