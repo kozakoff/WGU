@@ -1322,6 +1322,7 @@ var crdEYP1Task2 =
 	]
 };
 
+
 var crdEYP1Task3 = 
 {
 	"name": "EYP1 Task 3", 	//CRD name as it appears in EMA
@@ -1765,6 +1766,186 @@ var crdENT1Task2 =
 	]
 };
 
+//IXP Task 1
+var crdIXPTask1 = 
+{
+	"name": "IXP Task 1",
+	"tsname": "IXP Task 1",
+	"aspects": [
+		{
+			"name":"A: TOOL SELECTION: BENEFITS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[
+					"A succinct justification of the selection of R as the tool supporting the analysis of the customer churn, is provided in the submission.",
+					"The submission succinctly overviews the benefits from using SAS as the tool to support the analysis of the customer churn."]}
+			]
+		},
+		{
+			"name":"B: TOOL SELECTION: AIMS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"C: TOOL SELECTION: PRESCRIBED ANALYSIS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[
+					"Factor Analysis of Mixed Data and Logistic Regression are clearly identified as the methods supporting the analysis of the customer churn.",
+					"Multiple Correspondence Analysis and Logistic Regression are clearly identified as the analytical methods used to investigate the research question."]}
+			]
+		},
+		{
+			"name":"D: DATA EXPLORATION AND PREPARATION: TARGET VARIABLE",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"E: DATA EXPLORATION AND PREPARATION: INDEPENDENT PREDICTOR",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"F: DATA EXPLORATION AND PREPARATION: GOAL",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"G: DATA EXPLORATION AND PREPARATION: STATISTICAL IDENTITY",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"H: DATA EXPLORATION AND PREPARATION: CLEANING",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"I: DATA ANALYSIS: UNIVARIATE STATISTICS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":["Accurate histograms effectively support the distribution analysis of the variables from the cleaned dataset."]}
+			]
+		},
+		{
+			"name":"J: DATA ANALYSIS: BIVARIATE STATISTICS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"K: DATA ANALYSIS: METHODS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"L: DATA ANALYSIS: JUSTIFICATION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"M: DATA ANALYSIS: VISUAL REPRESENTATION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":["Succinct explanations of the reasons for selecting visualization elements in the presentation of the analysis, including scree plots, are provided."]}
+			]
+		},
+		{
+			"name":"N: DATA SUMMARY: PHENOMENON",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"O: DATA SUMMARY: DETECTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":[""]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents an analysis of the attrition phenomenon among the customers of the telecom company based on FAMD and Logistic Regression methods executed in an R environment. the work summarizes the phases of the analytical process with adequate explanations of the code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary: Phenomenon, are complete and meet standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+//JNP Task 3
+var crdJNPTask3 = 
+{
+	"name": "JNP Task 3",
+	"tsname": "JNP Task 3",
+	"aspects": [
+		{
+			"name":"A: EXECUTIVE SUMMARY AND IMPLICATIONS",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B1: PRESENTATION: ORGANIZATION AND PROFESSIONALISM",
+			"grades": [
+				{"name":"Not Evident","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panopto presentation is not observed."]},
+				{"name":"Competent","text":["The submission presents professionally delivered presentation of the salient points of <SUBJECT> in a Panopto recording."]}
+			]
+		},
+		{
+			"name":"B2: PRESENTATION: CONTENT",
+			"grades": [
+				{"name":"Not Evident","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panopto presentation is not observed."]},
+				{"name":"Competent","text":["The presentation aptly discusses the problem under investigation and the analysis of <SUBJECT>."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents a link to a Panopto recordings that discuss the analysis of <SUBJECT> and outline the salient points of the project. All aspects of the work, including Presentation: Content, are presented in adequate detail and meet standards."]},
+				{"name":"Not Passing","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panoptu presentation is not observed. This area needs further development to meet task requirements."]}
+			]
+		}
+	]
+};
+
 //Template CRD Object
 var crdXXXTaskX = 
 {
@@ -1816,7 +1997,9 @@ var CRD =
 	crdDDT1Task1,
 	crdEYP1Task3,
 	crdEYP1Task2,
-	crdEYP1Task1
+	crdEYP1Task1,
+	crdIXPTask1,
+	crdJNPTask3
 ];
 
 
