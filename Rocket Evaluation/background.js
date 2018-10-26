@@ -1325,7 +1325,7 @@ var crdEYP1Task2 =
 var crdEYP1Task3 = 
 {
 	"name": "EYP1 Task 3", 	//CRD name as it appears in EMA
-	"tsname": "EYP1 Task 3",	//CRD name as it appears in TaskStream
+	"tsname": "EYP Task 3",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -1923,25 +1923,23 @@ var crdJNPTask3 =
 		{
 			"name":"B1: PRESENTATION: ORGANIZATION AND PROFESSIONALISM",
 			"grades": [
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Not Evident","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panopto presentation is not observed."]},
+				{"name":"Competent","text":["The submission presents professionally delivered presentation of the salient points of <SUBJECT> in a Panopto recording."]}
 			]
 		},
 		{
 			"name":"B2: PRESENTATION: CONTENT",
 			"grades": [
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Not Evident","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panopto presentation is not observed."]},
+				{"name":"Competent","text":["The presentation aptly discusses the problem under investigation and the analysis of <SUBJECT>."]}
 			]
 		},
 		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":[""]},
-				{"name":"Not Passing","text":[""]}
+				{"name":"Passing","text":["The submission presents a link to a Panopto recordings that discuss the analysis of <SUBJECT> and outline the salient points of the project. All aspects of the work, including Presentation: Content, are presented in adequate detail and meet standards."]},
+				{"name":"Not Passing","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panoptu presentation is not observed. This area needs further development to meet task requirements."]}
 			]
 		}
 	]
