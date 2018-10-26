@@ -1325,7 +1325,7 @@ var crdEYP1Task2 =
 var crdEYP1Task3 = 
 {
 	"name": "EYP1 Task 3", 	//CRD name as it appears in EMA
-	"tsname": "EYP1 Task 3",	//CRD name as it appears in TaskStream
+	"tsname": "EYP Task 3",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
