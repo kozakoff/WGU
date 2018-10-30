@@ -1070,7 +1070,23 @@ var crdGWA2Task2 =
 	"tsname": "GWA2 Task 2",
 	"aspects": [
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 1",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["Adequate summaries of dissemination plan for the results of the project are presented."]}
+			]
+		},
+		{
+			"name":"Program Outcome 2",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["Adequate summaries of the management of the project and its stakeholders are presented. A clear project plan is presented."]}
+			]
+		},
+		{
+			"name":"Program Outcome 3",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
@@ -1078,58 +1094,42 @@ var crdGWA2Task2 =
 			]
 		},
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 4",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The submission presents succinct descriptions and assessments of the risks associated with the proposed implementation of the technology solution."]}
 			]
 		},
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 5",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The submission presents an adequate summary and a clear justification of the proposed technology solution."]}
 			]
 		},
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 6",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A succinct explanation for how the proposed project will demonstrate Outcome 6 is provided. The support of the project of the organization's business priorities is summarized."]}
 			]
 		},
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 7",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
-			]
-		},
-		{
-			"name":"AspectName",
-			"grades": [			
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
-			]
-		},
-		{
-			"name":"AspectName",
-			"grades": [			
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["Adequate summaries of the infrastructure problem under investigation and the proposed technology solution are provided."]}
 			]
 		},
 		sourcesAspectEMA, 	//both for CRDs that are in both systems.
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":[""]},
+				{"name":"Passing","text":["The submission presents a thorough Capstone Prospectus that outlines the plan to develop a technology solution for <ORG>. The work presents an adequate summary of the problem under investigation, the proposed technology solution, and the salient points of the project, including its risks. The competencies supporting each of the program objectives are adequately demonstrated and the submission meets the requirements of the task."]},
 				{"name":"Not Passing","text":[""]}
 			]
 		}
