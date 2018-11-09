@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse)
 	//	  console.log('keypress event with ' + 'key: ' + keyName);
 	//});
 	
-	document.activeElement.focus();
+	//document.activeElement.focus();
 	
 	if(document.activeElement.value != "")
 	{
@@ -35,7 +35,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse)
 	//document.activeElement.change();
 	//let input = document.getElementById("name");let keyboard = Keysim.Keyboard.US_ENGLISH;let ctrl_shift_enter = new Keysim.Keystroke(  Keysim.Keystroke.CTRL | Keysim.Keystroke.SHIFT,  13);keyboard.dispatchEventsForKeystroke(ctrl_shift_enter, input);
 	
-	document.activeElement.blur();
+	//document.activeElement.blur();
 
 });
 
