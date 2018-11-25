@@ -998,7 +998,23 @@ var crdGWA2Task3 =
 	"tsname": "GWA2 Task 3",
 	"aspects": [
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 1",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A summary of the project to develop and implement a threat intelligence framework for SunTrust Bank to combat cybercrime is provided with excellent technical detail in the submission."]}
+			]
+		},
+		{
+			"name":"Program Outcome 2",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The included timeframe that clearly identifies tasks dependent on previous tasks supports the ability to manage activities in the development."]}
+			]
+		},
+		{
+			"name":"Program Outcome 3",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
@@ -1006,7 +1022,7 @@ var crdGWA2Task3 =
 			]
 		},
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 4",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
@@ -1014,7 +1030,7 @@ var crdGWA2Task3 =
 			]
 		},
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 5",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
@@ -1022,7 +1038,7 @@ var crdGWA2Task3 =
 			]
 		},
 		{
-			"name":"AspectName",
+			"name":"Program Outcome 6",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
@@ -1030,23 +1046,7 @@ var crdGWA2Task3 =
 			]
 		},
 		{
-			"name":"AspectName",
-			"grades": [			
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
-			]
-		},
-		{
-			"name":"AspectName",
-			"grades": [			
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
-			]
-		},
-		{
-			"name":"AspectName",
+			"name":"Program Outcome 7",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
@@ -1057,7 +1057,7 @@ var crdGWA2Task3 =
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":[""]},
+				{"name":"Passing","text":["The submission presents the report for a software evaluation for Virtualization and Automation. All aspects of the submission, including diagrams such as the Virtual Machine Build Workflow to document the design, are complete and meet standards.","The submission presents a thorough Capstone Report which describes implementing a threat intelligence framework solution to mitigate cyber attacks for SunTrust Bank and includes a compelling presentation that highlights the most salient aspects of the project. All aspects of the submission are complete and meet standards."]},
 				{"name":"Not Passing","text":[""]}
 			]
 		}
