@@ -1470,7 +1470,7 @@ var crdDDT1Task1 =
 var crdDDT1Task2 = 
 {
 	"name": "DDT1 Task 2", 	//CRD name as it appears in EMA
-	"tsname": "DDT1 Task 2",	//CRD name as it appears in TaskStream
+	"tsname": "DDT Task 2",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -1946,6 +1946,32 @@ var crdJNPTask3 =
 	]
 };
 
+var crdLQTTask1 = 
+{
+	"name": "LQT2 Task 1",
+	"tsname": "LQT2 Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"Timeline Form",
+			"grades": [
+				{"name":"Competent","text":["A CAWA MSISCA Written Capstone Timeline Form that states the prospectus will be completed by <DATE> is aptly provided in the submission."]}
+			]
+		},
+		{
+			"name":"Capstone Waiver Release Form",
+			"grades": [
+				{"name":"Competent","text":["The submission includes a completed Capstone Waiver Release Form that is digitally signed and dated."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["A completed Timeline Form and Capstone Waiver Release Form are provided in the submission."]}
+			]
+		}
+	]
+};
+
 //Template CRD Object
 var crdXXXTaskX = 
 {
@@ -1999,7 +2025,8 @@ var CRD =
 	crdEYP1Task2,
 	crdEYP1Task1,
 	crdIXPTask1,
-	crdJNPTask3
+	crdJNPTask3,
+	crdLQTTask1
 ];
 
 
