@@ -1144,37 +1144,31 @@ var crdEYP1Task1 =
 		{
 			"name":"A. TOPIC APPROVAL FORM", 
 			"grades": [
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Not Evident","text":["The submission provides a summary of the proposed capstone project. A Topic Approval Form that is signed by a Course Instructor cannot be located."]},
+				{"name":"Competent","text":["The Topic Approval Form is signed by a Course Instructor."]}
 			]
 		},
 		{
 			"name":"B. CAPSTONE RELEASE FORM", 
 			"grades": [
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Not Evident","text":["The Capstone Release Form aspect will be assessed once a completed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["A completed and digitally signed IT Capstone Waiver/Release Form that declares that the project is not based upon and does not include Restricted Information is provided."]}
 			]
 		},
 		{
 			"name":"C. HUMAN SUBJECTS FAQ QUIZ", 
 			"grades": [
 				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A clear copy of the results from the successfully completed Human Subjects FAQ Quiz is presented."]}
 			]
 		},
 		{
 			"name":"D. IRB COMPLIANCE", 
 			"grades": [
-				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Not Evident","text":["The IRB Compliance aspect will be assessed once a completed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["The proposal complies with IRB standards for exemption status."]}
 			]
 		},
-		sourcesAspectTS,   
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -1907,6 +1901,45 @@ var crdIXPTask1 =
 	]
 };
 
+//JNP Task 2
+var crdJNPTask2 = 
+{
+	"name": "JNP Task 2",
+	"tsname": "JNP Task 2",
+	"aspects": [
+		{
+			"name":"A: RESEARCH QUESTION",
+			"grades": [
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A clear summary of the hypothesis that country of origin is statistically significant in determining whether a wine rating is in the upper or lower 50% of wine ratings is presented."]}
+			]
+		},
+		{
+			"name":"B: DATA COLLECTION",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Competent","text":["The work clearly identifies the Wine Enthusiast dataset found on Kaggle.com as the data sources and outlines the data collection procedures using SAS."]}
+			]
+		},
+		{
+			"name":"C: DATA EXTRACTION AND PREPARATION",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Competent","text":["The work clearly identifies the U.S. Census website as the data sources and outlines the data collection procedures."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents an analysis of the relationship between poverty and employment in the Mountain State region and provides clear directions for further research, The stages of the analytical process are overviewed with satisfactory detail and include adequate explanations of the R code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary and Implications, are complete and meet standards.",
+										  "The submission presents an analysis of the significance of wine origin and variety in review scoring that relies on Chi-Squared tests and regression methods. The stages of the analytical process are overviewed with satisfactory detail and include adequate explanations of the SAS code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary and Implications, are complete and meet standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
 //JNP Task 3
 var crdJNPTask3 = 
 {
@@ -1941,6 +1974,135 @@ var crdJNPTask3 =
 			"grades": [
 				{"name":"Passing","text":["The submission presents a link to a Panopto recordings that discuss the analysis of <SUBJECT> and outline the salient points of the project. All aspects of the work, including Presentation: Content, are presented in adequate detail and meet standards."]},
 				{"name":"Not Passing","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panoptu presentation is not observed. This area needs further development to meet task requirements."]}
+			]
+		}
+	]
+};
+
+var crdNIPTask2 = 
+{
+	"name": "NIP1 Task 2",
+	"tsname": "NIP1 Task 2",
+	"aspects": [
+		{
+			"name":"A: Problem",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission aptly describes the disaster environment as an earthquake devastated city that has multiple obstacles such as downed trees and buildings hindering rescue."]}
+			]
+		},
+		{
+			"name":"B: Improved Disaster Recovery",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The narrative clearly explains how artificial intelligence and training data will be used to identify target objects that are obscured by building rubble and trees in the environment."]}
+			]
+		},
+		{
+			"name":"C: Architecture",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission describes removing the robot's wheel, swapping the body, and replacing the proximity sensor with a camera which are appropriate modifications needed to provide the functionality that aligns with disaster recovery efforts."]}
+			]
+		},
+		{
+			"name":"D: Goal Seeking",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission succinctly describes how the implemented algorithm was optimized over multiple iterations and explains how the optimizations align with the concepts of reasoning and uncertianty."]}
+			]
+		},
+		{
+			"name":"E: Advantages and Limitations",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission provides an adequate overview of the advantages and limitations by noting potential applications of the bot are not limited to earthquake disaster recovery and the stationary hardware limits the camera's visual range."]}
+			]
+		},
+		{
+			"name":"F: Testing and Implementation Plan",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"G: Improving the Prototype",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission describes how adding more data from disaster sites can be used to refine the deep learning model to improve the performance of the prototype."]}
+			]
+		},
+		{
+			"name":"H: Code",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"I: Panopto Recording",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission aptly provides links to Panopto recordings which summarize the disaster recovery problem and environment and, the robot's goals, architecture, capabilities, and benefits."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents a thorough portrayal of an earthquake disaster recovery robot including a description of the environment, robot hardware and software architecture, Coppelia Robotics V-REP files, code, and Panopto videos summarizing the work. All aspects of the work, including the Testing and Implementation Plan, are complete and meet standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
+//GWA2 Task 1
+var crdGWA2Task1 = 
+{
+	"name": "GWA2 Task 1",
+	"tsname": "GWA2 Task 1",
+	"aspects": [
+		{
+			"name":"Topic Approval Form",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission presents an MSITM Capstone Topic Approval Form that is signed by the course instructor."]}
+			]
+		},
+		{
+			"name":"Capstone Waiver Form",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["An MSITM Capstone Waiver Form that states the project is not based upon and does not include restricted information is provided in the submission."]}
+			]
+		},
+		{
+			"name":"IRB Form",
+			"grades": [			
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission includes an email that aptly confirms the completion of the Human Subjects FAQ Quiz."]}
+			]
+		},
+		sourcesAspectEMA, 	//both for CRDs that are in both systems.
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission provides an appropriate Topic Approval Form, Waiver Form, and Human Subjects FAQ Quiz. All sections are complete and meet task requirements."]},
+				{"name":"Not Passing","text":[""]}
 			]
 		}
 	]
@@ -1989,6 +2151,7 @@ var CRD =
 	crdLQTTask2,
 	crdLQTTask4,
 	crdAKM1Task1,
+	crdGWA2Task1,
 	crdGWA2Task2,
 	crdGWA2Task3,
 	crdENT1Task2,
@@ -1999,7 +2162,9 @@ var CRD =
 	crdEYP1Task2,
 	crdEYP1Task1,
 	crdIXPTask1,
-	crdJNPTask3
+	crdJNPTask2,
+	crdJNPTask3,
+	crdNIPTask2
 ];
 
 
