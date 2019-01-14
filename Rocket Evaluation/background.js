@@ -1139,7 +1139,7 @@ var crdGWA2Task2 =
 var crdEYP1Task1 = 
 {
 	"name": "EYP1 Task 1", 	//CRD name as it appears in EMA
-	"tsname": "EYP1 Task 1",	//CRD name as it appears in TaskStream
+	"tsname": "EYP Task 1",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
 			"name":"A. TOPIC APPROVAL FORM", 
@@ -1182,7 +1182,7 @@ var crdEYP1Task1 =
 var crdEYP1Task2 = 
 {
 	"name": "EYP1 Task 2", 	//CRD name as it appears in EMA
-	"tsname": "EYP1 Task 2",	//CRD name as it appears in TaskStream
+	"tsname": "EYP Task 2",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
