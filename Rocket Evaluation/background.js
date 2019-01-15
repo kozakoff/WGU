@@ -2067,6 +2067,86 @@ var crdNIPTask2 =
 	]
 };
 
+//NIP1 Task 1
+var crdNIPTask1 = 
+{
+	"name": "NIP1 Task 1",
+	"tsname": "NIP1 Task 1",
+	"aspects": [
+		{
+			"name":"A: Description",
+			"grades": [
+				{"name":"Competent","text":["The submission aptly describes functionality to record chat sessions, provides appropriate greetings, identifies jobs for students, and aligns with the needs of the career advisor."]}
+			]
+		},
+		{
+			"name":"B: Other Works",
+			"grades": [
+				{"name":"Approaching","text":["The submission aptly summarizes the article <FROM_SUBMISSION> and provides a description of how it relates to the project. A summary of a second third-party work could not be located. Make sure to update the references section in the report once the second summary is in place."]},
+				{"name":"Competent","text":["The work concisely summarizes works by <WORK1> and <WORK2> solutions in the other works section that relate to the key elements of the proposal."]}
+			]
+		},
+		{
+			"name":"C: Job Types",
+			"grades": [
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"D: Training",
+			"grades": [
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"E: Optimization",
+			"grades": [
+				{"name":"Competent","text":["The submission describes pattern matching and stateful response optimizations with concise examples of design and workflow.The submission describes pattern matching and stateful response optimizations with concise examples of design and workflow."]}
+			]
+		},
+		{
+			"name":"F: Installation Manual",
+			"grades": [
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"G: Effectiveness of the Bot",
+			"grades": [
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"H: Challenges during Development",
+			"grades": [
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"I: The Bot Development Environment",
+			"grades": [
+				{"name":"Competent","text":["Instant compile and a directory of pre-built bots are documented in the work as strengths of the development environment which supported the development of <BOT_NAME>."]}
+			]
+		},
+		{
+			"name":"J: Panopto Recording",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission aptly provides links to Panopto recordings which summarize the disaster recovery problem and environment and, the robot's goals, architecture, capabilities, and benefits. Presentation link: "]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents a  report which thoroughly describes a project to develop a chatbot with embedded artificial intelligence to assist career advisors at a university. The work provides a suitable description, reviews of other works, and an excellent Panopto presentation that captures an interactive session with the bot. All sections of the work are complete and meets task requirements."]},
+				{"name":"Not Passing","text":["The submission presents a thorough report which describes a project to develop a chatbot with embedded artificial intelligence to assist career advisors at a university. The work provides a suitable description, explains the training process, and includes a link to an exemplary Panopto presentation that demonstrates an interactive session. One summary of a third-party work is provided in the submission, but, two are required to meet task standards. Please revise the Other Works section to include a second summary of a third-party work and update the Sources aspect if needed."]}
+			]
+		}
+	]
+};
+
 //GWA2 Task 1
 var crdGWA2Task1 = 
 {
@@ -2163,6 +2243,9 @@ var crdXXXTaskX =
 	]
 };
 
+//Future PC comment
+//The submission is easy to read as a result of effective organization and intelligent sentence fluency. The spelling, punctuation, and grammar are sound with only a few minor errors detected. The use of headings enhances the evaluation.
+
 //After adding a CRD object, it needs to get added to the list below. 
 //I'm working on a better way to manage the data in the future.
 var CRD = 
@@ -2191,6 +2274,7 @@ var CRD =
 	crdIXPTask1,
 	crdJNPTask2,
 	crdJNPTask3,
+	crdNIPTask1,
 	crdNIPTask2
 ];
 
