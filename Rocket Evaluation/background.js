@@ -518,7 +518,7 @@ var crdCIMTask2 =
 var crdLQTTask3 = 
 {
 	"name": "LQT2 Task 3", 	//CRD name as it appears in EMA
-	"tsname": "LQT2 Task 3",	//CRD name as it appears in TaskStream
+	"tsname": "MSISA Capstone Written Project",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
