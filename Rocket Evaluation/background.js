@@ -2214,6 +2214,34 @@ var crdLQTTask1 =
 	]
 };
 
+var crdNHPTask1 = 
+{
+	"name": "NHP1 Task 1",
+	"tsname": "NHP1 Task 1",
+	"aspects": [
+		{
+			"name":"Algorithm Selection",
+			"grades": [			
+				{"name":"Competent","text":["The simple greedy algorithm is logically identified and can perform the task to meet all requirements."]}
+			]
+		},
+		{
+			"name":"Identification Information",
+			"grades": [			
+				{"name":"Not Evident","text":["The two Python files are clearly present. The identity initial comment is not found."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents two Python files with the appropriate initial comment on the first line. All sections are complete and meet task requirements."]},
+				{"name":"Not Passing","text":["The submission presents the best route and delivery distribution for the Western Governors University Parcel Service (WGUPS). Most aspects of the submission meet standards and provide concise, correct code, including the ability in the HashTable to def lookup(self, key). The Identification information in the code is not observed."]}
+			]
+		}
+	]
+};
+
 //Template CRD Object
 var crdXXXTaskX = 
 {
@@ -2275,7 +2303,8 @@ var CRD =
 	crdJNPTask2,
 	crdJNPTask3,
 	crdNIPTask1,
-	crdNIPTask2
+	crdNIPTask2,
+	crdNHPTask1
 ];
 
 
