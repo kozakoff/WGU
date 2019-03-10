@@ -843,7 +843,7 @@ var crdLQTTask2 =
 var crdLQTTask4 = 
 {
 	"name": "LQT2 Task 4", 	//CRD name as it appears in EMA
-	"tsname": "LQT2 Task 4",	//CRD name as it appears in TaskStream
+	"tsname": "Oral Presentation: Multimedia Presentation",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -2242,6 +2242,49 @@ var crdNHPTask1 =
 	]
 };
 
+var crdEZP1Task1 = 
+{
+	"name": "EZP1 Task 1", 	//CRD name as it appears in EMA
+	"tsname": "EZP Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"A. TOPIC APPROVAL FORM", 
+			"grades": [
+				{"name":"Not Evident","text":["The submission provides a summary of the proposed capstone project. A Topic Approval Form that is signed by a Course Instructor cannot be located."]},
+				{"name":"Competent","text":["The Topic Approval Form is signed by a Course Instructor."]}
+			]
+		},
+		{
+			"name":"B. CAPSTONE RELEASE FORM", 
+			"grades": [
+				{"name":"Not Evident","text":["The Capstone Release Form aspect will be assessed once a completed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["A completed and digitally signed IT Capstone Waiver/Release Form that declares that the project is not based upon and does not include Restricted Information is provided."]}
+			]
+		},
+		{
+			"name":"C. HUMAN SUBJECTS FAQ QUIZ", 
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Competent","text":["A clear copy of the results from the successfully completed Human Subjects FAQ Quiz is presented."]}
+			]
+		},
+		{
+			"name":"D. IRB COMPLIANCE", 
+			"grades": [
+				{"name":"Not Evident","text":["The IRB Compliance aspect will be assessed once a completed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["The proposal complies with IRB standards for exemption status."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The Waivers, IRB Quiz and Compliance, as well as the Topic Approval form are all complete and meet standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
 //Template CRD Object
 var crdXXXTaskX = 
 {
@@ -2304,7 +2347,8 @@ var CRD =
 	crdJNPTask3,
 	crdNIPTask1,
 	crdNIPTask2,
-	crdNHPTask1
+	crdNHPTask1,
+	crdEZP1Task1
 ];
 
 
