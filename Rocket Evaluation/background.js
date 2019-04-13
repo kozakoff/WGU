@@ -615,9 +615,333 @@ var crdLQTTask3 =
 	]
 };
 
+var crdDDMTask3 = 
+{
+	"name": "DDM Task 3", 	//CRD name as it appears in EMA
+	"tsname": "MSISA Capstone Written Project",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE", 
+			"grades": [	
+				{"name":"Not Evident","text":["This aspect will be assessed when all task requirements are in place."]},
+				{"name":"Competent","text":["The work is mechanically sound and free of major errors."]}
+			]
+		},
+		{
+			"name":"A1. IMPORTANT ASPECTS",
+			"grades": [
+				{"name":"Competent","text":["The salient points of the information security realignment project for Top Care Medical, including it actual outcomes, are intelligently summarized in the Abstract of the report."]}
+			]
+		},
+		{
+			"name":"D1. PROJECT REQUIREMENTS",
+			"grades": [
+				{"name":"Competent","text":["The submission presents adequately detailed summaries of the functional and detailed requirements that emerged after the process and system audit and the gaps the project aimed to fill."]}
+			]
+		},
+		{
+			"name":"F1. APPROACH EXPLANATION",
+			"grades": [
+				{"name":"Competent","text":["The four phases of the project methodology are succinctly outlined."]}
+			]
+		},
+		{
+			"name":"G2. RESOURCES USED", 
+			"grades": [
+				{"name":"Not Evident","text":["The Resources section states the resources used are identified in the Project Design section. A logical justification for the resources is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound justification for the labor, hardware, and software resources to implement the solution."]}
+			]
+		},
+		{
+			"name":"H1. QUALITY ASSURANCE APPROACH",
+			"grades": [	
+				{"name":"Approaching","text":["The submission states the phases were implemented to increase troubleshooting efficiency. A detailed discussion of the approach to quality assurance and specifies the quality assurance criteria is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound explanation of how the quality assurance was implemented during the project development process."]}			
+			]
+		},
+		{
+			"name":"H2. SOLUTION TESTING",
+			"grades": [
+				{"name":"Approaching","text":["The Solution Testing section includes a table that clearly organizes the each test and its purpose. A justification for the test case and scenarios, and the acceptance criteria, are not observed."]},
+				{"name":"Competent","text":["The submission provides a sound overview of the solution testing and clearly identifies the acceptance criteria for the user and administration."]}
+			]
+		},
+		{
+			"name":"I1. IMPLEMENTATION PLAN",
+			"grades": [
+				{"name":"Approaching","text":["The Implementation Plan section provides a sound overview of the user training. A detailed discussion of the phases of the rollout and details of the go-live is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound explanation of the implementation phases and issues with a Skype user during the go-live event."]}
+			]
+		},
+		{
+			"name":"J1. RISK ASSESSMENT",
+			"grades": [
+				{"name":"Competent","text":["Assessments of the risks of Intranet unavailability, corrupt files, and malicious employees are presented in a clear table."]}
+			]
+		},
+		{
+			"name":"J3. RISK MITIGATION",
+			"grades": [
+				{"name":"Not Evident","text":["The Risk Mitigation section clearly states the importance of personnel. A logical explanation of how the two risks will be mitigated is not observed."]},
+				{"name":"Competent","text":["The submission provides a clear explanation of how the equipment and personnel-related risks will be mitigated."]}
+			]
+		},
+		{
+			"name":"K3. MAINTENANCE PLAN",
+			"grades": [
+				{"name":"Approaching","text":["The submission includes a table that clearly organizes the project maintenance. A well-developed short- and long-term maintenance plan is not observed."]},
+				{"name":"Competent","text":["The submission includes a sound explanation of the short- and long-term maintenance plans that includes technical manuals and a maintenance support package."]}
+			]
+		},
+		{
+			"name":"L1A. DELIVERABLES",
+			"grades": [
+				{"name":"Competent","text":["A sample output of the gap analysis provided in Appendix A as an actual project artifact adequately supports the explanations in the narrative."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":
+					[
+						"The submission successfully describes the implementation of a secure wireless network solution for North Gate Studios, provides a sound explanation of the mitigation for the two identified risks, and includes a clear summary of the short- and long-term maintenance plans. All task requirements have been met.",
+						"A Capstone Report that describes the implementation of an Information Security Policy solution for Top Care Medical after a completed merger is provided in the submission. The work adequately outlines the project approach and methodology, as well as the phases of the completed project and provides a succinct summary of the lessons learned from the capstone experience. All sections of the work, including Postimplementation Support, are complete and meet standards."
+					]
+				},
+				{"name":"Not Passing","text":["The submission describes a network security solution for North Gate Studios, provides a sound overview of the project in the Abstract, and includes screenshots and diagrams as project deliverables. A justification for the resources used, an explanation of the quality assurance approach, and a detailed discussion of the risk mitigations, solution testing, and maintenance plans are not observed. These areas need further development to meet task requirements."]}
+			]
+		}
+	]
+};
+
 var crdLQTTask2 = 
 {
 	"name": "LQT2 Task 2", 	//CRD name as it appears in EMA
+	"tsname": "MSISA Capstone Prospectus",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"ARTICULATION OF RESPONSE",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The work is mechanically sound and free of major errors."]}
+			]
+		},
+		{
+			"name":"A1: PROBLEM",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"A2: PLAN",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"A3: METHODOLOGY",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The methodology will follow the National Institute of Standards and Technology (NIST) Special Publication 800-53 Security and Privacy Controls for Federal Information Systems and Organizations, which is fitting."]}
+			]
+		},
+		{
+			"name":"A4: IMPLEMENTATION PROPOSAL",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"A5: OUTCOMES",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B1: PROJECT SCOPE",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B2: PROJECT RATIONALE",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B3: PROBLEM SUMMARY",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B4: PROBLEM BACKGROUND",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["Lack of compliance is suitably detailed. The background of the problem within the greater context is not observed."]},
+				{"name":"Competent","text":["The Problem Background section explains that the county government is not PCI DSS compliant and presents historical insights into the reasons that contributed to the emergence of the problem in the context of current needs."]}
+			]
+		},
+		{
+			"name":"B5: NEED FOR THE SOLUTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B6: REASON FOR APPROACH",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The need for the approach clearly includes the lack of skilled personnel. A logical discussion, juxtaposing alternate solutions, with the strengths and weaknesses of each, is not observed."]},
+				{"name":"Competent","text":["A succinct justification for the selected approach that includes hiring of a chief security officer, is provided."]}
+			]
+		},
+		{
+			"name":"B7: PROSPECTUS ORGANIZATION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The Prospectus Organization clearly lists the sections to follow. Content summaries for each of the sections are not found."]},
+				{"name":"Competent","text":["Succinct content outlines of the Problem Statement and the Technology Solution segments that comprise the remainder of the prospectus, are provided."]}
+			]
+		},
+		{
+			"name":"C1: BACKGROUND INFORMATION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The ability to currently only accept cash and check is described, which is valid. Adequate detail for the background information is not found."]},
+				{"name":"Competent","text":["An adequate summary of the context in which the problem exists that situates the problem and provides direction to the project, is provided."]}
+			]
+		},
+		{
+			"name":"C2: CAUSES",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The lack of security is described logically. Adequate detail for the causes of the problem is not observed."]},
+				{"name":"Competent","text":["The lack of an employee with security assurance responsibility is presented as the primary reason behind the problem in an adequate root cause analysis."]}
+			]
+		},
+		{
+			"name":"C3: BUSINESS IMPACTS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["Several impacts are listed, which is fitting. Adequate detail for the business impacts of the problem is not found."]},
+				{"name":"Competent","text":["The impact fo the problem on the country officials are adequately outlined. "]}
+			]
+		},
+		{
+			"name":"C4: COST ANALYSIS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["An estimated cost for salary is listed, which is clear. Adequate detail for a source-supported cost analysis for all the associated costs is not evident."]},
+				{"name":"Competent","text":["The salary of the chief security officer is presented as the primary factor contributing to the costs of the project."]}
+			]
+		},
+		{
+			"name":"C5: RISK ANALYSIS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["A number of risks are identified, which is valid. A logical identification for each of the risks, with level and likelihood for each, is not found."]},
+				{"name":"Competent","text":["Reputational and financial risks associated with the proposed solution are discussed. "]}
+			]
+		},
+		{
+			"name":"C6: ASSUMPTIONS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["This aspect can be more accurately assessed once the other aspects have been revised to meet standards."]},
+				{"name":"Competent","text":["The submission clearly assumes that the county has the infrastructure and the financial resources to complete the project."]}
+			]
+		},
+		{
+			"name":"C7: LIMITATIONS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["This aspect can be more accurately assessed once the other aspects have been revised to meet standards."]},
+				{"name":"Competent","text":["The limited throughput of the CSO that will be hired is presented as a constraint the project will be subjected to during it execution."]}
+			]
+		},
+		{
+			"name":"C8: TERMS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["XX terms are clearly listed and expanded. Source-supported definitions for all the technical terms used in the prospectus are not evident."]},
+				{"name":"Competent","text":["Adequate expansions and explanations of seven technical acronyms, including CSO, VLAN, and PII, are provided."]}
+			]
+		},
+		{
+			"name":"D: TECHNOLOGY SOLUTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["Several reasons for implementing a technology solution are soundly provided. A logical explanation, with adequate detail, for why a technology solution is needed, is not evident."]},
+				{"name":"Competent","text":["The proposed solution and the gaps it intends to fill are summarized in the introductory section of the Technology Solution segment."]}
+			]
+		},
+		{
+			"name":"D1: BUSINESS DRIVERS",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["Three business drivers are included, which is clear. Adequate detail for the business drivers is not found."]},
+				{"name":"Competent","text":["The provision of better services to the citizens by the county is described as the primary driver behind the proposed solution."]}
+			]
+		},
+		{
+			"name":"D1A: JUSTIFICATION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["Succinct explanations of the significance of te3h business drivers are presented."]}
+			]
+		},
+		{
+			"name":"D2: NO SOLUTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"D3: SOLUTION",
+			"grades": [	
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":["The solution includes the priority to hire a CSO, which is insightful. Adequate detail for the solution within business priorities is not found."]},
+				{"name":"Competent","text":["The significance of the project to the county and NIST, PCI DSS, and other standards, are discussed in the concluding section of the prospectus."]}
+			]
+		},
+		sourcesAspectEMA, 	//both for CRDs that are in both systems.
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["A Capstone Prospectus that describes a PCI DSS compliance project for a county government is presented in the submission. the work provides adequate descriptions of the problem under investigation and the proposed technology solution, and includes adequate root cause, costs, risk, business impact, business drivers, and no-solution scenario analyses. All sections of the work, including Causes, are complete and meet standards."]},
+				{"name":"Not Passing","text":["The submission presents the Capstone Proposal for PCI Compliance for a County Government. Some aspects of the submission, such as the clear rationale for the need to provide compliance, are complete and meet standards. Adequate detail is not observed for the following aspects: Problem Background, Reason for Approach, Prospectus Organization, Background Information, Causes, Business Impacts, Cost Analysis, Risk Analysis, Terms, Technology Solution, Business Drivers, as well as the Solution."]}
+			]
+		}
+	]
+};
+
+var crdDDMTask2 = 
+{
+	"name": "DDM Task 2", 	//CRD name as it appears in EMA
 	"tsname": "MSISA Capstone Prospectus",	//CRD name as it appears in TaskStream
 	"aspects": [
 		{
@@ -2375,7 +2699,9 @@ var CRD =
 	crdNIPTask2,
 	crdNHPTask1,
 	crdEZP1Task1,
-	crdDDMTask1
+	crdDDMTask1,
+	crdDDMTask2,
+	crdDDMTask3
 ];
 
 
