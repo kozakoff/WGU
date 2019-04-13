@@ -2188,6 +2188,32 @@ var crdGWA2Task1 =
 	]
 };
 
+var crdDDMTask1 = 
+{
+	"name": "DDM Task 1",
+	"tsname": "DDM Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"Timeline Form",
+			"grades": [
+				{"name":"Competent","text":["A CAWA MSISCA Written Capstone Timeline Form that states the prospectus will be completed by <DATE> is aptly provided in the submission."]}
+			]
+		},
+		{
+			"name":"Capstone Waiver Release Form",
+			"grades": [
+				{"name":"Competent","text":["The submission includes a completed Capstone Waiver Release Form that is digitally signed and dated."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["A completed Timeline Form and Capstone Waiver Release Form are provided in the submission."]}
+			]
+		}
+	]
+};
+
 var crdLQTTask1 = 
 {
 	"name": "LQT2 Task 1",
@@ -2348,7 +2374,8 @@ var CRD =
 	crdNIPTask1,
 	crdNIPTask2,
 	crdNHPTask1,
-	crdEZP1Task1
+	crdEZP1Task1,
+	crdDDMTask1
 ];
 
 
