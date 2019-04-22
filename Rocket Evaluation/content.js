@@ -36,10 +36,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse)
 	//let input = document.getElementById("name");let keyboard = Keysim.Keyboard.US_ENGLISH;let ctrl_shift_enter = new Keysim.Keystroke(  Keysim.Keystroke.CTRL | Keysim.Keystroke.SHIFT,  13);keyboard.dispatchEventsForKeystroke(ctrl_shift_enter, input);
 	
 	//document.activeElement.blur();
-
 });
-
-
 
 function sleep(ms) 
 {

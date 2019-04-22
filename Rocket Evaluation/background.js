@@ -33,7 +33,51 @@ function init()
 		if(t != null)
 		{
 			n2 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n2"});
+			
+			//console.log("window.width * .4 = "+(window.width * .4));
+			
+			chrome.windows.getAll(
+				{"populate" : true},
+				function (window_list) 
+				{
+					for(var i=0; i < window_list.length; i++) 
+					{
+						var thisWin = window_list[i];
+						for(var t=0; t < thisWin.tabs.length; t++)
+						{
+							var thisTab = thisWin.tabs[t];
+							if(thisTab.title == "EMA")
+							{
+								//console.log("Before Window width: "+thisWin.width);
+								//console.log("Before Window height: "+thisWin.height);
+								//console.log("About to change window size...");
+								//thisWin.width = 800; //screen.width*.7;
+								//thisWin.height = 600; //screen.height;
+								//chrome.windows.update(thisWin.id, {width: screen.availWidth*.7, height: screen.availHeight, top: 0, left: 0}, function(){});
+								//console.log("Done changing window size.");
+								//console.log("After Window width: "+thisWin.width);
+								//console.log("After Window height: "+thisWin.height);
+								return;
+							}
+						}
+						console.log(thisWin.tabs);
+					}
+				}
+			);
+			
+			//chrome.windows.getCurrent(function(w) 
+			//{
+			//	console.log("screen.width * .7 = "+(screen.width * .7));
+			//	w.width = screen.width*.7;
+			//	w.height = screen.height;
+			//});
+			
+			
+			
+			//chrome.windows.create({url: "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=view&sourcedoc={9B19BDAD-29BF-4AED-8717-DC0866705CF5}", type: "popup", width: (window.width * .4), height: window.height, top: 0, right: 0});
 		
+			//chrome.windows.getCurrent(function(w) { 	}
+			
 			for(var i = 0; i < t.aspects.length; i++) 
 			{
 				var aspect = t.aspects[i];
@@ -70,7 +114,6 @@ function init()
 			}
 		}
 	}
-	//chrome.windows.create({url: "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=view&sourcedoc={9B19BDAD-29BF-4AED-8717-DC0866705CF5}", type: "popup", width: 800, height: 600});
 }
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) 
