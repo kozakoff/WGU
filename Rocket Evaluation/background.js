@@ -70,6 +70,7 @@ function init()
 			}
 		}
 	}
+	//chrome.windows.create({url: "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=view&sourcedoc={9B19BDAD-29BF-4AED-8717-DC0866705CF5}", type: "popup", width: 800, height: 600});
 }
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) 

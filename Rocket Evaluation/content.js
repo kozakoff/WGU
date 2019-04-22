@@ -82,6 +82,7 @@ function processMutations(mutations)
 	{
 		var s = document.querySelector("body > app-root > main > app-evaluation-workspace > div > header > div > div > div:nth-child(1) > p:nth-child(3)").innerText;
 		chrome.runtime.sendMessage({text: s}, function(response) { console.log("Response: ", response); });
+		//chrome.windows.create({url: "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=view&sourcedoc={9B19BDAD-29BF-4AED-8717-DC0866705CF5}", type: "popup", width: 800, height: 600});
 		console.log("content_script says: " + s);
 		//break;
 	}
