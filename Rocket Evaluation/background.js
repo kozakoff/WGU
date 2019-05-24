@@ -6,6 +6,7 @@
 
 var thisTask = "";
 var gradeTexts = [];
+var thisCRD = "";
 
 function init()
 {
@@ -16,10 +17,11 @@ function init()
 	var n1 = chrome.contextMenus.create({"title": "Insert Date", "contexts": contexts, "id": "n1"});
 	
 	gradeTexts = [];
+	thisCRD = "";
 	
 	if(thisTask != "")
 	{
-		var n2,t = null;
+		var n2,t = null,crd = null;
 		
 		for(var i = 0; i < CRD.length; i++) 
 		{
@@ -34,9 +36,15 @@ function init()
 		{
 			n2 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n2"});
 			
+			if(t.crd != null) 
+			{
+				chrome.contextMenus.create({"title": "Open CRD", "contexts": ["all"], "id": "crd"});
+				thisCRD = t.crd;
+			}
+			
 			//console.log("window.width * .4 = "+(window.width * .4));
 			
-			chrome.windows.getAll(
+			/*chrome.windows.getAll(
 				{"populate" : true},
 				function (window_list) 
 				{
@@ -64,6 +72,7 @@ function init()
 					}
 				}
 			);
+			*/
 			
 			//chrome.windows.getCurrent(function(w) 
 			//{
@@ -72,10 +81,6 @@ function init()
 			//	w.height = screen.height;
 			//});
 			
-			
-			
-			//chrome.windows.create({url: "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=view&sourcedoc={9B19BDAD-29BF-4AED-8717-DC0866705CF5}", type: "popup", width: (window.width * .4), height: window.height, top: 0, right: 0});
-		
 			//chrome.windows.getCurrent(function(w) { 	}
 			
 			for(var i = 0; i < t.aspects.length; i++) 
@@ -146,6 +151,10 @@ function onClick(info, tab) {
 			if(info.menuItemId == "n1")
 			{
 				chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date())}, function(response) {});
+			}
+			else if(info.menuItemId == "crd" && thisCRD != "")
+			{
+				chrome.windows.create({url: thisCRD, type: "popup", width: (screen.availWidth*.4), height: screen.availHeight, top: 0, left: screen.availWidth-(screen.availWidth*.4)});
 			}
 			else
 			{
@@ -1388,6 +1397,7 @@ var crdAKM1Task1 =
 {
 	"name": "AKM1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "AKM1 Task 1",	//CRD name as it appears in TaskStream
+	"crd": "",
 	"aspects": [
 		{
 			"name":"A: Dataset Preparation",
@@ -1476,6 +1486,7 @@ var crdGWA2Task3 =
 {
 	"name": "GWA2 Task 3",
 	"tsname": "GWA2 Task 3",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=edit&sourcedoc={CA7E9131-F371-4223-AEBF-282B9A4A0B12}",
 	"aspects": [
 		{
 			"name":"Program Outcome 1",
@@ -1548,6 +1559,7 @@ var crdGWA2Task2 =
 {
 	"name": "GWA2 Task 2",
 	"tsname": "GWA2 Task 2",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=edit&sourcedoc={17B0DB5C-7B49-4BD1-A884-2D3E52A78312}",
 	"aspects": [
 		{
 			"name":"Program Outcome 1",
@@ -1620,6 +1632,7 @@ var crdEYP1Task1 =
 {
 	"name": "EYP1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "EYP Task 1",	//CRD name as it appears in TaskStream
+	"crd": "https://google.com",
 	"aspects": [
 		{
 			"name":"A. TOPIC APPROVAL FORM", 
