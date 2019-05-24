@@ -1632,7 +1632,7 @@ var crdEYP1Task1 =
 {
 	"name": "EYP1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "EYP Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://google.com",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=edit&sourcedoc={B024C522-E199-4A69-A29D-C5D73F26F230}",
 	"aspects": [
 		{
 			"name":"A. TOPIC APPROVAL FORM", 
