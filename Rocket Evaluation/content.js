@@ -6,13 +6,6 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse)
 {
 	console.log("Message recieved!");
 	
-	//document.activeElement.addEventListener('keyup', (event) => {
-	//	  const keyName = event.key;
-	//	  console.log('keypress event with ' + 'key: ' + keyName);
-	//});
-	
-	//document.activeElement.focus();
-	
 	if(document.activeElement.value != "")
 	{
 		document.activeElement.value = msg.text + '\n\n' + document.activeElement.value;
@@ -21,21 +14,6 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse)
 	{
 		document.activeElement.value = msg.text;
 	}
-	
-	var e = new Event("keyup");
-	e.key = "a";
-	e.keyCode = e.key.charCodeAt(0);
-	e.which = e.keyCode;
-	e.altKey = false;
-	e.ctrlKey = false;
-	e.shiftKey = false;
-	e.metaKey = false;
-	e.bubbles = true;
-	document.activeElement.dispatchEvent(e);
-	//document.activeElement.change();
-	//let input = document.getElementById("name");let keyboard = Keysim.Keyboard.US_ENGLISH;let ctrl_shift_enter = new Keysim.Keystroke(  Keysim.Keystroke.CTRL | Keysim.Keystroke.SHIFT,  13);keyboard.dispatchEventsForKeystroke(ctrl_shift_enter, input);
-	
-	//document.activeElement.blur();
 });
 
 function sleep(ms) 
