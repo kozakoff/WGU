@@ -599,6 +599,95 @@ var crdIYPTask1 =
 	]
 };
 
+var crdADETask1 = 
+{
+	"name": "ADE Task 1",
+	"tsname": "ADE Task 1",
+	"aspects": [
+		{
+			"name":"Professional Communication", 
+			"grades": [
+				{"name":"Competent","text":["The work is mechanically sound with only minor grammatical errors detected."]}
+			]
+		},
+		{
+			"name":"A: SCRAPED DATA: CRITERIA 1", 
+			"grades": [
+				{"name":"Competent","text":["The submission includes scraped data for Criteria 1 in the \"<FILENAME>\" file."]}
+			]
+		},
+		{
+			"name":"B: SCRAPED DATA: CRITERIA 2", 
+			"grades": [
+				{"name":"Competent","text":["The submission includes scraped data for Criteria 2 in the \"<FILENAME>\" file."]}
+			]
+		},
+		{
+			"name":"C: CLEANED DATA: CRITERIA 1", 
+			"grades": [
+				{"name":"Competent","text":["A table that presents the values of the Insurance, Fuel Economy, and Resale Value attributes of the four vehicle models, weighted at 5, 7, and 3 respectively, are provided in the \"<FILENAME>\" file."]}
+			]
+		},
+		{
+			"name":"D: CLEANED DATA: CRITERIA 2", 
+			"grades": [
+				{"name":"Competent","text":["A table that presents the values of the Safety Features, Maintenance Cost, and Price attributes of the four vehicle models, weighted at 10, 5, and 7 respectively, are provided in the \"<FILENAME>\" file."]}
+			]
+		},
+		{
+			"name":"E: COMBINED DATA", 
+			"grades": [
+				{"name":"Competent","text":["A table that presents the combined values for the name of the car, features being evaluated, and score for each vehicle model is provided in the \"<FILENAME>\" file."]}
+			]
+		},
+		{
+			"name":"F: VISUAL PRESENTATION: CRITERIA 1", 
+			"grades": [
+				{"name":"Competent","text":["The submission presents stacked bar, horizontal bar, and pie charts generated from Tableau to adequately visualize the attributes of the company’s criterion."]}
+			]
+		},
+		{
+			"name":"G: VISUAL PRESENTATION: CRITERIA 2", 
+			"grades": [
+				{"name":"Competent","text":["The submission presents stacked bar, horizontal bar, and pie charts generated from Tableau to adequately visualize the attributes of personal criterion."]}
+			]
+		},
+		{
+			"name":"H: DASHBOARD", 
+			"grades": [
+				{"name":"Approaching Competence","text":["The dashboard presents a stacked bar, horizontal bar, pie, and treemap charts. The purpose of the pie chart and the intent of the treemaps are unclear."]}
+			]
+		},
+		{
+			"name":"I: VEHICLE SELECTION", 
+			"grades": [
+				{"name":"Competent","text":["The work clearly recommends the purchase a 2017 Honda CR-V for the company justified by the sum of weighted values for the elements of the combined criterion."]}
+			]
+		},
+		{
+			"name":"J: STORYTELLING METHODS", 
+			"grades": [
+				{"name":"Approaching Competence","text":["The submission notes the Honda CR-V scores best on \"almost all of the six aspects.\" The explanation for how storytelling methods were used to effectively support the presentation of the recommendation is presented with limited detail. Please update the explanation of the applied storytelling methods once revised visualization elements are in place."]}
+			]
+		},
+		{
+			"name":"K: WEB SOURCES", 
+			"grades": [
+				{"name":"Competent","text":["Five web sources are included in the submission to support the scraped data in parts A1 and A2."]}
+			]
+		},
+		sourcesAspectTS,
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Not Passing","text":["The submission effectively scrapes data from the Cars and Edmunds websites and provides tables with values for the company, personal, and combined criteria, including Safety Features, Maintenance Cost, Price Point, Insurance, Fuel Economy, and Resale attributes. Adequate visualization elements for the for the dashboard are not readily evident, and the presentation of the recommendation for the purchase of a 2017 Honda CR-V for the company and the justification of the elements of effective storytelling used in the presentation are provided with limited detail. To meet standards, revisions are needed for the responses to the Dashboard and Storytelling Methods aspects."]},
+				{"name":"Passing","text":["The submission provides bar charts generated in Tableau to support the comparison of the vehicles in the categories of the company. personal, and combined criteria. Succinct explanations for how the dashboard supports the recommendation to purchase a 2017 Honda CR-V for the company and the use of elements of effective storytelling in the delivery of the recommendation are present. All sections of the work, including Visual Presentation: Criteria 1, Visual Presentation: Criteria 2, Dashboard, Vehicle Selection, and Storytelling Methods, are complete and meet standards."]}
+			]
+		}
+	]
+};
+
 var crdCIMTask1 = 
 {
 	"name": "CIM1 Task 1", 	//CRD name as it appears in EMA
@@ -2871,7 +2960,8 @@ var CRD =
 	crdDDMTask1,
 	crdDDMTask2,
 	crdDDMTask3,
-	crdAAM1Task1
+	crdAAM1Task1,
+	crdADETask1
 ];
 
 
