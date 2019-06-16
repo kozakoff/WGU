@@ -2561,6 +2561,45 @@ var crdJNPTask3 =
 	]
 };
 
+
+var crdAEE2Task3 = 
+{
+	"name": "AEE2 Task 3",
+	"tsname": "AEE2 Task 3",
+	"aspects": [
+		{
+			"name":"A: EXECUTIVE SUMMARY AND IMPLICATIONS",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":[""]}
+			]
+		},
+		{
+			"name":"B1: PRESENTATION: ORGANIZATION AND PROFESSIONALISM",
+			"grades": [
+				{"name":"Not Evident","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panopto presentation is not observed."]},
+				{"name":"Competent","text":["The submission presents professionally delivered presentation of the salient points of <SUBJECT> in a Panopto recording."]}
+			]
+		},
+		{
+			"name":"B2: PRESENTATION: CONTENT",
+			"grades": [
+				{"name":"Not Evident","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panopto presentation is not observed."]},
+				{"name":"Competent","text":["The presentation aptly discusses the problem under investigation and the analysis of <SUBJECT>."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents a link to a Panopto recordings that discuss the analysis of <SUBJECT> and outline the salient points of the project. All aspects of the work, including Presentation: Content, are presented in adequate detail and meet standards."]},
+				{"name":"Not Passing","text":["The submission includes the PowerPoint presentation, the Executive Summary, and the required waiver forms. A link to the Panoptu presentation is not observed. This area needs further development to meet task requirements."]}
+			]
+		}
+	]
+};
+
 var crdNIPTask2 = 
 {
 	"name": "NIP1 Task 2",
@@ -2961,7 +3000,8 @@ var CRD =
 	crdDDMTask2,
 	crdDDMTask3,
 	crdAAM1Task1,
-	crdADETask1
+	crdADETask1,
+	crdAEE2Task3
 ];
 
 
