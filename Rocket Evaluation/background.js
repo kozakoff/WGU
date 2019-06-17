@@ -2522,6 +2522,45 @@ var crdJNPTask2 =
 	]
 };
 
+
+var crdAEE2Task2 = 
+{
+	"name": "AEE2 Task 2",
+	"tsname": "AEE2 Task 2",
+	"aspects": [
+		{
+			"name":"A: RESEARCH QUESTION",
+			"grades": [
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["A clear summary of the hypothesis that country of origin is statistically significant in determining whether a wine rating is in the upper or lower 50% of wine ratings is presented."]}
+			]
+		},
+		{
+			"name":"B: DATA COLLECTION",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Competent","text":["The work clearly identifies the Wine Enthusiast dataset found on Kaggle.com as the data sources and outlines the data collection procedures using SAS."]}
+			]
+		},
+		{
+			"name":"C: DATA EXTRACTION AND PREPARATION",
+			"grades": [
+				{"name":"Not Evident","text":[""]},
+				{"name":"Competent","text":["The work clearly identifies the U.S. Census website as the data sources and outlines the data collection procedures."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The submission presents an analysis of the relationship between poverty and employment in the Mountain State region and provides clear directions for further research, The stages of the analytical process are overviewed with satisfactory detail and include adequate explanations of the R code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary and Implications, are complete and meet standards.",
+										  "The submission presents an analysis of the significance of wine origin and variety in review scoring that relies on Chi-Squared tests and regression methods. The stages of the analytical process are overviewed with satisfactory detail and include adequate explanations of the SAS code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary and Implications, are complete and meet standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
+
 //JNP Task 3
 var crdJNPTask3 = 
 {
@@ -3001,7 +3040,8 @@ var CRD =
 	crdDDMTask3,
 	crdAAM1Task1,
 	crdADETask1,
-	crdAEE2Task3
+	crdAEE2Task3,
+	crdAEE2Task2
 ];
 
 
