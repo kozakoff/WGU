@@ -2522,6 +2522,34 @@ var crdJNPTask2 =
 	]
 };
 
+var crdAEE2Task1 = 
+{
+	"name": "AEE2 Task 1", 	//CRD name as it appears in EMA
+	"tsname": "AEE2 Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"A. TOPIC APPROVAL FORM", 
+			"grades": [
+				{"name":"Not Evident","text":["The submission provides a summary of the proposed capstone project. A Topic Approval Form that is signed by a Course Instructor cannot be located."]},
+				{"name":"Competent","text":["The Topic Approval Form is signed by a Course Instructor."]}
+			]
+		},
+		{
+			"name":"B. CAPSTONE RELEASE FORM", 
+			"grades": [
+				{"name":"Not Evident","text":["The Capstone Release Form aspect will be assessed once a completed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["A completed and digitally signed IT Capstone Waiver/Release Form that declares that the project is not based upon and does not include Restricted Information is provided."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The Waivers, IRB Quiz and Compliance, as well as the Topic Approval form are all complete and meet standards."]},
+				{"name":"Not Passing","text":[""]}
+			]
+		}
+	]
+};
 
 var crdAEE2Task2 = 
 {
@@ -3000,6 +3028,51 @@ var crdXXXTaskX =
 	]
 };
 
+var crdKYP2Task2 = 
+{
+	"name": "KYP2 Task 2", 
+	"tsname": "KYP2 Task 2",
+	"aspects": [
+		{
+			"name":"Program Outcome 1",
+			"grades": [			
+				{"name":"Approaching","text":["Inability to store Controlled Unclassified Information (CUI) and Controlled Defense Information (CDI) is presented as the primary problem which is fitting, a concise statement is provided for analysis of systems and/or processes which describes using laptops for principal investigators and reconfiguring a fileserver to be compliant to store CDI and CUI, and, a list of project requirements is present in the work. A logical discussion with adequate details to summarize the problem, its severity, solutions to the problem, expected results, and the goal and objectives which the project will accomplish are not observed. The root cause analysis of the problem is present with limited details. The audit details, problem statement, problem causes, business impacts, cost analysis, risk analysis are not evident in the analysis of systems and processes. The functional (end-user) requirements, detailed requirements, and existing gaps which a successful project will fill are not clear in the project requirements section."]}
+			]
+		},
+		{
+			"name":"Program Outcome 2",
+			"grades": [			
+				{"name":"Approaching","text":["The submission provides concise descriptions of the information technology infrastructure to ensure confidentiality, integrity, and availability; and notes that lack of awareness of cyberlaw, regulations, and compliance is a primary factor that causes the problem. An adequate description of the deliverables associated with the design and development of the technology solution is not observed; the strategy for the implementation, phases of the rollout with a timeline in chronological order, details of the go-live, project task dependencies, deliverables, and training plan for users are not evident in the strategy for implementing the solution and anticipated outcomes from the project; a quality assurance plan, including formative and summative evaluation plans, plans for revision, the justification for test cases and scenarios, acceptance criteria are not observed; an adequate assessment of risks associated with the implementation with a discussion of the quantitative and qualitative risks and the cost/benefit relationships related to the project is not evident; and the resources assigned to each task is not evident in the project timeline."]}
+			]
+		},
+		{
+			"name":"Program Outcome 3",
+			"grades": [			
+				{"name":"Approaching","text":["The technology environments, tools, human resources, and costs needed to execute each project phase are presented in a clear list in the submission. A logical discussion with adequate details for the points listed under the Technology Environment, Cost, & Resources section is not observed."]}
+			]
+		},
+		{
+			"name":"Program Outcome 4",
+			"grades": [			
+				{"name":"Approaching","text":["An adequate description of the post-implementation systems and process analysis is provided including a diagram of the ACME SSRE Network Topology. A post-implementation risk assessment is not evident in the documentation for the developed solution."]}
+			]
+		},
+		{
+			"name":"Program Outcome 5",
+			"grades": [			
+				{"name":"Approaching","text":["The submission provides a discussion describing the compliance logs that will be created to track the research organization’s responses to NIST controls which is fitting. The description of the data that needs to be collected to support the project is present with limited details."]}
+			]
+		},
+		sourcesAspectEMA,
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Not Passing","text":["The submission presents a Cybersecurity Graduate Capstone Design and Development prospectus that thoroughly describes a security realignment project for ACME Research Group to upgrade the technology infrastructure to permit storage of Controlled Unclassified Information (CUI) and Controlled Defense Information (CDI). The submission provides a thorough description of the framework that will be used to assess the success of the technology solution and many salient points of the project. Some aspects are present with limited details. The Program Outcome 1, 2, 3, 4 and 5 aspects need further development to meet task requirements."]}
+			]
+		}
+	]
+};
+
 //Future PC comment
 //The submission is easy to read as a result of effective organization and intelligent sentence fluency. The spelling, punctuation, and grammar are sound with only a few minor errors detected. The use of headings enhances the evaluation.
 
@@ -3041,7 +3114,8 @@ var CRD =
 	crdAAM1Task1,
 	crdADETask1,
 	crdAEE2Task3,
-	crdAEE2Task2
+	crdAEE2Task2,
+	crdKYP2Task2
 ];
 
 
