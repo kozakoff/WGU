@@ -2544,7 +2544,7 @@ var crdAEE2Task1 =
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The Waivers, IRB Quiz and Compliance, as well as the Topic Approval form are all complete and meet standards."]},
+				{"name":"Passing","text":["The Topic Approval Form and Capstone Release Form are all complete and meet task requirements."]},
 				{"name":"Not Passing","text":[""]}
 			]
 		}
