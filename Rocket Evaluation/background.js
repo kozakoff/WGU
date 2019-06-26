@@ -3115,6 +3115,7 @@ var CRD =
 	crdADETask1,
 	crdAEE2Task3,
 	crdAEE2Task2,
+	crdAEE2Task1,
 	crdKYP2Task2
 ];
 
