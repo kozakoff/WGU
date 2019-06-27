@@ -2588,6 +2588,34 @@ var crdMDP1Task1 =
 	]
 };
 
+var crdKYP2Task1 = 
+{
+	"name": "KYP2 Task 1", 	//CRD name as it appears in EMA
+	"tsname": "KYP2 Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"A. Topic Approval Form", 
+			"grades": [
+				{"name":"Not Evident","text":["This aspect will be evaluated once a signed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["The submission provides a Topic Approval Form is signed by a Course Instructor and documentation that confirms the completion of the Human Subjects FAQ Quiz."]}
+			]
+		},
+		{
+			"name":"B. Capstone Release Form", 
+			"grades": [
+				{"name":"Not Evident","text":["The Capstone Release Form aspect will be evaluated once a signed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["A completed and digitally signed IT Capstone Waiver/Release Form that declares that the project is not based upon and does not include Restricted Information is provided."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The Topic Approval Form and Capstone Release Form are complete and meet task requirements."]},
+				{"name":"Not Passing","text":["The submission provides a summary of the proposed capstone project. A Topic Approval Form that is signed by a Course Instructor is not observed."]}
+			]
+		}
+	]
+};
 
 var crdAEE2Task2 = 
 {
@@ -3161,6 +3189,7 @@ var CRD =
 	crdAEE2Task2,
 	crdAEE2Task1,
 	crdKYP2Task2,
+	crdKYP2Task1,
 	crdMDP1Task1
 ];
 
