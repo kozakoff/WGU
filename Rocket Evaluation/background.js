@@ -2551,6 +2551,44 @@ var crdAEE2Task1 =
 	]
 };
 
+var crdMDP1Task1 = 
+{
+	"name": "MDP1 Task 1", 	//CRD name as it appears in EMA
+	"tsname": "MDP1 Task 1",	//CRD name as it appears in TaskStream
+	"aspects": [
+		{
+			"name":"A. Topic Approval Form", 
+			"grades": [
+				{"name":"Not Evident","text":["This aspect will be evaluated once a signed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["The Topic Approval Form is signed by a Course Instructor."]}
+			]
+		},
+		{
+			"name":"B. Capstone Release Form", 
+			"grades": [
+				{"name":"Not Evident","text":["The Capstone Release Form aspect will be evaluated once a signed Topic Approval Form is in place."]},
+				{"name":"Competent","text":["A completed and digitally signed IT Capstone Waiver/Release Form that declares that the project is not based upon and does not include Restricted Information is provided."]}
+			]
+		},
+		{
+			"name":"C. IRB Form",
+			"grades": [			
+				{"name":"Not Evident","text":["The IRB Form aspect will be evaluated once a signed Topic Approval Form is in place."]},
+				{"name":"Approaching","text":[""]},
+				{"name":"Competent","text":["The submission includes a completed IRB Form an email that aptly confirms the completion of the Human Subjects FAQ Quiz."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Passing","text":["The Topic Approval Form and Capstone Release Form are all complete and meet task requirements."]},
+				{"name":"Not Passing","text":["The submission provides a summary of the proposed capstone project. A Topic Approval Form that is signed by a Course Instructor is not observed."]}
+			]
+		}
+	]
+};
+
+
 var crdAEE2Task2 = 
 {
 	"name": "AEE2 Task 2",
@@ -2566,15 +2604,21 @@ var crdAEE2Task2 =
 		{
 			"name":"B: DATA COLLECTION",
 			"grades": [
-				{"name":"Not Evident","text":[""]},
+				{"name":"Not Evident","text":["The work clearly identifies the [DATASET] found on [DATASET_LOCATION] as the data sources. A logical discussion with adequate details to describe the advantages and disadvantages of the data-gathering methodology used and details about any challenges encountered during the process of collecting the data are not observed."]},
 				{"name":"Competent","text":["The work clearly identifies the Wine Enthusiast dataset found on Kaggle.com as the data sources and outlines the data collection procedures using SAS."]}
 			]
 		},
 		{
 			"name":"C: DATA EXTRACTION AND PREPARATION",
 			"grades": [
-				{"name":"Not Evident","text":[""]},
+				{"name":"Not Evident","text":["The work clearly identifies the required libraries and the import command used. An adequate explanation of the tools and techniques used for data extraction and data preparation, the justification for using the described tools and techniques, including any advantages or disadvantages of these when used with your data-extraction and -preparation methods, is not evident."]},
 				{"name":"Competent","text":["The work clearly identifies the U.S. Census website as the data sources and outlines the data collection procedures."]}
+			]
+		},
+		{
+			"name":"E: DATA SUMMARY AND IMPLICATIONS",
+			"grades": [
+				{"name":"Not Evident","text":["The submission provides a conclusion with summary statistics which is fitting. An adequate summary of the implications of the data analysis in the context of the research question, a recommend a course of action based on the results, and two proposed directions or approaches for future study of the data set are not evident in the work."]}
 			]
 		},
 		sourcesAspectEMA,
@@ -2583,7 +2627,7 @@ var crdAEE2Task2 =
 			"grades": [
 				{"name":"Passing","text":["The submission presents an analysis of the relationship between poverty and employment in the Mountain State region and provides clear directions for further research, The stages of the analytical process are overviewed with satisfactory detail and include adequate explanations of the R code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary and Implications, are complete and meet standards.",
 										  "The submission presents an analysis of the significance of wine origin and variety in review scoring that relies on Chi-Squared tests and regression methods. The stages of the analytical process are overviewed with satisfactory detail and include adequate explanations of the SAS code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary and Implications, are complete and meet standards."]},
-				{"name":"Not Passing","text":[""]}
+				{"name":"Not Passing","text":["The submission presents a Data Analytics Report that thoroughly describes the analysis of important factors contributing to employee attrition using Logistic Regression, Decision Tree, and Random Forest on the IBM Employee Attrition and Performance Dataset. The work provides a clear summary of the research question, intelligent analysis, and many salient points of the project. Some aspects are present with limited details. The Data Collection, Data Extraction And Preparation, and Data Summary And Implications aspects need further development to meet task requirements."]}
 			]
 		}
 	]
@@ -3116,7 +3160,8 @@ var CRD =
 	crdAEE2Task3,
 	crdAEE2Task2,
 	crdAEE2Task1,
-	crdKYP2Task2
+	crdKYP2Task2,
+	crdMDP1Task1
 ];
 
 
