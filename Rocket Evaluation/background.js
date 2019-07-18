@@ -163,7 +163,8 @@ function onClick(info, tab) {
 					if(info.menuItemId == gradeTexts[x].id)
 					{
 						console.log(dateToDDMMYYYY(new Date()) + gradeTexts[x].title);
-						chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date()) + gradeTexts[x].title}, function(response) {}); 
+						//chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date()) + gradeTexts[x].title}, function(response) {}); 
+						chrome.tabs.sendMessage(tabs[0].id, {text: gradeTexts[x].title}, function(response) {}); //No more dates as of 07/19/2019
 						break;
 					}
 				}
