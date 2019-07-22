@@ -34,54 +34,14 @@ function init()
 		
 		if(t != null)
 		{
-			n2 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n2"});
 			
 			if(t.crd != null) 
 			{
-				chrome.contextMenus.create({"title": "Open CRD", "contexts": ["all"], "id": "crd"});
+				chrome.contextMenus.create({"title": "Open CRD for "+t.name, "contexts": ["all"], "id": "crd"});
 				thisCRD = t.crd;
 			}
 			
-			//console.log("window.width * .4 = "+(window.width * .4));
-			
-			/*chrome.windows.getAll(
-				{"populate" : true},
-				function (window_list) 
-				{
-					for(var i=0; i < window_list.length; i++) 
-					{
-						var thisWin = window_list[i];
-						for(var t=0; t < thisWin.tabs.length; t++)
-						{
-							var thisTab = thisWin.tabs[t];
-							if(thisTab.title == "EMA")
-							{
-								//console.log("Before Window width: "+thisWin.width);
-								//console.log("Before Window height: "+thisWin.height);
-								//console.log("About to change window size...");
-								//thisWin.width = 800; //screen.width*.7;
-								//thisWin.height = 600; //screen.height;
-								//chrome.windows.update(thisWin.id, {width: screen.availWidth*.7, height: screen.availHeight, top: 0, left: 0}, function(){});
-								//console.log("Done changing window size.");
-								//console.log("After Window width: "+thisWin.width);
-								//console.log("After Window height: "+thisWin.height);
-								return;
-							}
-						}
-						console.log(thisWin.tabs);
-					}
-				}
-			);
-			*/
-			
-			//chrome.windows.getCurrent(function(w) 
-			//{
-			//	console.log("screen.width * .7 = "+(screen.width * .7));
-			//	w.width = screen.width*.7;
-			//	w.height = screen.height;
-			//});
-			
-			//chrome.windows.getCurrent(function(w) { 	}
+			n2 = chrome.contextMenus.create({"title": t.name + " Aspects", "contexts": contexts, "id": "n2"});
 			
 			for(var i = 0; i < t.aspects.length; i++) 
 			{
@@ -117,6 +77,93 @@ function init()
 					}
 				}
 			}
+		}
+		
+		t = sourcesAspectEMA;
+		var n3 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n3"});
+		var aspect = t.aspects[0];
+		var id = n3;
+			
+		for(var g = 0; g < aspect.grades.length; g++)
+		{
+			var grade = aspect.grades[g];
+			var gid = "g"+id+g;
+		
+			if(grade.text.length == 1)
+			{
+				var txt = grade.text[0];
+				chrome.contextMenus.create({"title": grade.name+": "+txt, "parentId": id, "contexts": contexts, "id": gid});
+				gradeTexts.push({"title": txt, "id": gid});
+			}
+			else
+			{		
+				chrome.contextMenus.create({"title": grade.name, "parentId": id, "contexts": contexts, "id": gid});
+				for(var e = 0; e < grade.text.length; e++)
+				{
+					var txt = grade.text[e];
+					var	eid = "t"+gid+e;
+					chrome.contextMenus.create({"title": txt, "parentId": gid, "contexts": contexts, "id": eid});
+					gradeTexts.push({"title": txt, "id": eid});
+				}
+			}							
+		}
+		
+		t = sourcesAspectTS;
+		var n4 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n4"});
+		var aspect = t.aspects[0];
+		var id = n4;
+			
+		for(var g = 0; g < aspect.grades.length; g++)
+		{
+			var grade = aspect.grades[g];
+			var gid = "g"+id+g;
+		
+			if(grade.text.length == 1)
+			{
+				var txt = grade.text[0];
+				chrome.contextMenus.create({"title": grade.name+": "+txt, "parentId": id, "contexts": contexts, "id": gid});
+				gradeTexts.push({"title": txt, "id": gid});
+			}
+			else
+			{		
+				chrome.contextMenus.create({"title": grade.name, "parentId": id, "contexts": contexts, "id": gid});
+				for(var e = 0; e < grade.text.length; e++)
+				{
+					var txt = grade.text[e];
+					var	eid = "t"+gid+e;
+					chrome.contextMenus.create({"title": txt, "parentId": gid, "contexts": contexts, "id": eid});
+					gradeTexts.push({"title": txt, "id": eid});
+				}
+			}							
+		}
+		
+		t = cIReferral;
+		var n5 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n5"});
+		var aspect = t.aspects[0];
+		var id = n5;
+			
+		for(var g = 0; g < aspect.grades.length; g++)
+		{
+			var grade = aspect.grades[g];
+			var gid = "g"+id+g;
+		
+			if(grade.text.length == 1)
+			{
+				var txt = grade.text[0];
+				chrome.contextMenus.create({"title": grade.name+": "+txt, "parentId": id, "contexts": contexts, "id": gid});
+				gradeTexts.push({"title": txt, "id": gid});
+			}
+			else
+			{		
+				chrome.contextMenus.create({"title": grade.name, "parentId": id, "contexts": contexts, "id": gid});
+				for(var e = 0; e < grade.text.length; e++)
+				{
+					var txt = grade.text[e];
+					var	eid = "t"+gid+e;
+					chrome.contextMenus.create({"title": txt, "parentId": gid, "contexts": contexts, "id": eid});
+					gradeTexts.push({"title": txt, "id": eid});
+				}
+			}							
 		}
 	}
 }
@@ -182,31 +229,52 @@ chrome.contextMenus.onClicked.addListener(onClick);
 
 var sourcesAspectTS = 
 {
-	"name":"Sources (TS)", 
-	"grades": [
-		{"name":"Not Evident","text":
-			[
-				"Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>.",
-				"Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>.",
-				"Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>.",
-				"Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."
-			]},
-		{"name":"Competent","text":["XX outside sources that support the work are listed in the References section of the proposal and are referred to in-text without observable departures from the APA style conventions."]}
+	"name": "Sources (TS)",
+	"tsname": "Sources (TS)",
+	"aspects": [
+		{
+			"name":"Sources (TS)", 
+			"grades": [
+				{"name":"Missing Some References","text":["Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
+				{"name":"Missing In-text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
+				{"name":"Missing Ref List for Citations","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
+				{"name":"Missing APA Formatting","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
+				{"name":"Competent","text":["XX outside sources that support the work are listed in the References section of the proposal and are referred to in-text without observable departures from the APA style conventions."]}
+			]
+		}
 	]
 };
 
 var sourcesAspectEMA = 
 {
-	"name":"Sources (EMA)", 
-	"grades": [
-		{"name":"Not Evident","text":
-			[
-				"Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321.",
-				"Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321.",
-				"Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321.",
-				"Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."
-			]},
-		{"name":"Competent","text":["XX outside sources that support the work are listed in the References section of the proposal and are referred to in-text without observable departures from the APA style conventions."]}
+	"name": "Sources (EMA)",
+	"tsname": "Sources (EMA)",
+	"aspects": [
+		{
+			"name":"Sources (EMA)", 
+			"grades": [
+				{"name":"Missing Some References","text":["Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"Missing In-text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"Missing Ref List for Citations","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"Missing APA Formatting","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"Competent","text":["XX outside sources that support the work are listed in the References section of the proposal and are referred to in-text without observable departures from the APA style conventions."]}
+			]
+		}
+	]
+};
+
+var cIReferral = 
+{
+	"name": "CI Referral",
+	"tsname": "CI Referral",
+	"aspects": [
+		{
+			"name":"CI Referral", 
+			"grades": [
+				{"name":"For Content","text":["You are encouraged to connect with your course instructor to strengthen your understanding of the content before working further on this assessment."]},
+				{"name":"For Other","text":["You are encouraged to connect with your course instructor before working further on this assessment."]}
+			]
+		}
 	]
 };
 
@@ -320,7 +388,6 @@ var crdBEMTask1 =
 				{"name":"Competent","text":["A CSV file that presents the differences between the current and the most recent data sets of population estimates for the U.S. states whose absolute values exceed 10,000 is provided."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -432,7 +499,6 @@ var crdAAM1Task1 =
 				{"name":"Competent","text":["A CSV file that presents the differences between the current and the most recent data sets of population estimates for the U.S. states whose absolute values exceed 10,000 is provided."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -454,8 +520,6 @@ var crdEWPTask1 =
 				{"name":"Competent","text":["Sound analyses of the topic familiarity, demographics, disposition, cultural background, and language attributes of the members of the three given audiences to whom the new process will be delivered are presented."]}
 			]
 		},
-		sourcesAspectTS,
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -500,8 +564,6 @@ var crdEWPTask2 =
 				{"name":"Competent","text":["A compelling description of <SOLUTION> and an explanation of its alignment with the requirements stated in the RFP are provided in the work."]}
 			]
 		},
-		sourcesAspectTS,
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -588,8 +650,6 @@ var crdIYPTask1 =
 				{"name":"Competent","text":["Five web sources are included in the submission to support the scraped data in parts A1 and A2."]}
 			]
 		},
-		sourcesAspectTS,
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -677,8 +737,6 @@ var crdADETask1 =
 				{"name":"Competent","text":["Five web sources are included in the submission to support the scraped data in parts A1 and A2."]}
 			]
 		},
-		sourcesAspectTS,
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -720,7 +778,6 @@ var crdCIMTask1 =
 				{"name":"Competent","text":["The submission provides a sound explanation of the attributes for both audiences."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -760,7 +817,6 @@ var crdCIMTask2 =
 				{"name":"Competent","text":["A compelling description of <SOLUTION> and an explanation of its alignment with the requirements stated in the RFP are provided in the work."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -854,7 +910,6 @@ var crdLQTTask3 =
 				{"name":"Competent","text":["A sample output of the gap analysis provided in Appendix A as an actual project artifact adequately supports the explanations in the narrative."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -954,7 +1009,6 @@ var crdDDMTask3 =
 				{"name":"Competent","text":["A sample output of the gap analysis provided in Appendix A as an actual project artifact adequately supports the explanations in the narrative."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -1183,7 +1237,6 @@ var crdLQTTask2 =
 				{"name":"Competent","text":["The significance of the project to the county and NIST, PCI DSS, and other standards, are discussed in the concluding section of the prospectus."]}
 			]
 		},
-		sourcesAspectEMA, 	//both for CRDs that are in both systems.
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -1407,7 +1460,6 @@ var crdDDMTask2 =
 				{"name":"Competent","text":["The significance of the project to the county and NIST, PCI DSS, and other standards, are discussed in the concluding section of the prospectus."]}
 			]
 		},
-		sourcesAspectEMA, 	//both for CRDs that are in both systems.
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -1472,7 +1524,6 @@ var crdLQTTask4 =
 				{"name":"Competent","text":["A clear copy of a XX-slide PowerPoint presentation is presented."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -1561,7 +1612,6 @@ var crdAKM1Task1 =
 				{"name":"Competent","text":["Succinct summaries of precautions to be exercised to safeguard the sensitive data, including XXX, are present."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -1634,7 +1684,6 @@ var crdGWA2Task3 =
 				{"name":"Competent","text":[""]}
 			]
 		},
-		sourcesAspectEMA, 	//both for CRDs that are in both systems.
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -1707,7 +1756,6 @@ var crdGWA2Task2 =
 				{"name":"Competent","text":["Adequate summaries of the infrastructure problem under investigation and the proposed technology solution are provided."]}
 			]
 		},
-		sourcesAspectEMA, 	//both for CRDs that are in both systems.
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -1887,8 +1935,6 @@ var crdEYP1Task2 =
 				{"name":"Competent","text":[""]}
 			]
 		},
-		sourcesAspectTS,   
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2001,8 +2047,6 @@ var crdEYP1Task3 =
 				{"name":"Competent","text":[""]}
 			]
 		},
-		sourcesAspectTS,   
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2156,8 +2200,6 @@ var crdDDT1Task2 =
 				{"name":"HIGHLY COMPETENT","text":["A complete timeline with milestones and start/end dates is provided."]}
 			]
 		},
-		sourcesAspectTS,   
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2331,8 +2373,6 @@ var crdENT1Task2 =
 				{"name":"HIGHLY COMPETENT","text":[""]}
 			]
 		},
-		sourcesAspectTS,   
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2473,7 +2513,6 @@ var crdIXPTask1 =
 				{"name":"Competent","text":[""]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2511,7 +2550,6 @@ var crdJNPTask2 =
 				{"name":"Competent","text":["The work clearly identifies the U.S. Census website as the data sources and outlines the data collection procedures."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2650,7 +2688,6 @@ var crdAEE2Task2 =
 				{"name":"Not Evident","text":["The submission provides a conclusion with summary statistics which is fitting. An adequate summary of the implications of the data analysis in the context of the research question, a recommend a course of action based on the results, and two proposed directions or approaches for future study of the data set are not evident in the work."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2690,7 +2727,6 @@ var crdJNPTask3 =
 				{"name":"Competent","text":["The presentation aptly discusses the problem under investigation and the analysis of <SUBJECT>."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2729,7 +2765,6 @@ var crdAEE2Task3 =
 				{"name":"Competent","text":["The presentation aptly discusses the problem under investigation and the analysis of <SUBJECT>."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2817,7 +2852,6 @@ var crdNIPTask2 =
 				{"name":"Competent","text":["The submission aptly provides links to Panopto recordings which summarize the disaster recovery problem and environment and, the robot's goals, architecture, capabilities, and benefits."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2897,7 +2931,6 @@ var crdNIPTask1 =
 				{"name":"Competent","text":["The submission aptly provides links to Panopto recordings which summarize the disaster recovery problem and environment and, the robot's goals, architecture, capabilities, and benefits. Presentation link: "]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2938,7 +2971,6 @@ var crdGWA2Task1 =
 				{"name":"Competent","text":["The submission includes an email that aptly confirms the completion of the Human Subjects FAQ Quiz."]}
 			]
 		},
-		sourcesAspectEMA, 	//both for CRDs that are in both systems.
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -2953,6 +2985,7 @@ var crdDDMTask1 =
 {
 	"name": "DDM Task 1",
 	"tsname": "DDM Task 1",	//CRD name as it appears in TaskStream
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/_layouts/15/Doc.aspx?OR=teams&action=edit&sourcedoc={0674F64D-CBF3-465D-8FF3-E3B77AFF8C58}",
 	"aspects": [
 		{
 			"name":"Timeline Form",
@@ -3018,7 +3051,6 @@ var crdNHPTask1 =
 				{"name":"Not Evident","text":["The two Python files are clearly present. The identity initial comment is not found."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -3089,8 +3121,6 @@ var crdXXXTaskX =
 		//The sources aspects are define elsewhere and reused in multiple locations. Its worth it to mention this could be done 
 		//with other aspects, like PC, that are shared with multiple CRDs as well. There is a placeholder object for PC above, pcAspect,
 		//it just needs to be fleshed out. 
-		sourcesAspectTS,	//Usually use either EMA or TS, but, it's okay to use   
-		sourcesAspectEMA, 	//both for CRDs that are in both systems.
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -3136,7 +3166,6 @@ var crdKYP2Task2 =
 				{"name":"Approaching","text":["The submission provides a discussion describing the compliance logs that will be created to track the research organization’s responses to NIST controls which is fitting. The description of the data that needs to be collected to support the project is present with limited details."]}
 			]
 		},
-		sourcesAspectEMA,
 		{
 			"name":"Overall Comment",
 			"grades": [
@@ -3191,7 +3220,10 @@ var CRD =
 	crdAEE2Task1,
 	crdKYP2Task2,
 	crdKYP2Task1,
-	crdMDP1Task1
+	crdMDP1Task1,
+	sourcesAspectTS,
+	sourcesAspectEMA,
+	cIReferral
 ];
 
 
