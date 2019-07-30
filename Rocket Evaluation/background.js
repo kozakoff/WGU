@@ -201,7 +201,8 @@ function onClick(info, tab) {
 			}
 			else if(info.menuItemId == "crd" && thisCRD != "")
 			{
-				chrome.windows.create({url: thisCRD, type: "popup", width: (screen.availWidth*.4), height: screen.availHeight, top: 0, left: screen.availWidth-(screen.availWidth*.4)});
+				//chrome.windows.create({url: thisCRD, type: "popup", width: (screen.availWidth*.4), height: screen.availHeight, top: 0, left: screen.availWidth-(screen.availWidth*.4)});
+				chrome.windows.create({url: thisCRD, type: "normal", width: (screen.availWidth*.5), height: screen.availHeight, top: 0, left: 0});
 			}
 			else
 			{
@@ -3135,6 +3136,7 @@ var crdKYP2Task2 =
 {
 	"name": "KYP2 Task 2", 
 	"tsname": "KYP2 Task 2",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C796%20Cybersecurity%20Graduate%20Capstone%20(KYP2)",
 	"aspects": [
 		{
 			"name":"Program Outcome 1",
