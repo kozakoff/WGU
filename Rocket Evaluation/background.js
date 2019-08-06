@@ -11,7 +11,7 @@ var thisCRD = "";
 function init()
 {
 	// Create one test item for each context type.
-	console.log("background_script chrome.runtime.onStartup happened");
+	//console.log("background_script chrome.runtime.onStartup happened");
 	
 	var contexts = ["editable"];
 	var n1 = chrome.contextMenus.create({"title": "Insert Date", "contexts": contexts, "id": "n1"});
@@ -166,18 +166,21 @@ function init()
 			}							
 		}
 	}
+	
+	var cc = chrome.contextMenus.create({"title": "Clear Browser Cache", "contexts": ["all"], "id": "cc"});
 }
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) 
 {
-	console.log("background_script says: " + request.text);
+	console.log("background_script heard: " + request.text);
 	
 	if(thisTask != request.text)
 	{
 		thisTask = request.text;
 		chrome.contextMenus.removeAll(init);
 	}
-    sendResponse("Thanks! "+request.text);
+    //sendResponse({"response":"Thanks! "+request.text});
+    return true;
 });
 
 // Get the date formatted like "MM/DD/YYYY:"
@@ -194,15 +197,43 @@ function onClick(info, tab) {
 	console.log('info: ' + JSON.stringify(info));
 	chrome.tabs.query({currentWindow: true, active: true}, 
 		function(tabs){ 
-			console.log('tabs: ' + JSON.stringify(tabs));
+			//console.log('tabs: ' + JSON.stringify(tabs));
 			if(info.menuItemId == "n1")
 			{
-				chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date())}, function(response) {});
+				chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date())});
 			}
 			else if(info.menuItemId == "crd" && thisCRD != "")
 			{
 				//chrome.windows.create({url: thisCRD, type: "popup", width: (screen.availWidth*.4), height: screen.availHeight, top: 0, left: screen.availWidth-(screen.availWidth*.4)});
 				chrome.windows.create({url: thisCRD, type: "normal", width: (screen.availWidth*.5), height: screen.availHeight, top: 0, left: 0});
+			}
+			else if(info.menuItemId == "cc") //Clear the browser cache
+			{
+				chrome.tabs.sendMessage(tabs[0].id, {cc: true});//, function(response) {}
+				chrome.browsingData.remove( {
+                    "since": 0,
+                    "originTypes": { "unprotectedWeb": true },
+                    "origins": ["https://ema.wgu.edu"] 
+                },
+                {
+                    "appcache": true,
+                    "cache": true,
+                    "cacheStorage": true,
+                    "cookies": false,
+                    "downloads": false,
+                    "fileSystems": false,
+                    "formData": false,
+                    "history": false,
+                    "indexedDB": false,
+                    "localStorage": false,
+                    "pluginData": false,
+                    "passwords": false,
+                    "serviceWorkers": false,
+                    "webSQL": false
+                  },
+                  function () {
+                	  chrome.tabs.reload({ "bypassCache": true })
+                	  console.log("Finished clearing cache!"); } );
 			}
 			else
 			{
@@ -210,9 +241,9 @@ function onClick(info, tab) {
 				{
 					if(info.menuItemId == gradeTexts[x].id)
 					{
-						console.log(dateToDDMMYYYY(new Date()) + gradeTexts[x].title);
+						//console.log(dateToDDMMYYYY(new Date()) + gradeTexts[x].title);
 						//chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date()) + gradeTexts[x].title}, function(response) {}); 
-						chrome.tabs.sendMessage(tabs[0].id, {text: gradeTexts[x].title}, function(response) {}); //No more dates as of 07/19/2019
+						chrome.tabs.sendMessage(tabs[0].id, {text: gradeTexts[x].title}); //No more dates as of 07/19/2019
 						break;
 					}
 				}
