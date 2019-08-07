@@ -244,6 +244,7 @@ function onClick(info, tab) {
 						//console.log(dateToDDMMYYYY(new Date()) + gradeTexts[x].title);
 						//chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date()) + gradeTexts[x].title}, function(response) {}); 
 						chrome.tabs.sendMessage(tabs[0].id, {text: gradeTexts[x].title}); //No more dates as of 07/19/2019
+						//chrome.tabs.executeScript({code:'document.activeElement.value = "' + gradeTexts[x].title + '"; var event = new Event(\'compositionend\', { \'bubbles\': false, \'composed\': false }); document.activeElement.dispatchEvent(event);'});
 						break;
 					}
 				}

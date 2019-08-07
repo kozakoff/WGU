@@ -4,18 +4,22 @@
 
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) 
 {
-	console.log("content_script heard: " + msg.text);
+	//console.log("content_script heard: " + msg.text);
 	
 	if(msg.text != null)
 	{
-		if(document.activeElement.value != "")
+		var element = document.activeElement;
+		if(element.value != "")
 		{
-			document.activeElement.value = msg.text + '\n\n' + document.activeElement.value;
+			element.value = msg.text + '\n\n' + document.activeElement.value;
 		}
 		else
 		{
-			document.activeElement.value = msg.text;
+			element.value = msg.text;
 		}
+		
+		var event = new Event('compositionend', { 'bubbles': false, 'composed': false }); 
+		element.dispatchEvent(event);
 	}
 	else if(msg.cc != null)
 	{
