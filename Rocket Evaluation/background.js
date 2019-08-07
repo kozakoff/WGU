@@ -167,7 +167,7 @@ function init()
 		}
 	}
 	
-	var cc = chrome.contextMenus.create({"title": "Clear Browser Cache", "contexts": ["all"], "id": "cc"});
+	var cc = chrome.contextMenus.create({"title": "Clear Cache and Reload", "contexts": ["all"], "id": "cc"});
 }
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) 
@@ -1250,7 +1250,7 @@ var crdLQTTask2 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["Succinct explanations of the significance of te3h business drivers are presented."]}
+				{"name":"Competent","text":["Succinct explanations of the significance of the business drivers are presented."]}
 			]
 		},
 		{
