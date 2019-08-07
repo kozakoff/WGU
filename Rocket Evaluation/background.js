@@ -37,7 +37,7 @@ function init()
 			
 			if(t.crd != null) 
 			{
-				chrome.contextMenus.create({"title": "Open CRD for "+t.name, "contexts": ["all"], "id": "crd"});
+				chrome.contextMenus.create({"title": "Open CRD folder for "+t.name, "contexts": ["all"], "id": "crd"});
 				thisCRD = t.crd;
 			}
 			
