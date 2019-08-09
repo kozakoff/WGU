@@ -24,8 +24,13 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse)
 	else if(msg.cc != null)
 	{
 		var elem = document.createElement('div');
-		elem.style.cssText = 'position:fixed; text-align:center; padding-top:150px; padding-right:0px; padding-left:0px; padding-bottom:0px; margin:0; top:0; left:0; width: 100%; height: 100%; background:rgba(255,255,255,0.7);';
-		elem.textContent = 'Clearing browser cache...';
+		var img = document.createElement('img');
+		var p = document.createElement('p');
+		elem.style.cssText = 'position:fixed; text-align:center; padding-top:150px; padding-right:0px; padding-left:0px; padding-bottom:0px; margin:0; top:0; left:0; width: 100%; height: 100%; background:rgba(255,255,255,0.85); font-weight: 900;';
+		elem.textContent = 'Clearing browser cache and reloading site...';
+		img.src = chrome.extension.getURL('images/spinner.gif');
+		elem.appendChild(p);
+		elem.appendChild(img);
 		document.body.appendChild(elem);
 	}
 	return true;

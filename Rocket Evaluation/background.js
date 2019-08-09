@@ -218,7 +218,7 @@ function onClick(info, tab) {
                 {
                     "appcache": true,
                     "cache": true,
-                    "cacheStorage": true,
+                    "cacheStorage": false,
                     "cookies": false,
                     "downloads": false,
                     "fileSystems": false,

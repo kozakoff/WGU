@@ -1,7 +1,7 @@
 {
   "name": "Rocket Evaluation",
   "short_name": "Rocket Eval",
-  "version": "1.6",
+  "version": "1.7",
   "description": "Adds evaluation templates to the context menu in Chrome for EMA and TaskStream.",
   "permissions": ["activeTab","declarativeContent","storage","contextMenus","tabs","browsingData"],
   "background": {
@@ -28,5 +28,6 @@
       "64": "images/speed64.png",
       "128": "images/speed128.png"
     },
+  "web_accessible_resources":["images/spinner.gif"],
   "manifest_version": 2
 }
