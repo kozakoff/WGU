@@ -7,6 +7,7 @@
 var thisTask = "";
 var gradeTexts = [];
 var thisCRD = "";
+ 
 
 function init()
 {
