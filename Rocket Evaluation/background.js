@@ -8,7 +8,6 @@ var thisTask = "";
 var gradeTexts = [];
 var thisCRD = "";
  
-
 function init()
 {
 	// Create one test item for each context type.
