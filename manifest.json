@@ -1,0 +1,46 @@
+{
+  "author": "A",
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ema.wgu.edu/*",
+        "https://staffdev.taskstream.com/*"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "description": "Adds evaluation templates to the context menu in Chrome for EMA and TaskStream.",
+  "icons": {
+    "16": "images/speed16.png",
+    "32": "images/speed32.png",
+    "64": "images/speed64.png",
+    "128": "images/speed128.png"
+  },
+  "manifest_version": 2,
+  "-ms-preload": {
+    "backgroundScript": "backgroundScriptsAPIBridge.js",
+    "contentScript": "contentScriptsAPIBridge.js"
+  },
+  "name": "Rocket Evaluation",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "contextMenus",
+    "tabs",
+    "browsingData"
+  ],
+  "short_name": "Rocket Eval",
+  "version": "1.7",
+  "web_accessible_resources": [
+    "images/spinner.gif"
+  ]
+}

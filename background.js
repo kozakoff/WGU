@@ -7,7 +7,7 @@
 var thisTask = "";
 var gradeTexts = [];
 var thisCRD = "";
- 
+
 function init()
 {
 	// Create one test item for each context type.
@@ -165,6 +165,35 @@ function init()
 				}
 			}							
 		}
+		
+		t = pcAspect;
+		var n6 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n6"});
+		var aspect = t.aspects[0];
+		var id = n6;
+			
+		for(var g = 0; g < aspect.grades.length; g++)
+		{
+			var grade = aspect.grades[g];
+			var gid = "g"+id+g;
+		
+			if(grade.text.length == 1)
+			{
+				var txt = grade.text[0];
+				chrome.contextMenus.create({"title": grade.name+": "+txt, "parentId": id, "contexts": contexts, "id": gid});
+				gradeTexts.push({"title": txt, "id": gid});
+			}
+			else
+			{		
+				chrome.contextMenus.create({"title": grade.name, "parentId": id, "contexts": contexts, "id": gid});
+				for(var e = 0; e < grade.text.length; e++)
+				{
+					var txt = grade.text[e];
+					var	eid = "t"+gid+e;
+					chrome.contextMenus.create({"title": txt, "parentId": gid, "contexts": contexts, "id": eid});
+					gradeTexts.push({"title": txt, "id": eid});
+				}
+			}
+		}		
 	}
 	
 	var cc = chrome.contextMenus.create({"title": "Clear Cache and Reload", "contexts": ["all"], "id": "cc"});
@@ -268,10 +297,10 @@ var sourcesAspectTS =
 		{
 			"name":"Sources (TS)", 
 			"grades": [
-				{"name":"Missing Some References","text":["Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGUâ€™s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
-				{"name":"Missing In-text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGUâ€™s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
-				{"name":"Missing Ref List for Citations","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGUâ€™s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
-				{"name":"Missing APA Formatting","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGUâ€™s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
+				{"name":"Missing Some References","text":["Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
+				{"name":"Missing In-text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
+				{"name":"Missing Ref List for Citations","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
+				{"name":"Missing APA Formatting","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
 				{"name":"Competent","text":["XX outside sources that support the work are listed in the References section of the proposal and are referred to in-text without observable departures from the APA style conventions."]}
 			]
 		}
@@ -286,10 +315,10 @@ var sourcesAspectEMA =
 		{
 			"name":"Sources (EMA)", 
 			"grades": [
-				{"name":"Missing Some References","text":["Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please visit WGUâ€™s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
-				{"name":"Missing In-text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please visit WGUâ€™s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
-				{"name":"Missing Ref List for Citations","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please visit WGUâ€™s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
-				{"name":"Missing APA Formatting","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please visit WGUâ€™s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"Missing Some References","text":["Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"Missing In-text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please visit WGU's Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"Missing Ref List for Citations","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"Missing APA Formatting","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
 				{"name":"Competent","text":["XX outside sources that support the work are listed in the References section of the proposal and are referred to in-text without observable departures from the APA style conventions."]}
 			]
 		}
@@ -305,22 +334,30 @@ var cIReferral =
 			"name":"CI Referral", 
 			"grades": [
 				{"name":"For Content","text":["You are encouraged to connect with your course instructor to strengthen your understanding of the content before working further on this assessment."]},
-				{"name":"For Other","text":["You are encouraged to connect with your course instructor before working further on this assessment."]}
-			]
+				{"name":"For Other","text":["You are encouraged to connect with your course instructor before working further on this assessment."]},
+				{"name":"Deferral","text":["The [ASPECT NAME] aspect will be assessed once [REQUIREMENT] is in place."]},
+				{"name":"Professional Communication","text":["Not Released Pending Second Review by Professional Communication Support Team"]},
+				{"name":"Document Formatting","text":["The submission is being returned without evaluation because the required Third Party form(s) were not located as a separate attachment. The evaluation cannot be completed without the appropriate Third Party form(s) submitted as separate attachments. Please resubmit your task along with the appropriate Third Party form(s). If this submission was made in the first 45 days of your first term, please be aware that the submission will not count toward your term start critical actions. Your Course Instructor can help you prepare for your next submission."]}
+			]	
 		}
 	]
 };
 
 var pcAspect = 
 {
-	"name":"Professional Communication", 
-	"grades": [
-		{"name":"Competent","text":[
-									"The work is mechanically sound with no major errors detected.",
-									"The submission is easy to read as a result of effective organization and intelligent sentence fluency. The spelling, punctuation, and grammar are sound with no major errors detected. The use of headings enhances the evaluation."
-								   ]
+	"name": "Professional Communication",
+	"tsname": "Professional Communication",
+	"aspects": [
+		{
+			"name":"Professional Communication", 
+			"grades": [
+				{"name":"Competent","text":["The work is mechanically sound with no major errors detected."]},
+				{"name":"Deferral","text":["The Professional Communication aspect will be assessed once the required revisions to the work are in place."]},
+				{"name":"PC Referral","text":["Not Released Pending Second Review by Professional Communication Support Team"]}
+			]
 		}
 	]
+	
 };
 
 var crdBEMTask1 = 
@@ -398,7 +435,7 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A succinct explanation of the use of the [BeautifulSoup OR requests OR other relevant library] in supporting the extractions of the web links from the HTML code of the Current Estimates web page is provided.  "]}
 			]
 		},
 		{
@@ -406,7 +443,7 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":["The extraction of web links from the Current Estimates web page is discussed in Section B. The output file includes only links from the census.gov domain. Please update the explanation once a revised Python script is in place."]},
-				{"name":"Competent","text":["The submission provides a discussion of the criteria for identifying a HTML pages, including the code and details on how it functions."]}
+				{"name":"Competent","text":["The criteria used to identify the web links to other HTML pages from the given code is adequately explained."]}
 			]
 		},
 		{
@@ -414,7 +451,7 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The work provides an adequately detailed explanation of the Python code used to convert the relative web links to an absolute format."]}
 			]
 		},
 		{
@@ -422,7 +459,7 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":["A discussion of the script's deduplication efforts is presented in the work. Multiple links from domains other than census.gov cannot be located in the output file. This aspect will be assessed once a revised Python script is in place."]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":["The submission removes duplicate links from the output file, providing a discussion of how the identified code segment functions."]}
+				{"name":"Competent","text":["A succinct explanation of the use of a [Python set() OR other detail] in support of the scraper's deduplication actions is presented."]}
 			]
 		},
 		{
@@ -430,7 +467,7 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":["The Python script c742_scraper_mdd.py that extracts web links from the HTML code of the Current Estimates web site executes without readily observable warnings or errors. The script extracts a limited subset of web links to other HTML pages from the code of the Current Estimates web page."]},
-				{"name":"Competent","text":["The submission provides functioning Python code that identifies all web links on the census.gov site."]}
+				{"name":"Competent","text":["A functioning Python scraper that extracts [HOW MANY] unique and absolute web links to HTML pages is provided."]}
 			]
 		},
 		{
@@ -438,7 +475,7 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A clear copy of the HTML code of the U.S. Census’ Current Estimates web page is provided [in a separate document]."]}
 			]
 		},
 		{
@@ -454,15 +491,31 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":["The Python: Screenshot of Results aspect will be assessed once a revised Python scraper is in place."]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":["The submission provides a screenshot of the functioning Python program."]}
+				{"name":"Competent","text":["[HOW MANY] clear screenshot[s] that evidence the completion of the Python program without readily observable run-time errors or warnings are provided."]}
 			]
 		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Not Passing","text":["The submission presents effective SQL statements that identify the differences between the current and the most recent vintage data sets of population estimates for the U.S. states and R code that builds a suitable linear regression model of the population dynamics for the State of Illinois used to estimate its population in the year 2020. The Python scraper outputs unique and absolute web links from the census.gov domain only. A revised Python program that outputs all the web links from the HTML code of the Current Estimates web page that point out to other HTML pages is needed to meet standards."]},
+				{"name":"Passing","text":["The submission provides a functioning Python scraper that extracts [HOW MANY] unique web links to HTML pages from the code of the Current Estimates web page and presents them in a CSV file in an absolute format. All sections of the work, including CSV File, are complete and meet standards."]}
+			]
+		}
+	]
+};
+
+var crdBOM1Task1 = 
+{
+	"name": "BOM1 Task 1: Estimating Population Size",
+	"tsname": "BOM1 Task 1",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:w:/s/GoransPlayground/EaK_aht_4dFFjRwrWpY7zhgB6P_UtKktQ5gYF1deFZMggw?e=WikStP",
+	"aspects": [	
 		{
 			"name":"I. R: Linear Regression Analysis",
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":["An estimate for the population size of the State of XX for the year 2020 of XX that is generated by an appropriate application of R code is provided."]}
+				{"name":"Competent","text":["The work constructs a fitting model of the population dynamics of the State of [WHICH STATE] using R's lm() function."]}
 			]
 		},
 		{
@@ -470,7 +523,7 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A reasonable explanation of the data preparation process, including dimensional reduction and the loading of the data is presented."]}
 			]
 		},
 		{
@@ -478,7 +531,7 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The statistical description of the variable [NAME OF VARIABLE] that models the population dynamics of the State of [WHICH STATE] is tabulated as a result of an appropriate application of R's summary() method."]}
 			]
 		},
 		{
@@ -486,19 +539,18 @@ var crdAAM1Task1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching Competence","text":[""]},
-				{"name":"Competent","text":["A CSV file that presents the differences between the current and the most recent data sets of population estimates for the U.S. states whose absolute values exceed 10,000 is provided."]}
+				{"name":"Competent","text":["Using the [predict function OR other detail], the work predicts a population size of [PREDICTED POPULATION SIZE] for the State of [WHICH STATE] for the year [WHICH YEAR, e.g. 2023]."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Not Passing","text":["The submission presents effective SQL statements that identify the differences between the current and the most recent vintage data sets of population estimates for the U.S. states and R code that builds a suitable linear regression model of the population dynamics for the State of Illinois used to estimate its population in the year 2020. The Python scraper outputs unique and absolute web links from the census.gov domain only. A revised Python program that outputs all the web links from the HTML code of the Current Estimates web page that point out to other HTML pages is needed to meet standards."]},
-				{"name":"Passing","text":["The submission provides a fully functioning suite of tools to extract population data, using Python, SQL, and R. All aspects of the work meet task requirements and standards."]}
+				{"name":"Not Passing","text":[""]},
+				{"name":"Passing","text":["The submission provides a functioning R script that constructs a fitting linear regression model of the population dynamics of the State of [WHICH STATE] used to predict its population size for the year [WHICH YEAR].  All sections of the work, including Statistical Description, are complete and meet standards."]}
 			]
 		}
 	]
 };
-
 var crdEWPTask1 = 
 {
 	"name": "EWP1 Task 1",
@@ -610,7 +662,7 @@ var crdIYPTask1 =
 		{
 			"name":"F: VISUAL PRESENTATION: CRITERIA 1", 
 			"grades": [
-				{"name":"Competent","text":["The submission presents stacked bar, horizontal bar, and pie charts generated from Tableau to adequately visualize the attributes of the companyâ€™s criterion."]}
+				{"name":"Competent","text":["The submission presents stacked bar, horizontal bar, and pie charts generated from Tableau to adequately visualize the attributes of the company’s criterion."]}
 			]
 		},
 		{
@@ -622,18 +674,20 @@ var crdIYPTask1 =
 		{
 			"name":"H: DASHBOARD", 
 			"grades": [
+				{"name":"Competent","text":["The dashboard presents a stacked bar and ring charts, a scatterplot, and a heatmap to effectively support the comparison of the six aspects of the two criteria."]},
 				{"name":"Approaching Competence","text":["The dashboard presents a stacked bar, horizontal bar, pie, and treemap charts. The purpose of the pie chart and the intent of the treemaps are unclear."]}
 			]
 		},
 		{
 			"name":"I: VEHICLE SELECTION", 
 			"grades": [
-				{"name":"Competent","text":["The work clearly recommends the purchase a 2017 Honda CR-V for the company justified by the sum of weighted values for the elements of the combined criterion."]}
+				{"name":"Competent","text":["The work clearly recommends the purchase a 2019 [Honda CR-V, Toyota RAV-4, Hyundai Santa Fe] for the company justified by the sum of weighted values for the elements of the combined criterion."]}
 			]
 		},
 		{
 			"name":"J: STORYTELLING METHODS", 
 			"grades": [
+				{"name":"Competent","text":["The submission provides a detailed explanation of how the chosen visualizations support the selection of a [VEHICLE] and appropriately represents the elements of effective storytelling."]},
 				{"name":"Approaching Competence","text":["The submission notes the Honda CR-V scores best on \"almost all of the six aspects.\" The explanation for how storytelling methods were used to effectively support the presentation of the recommendation is presented with limited detail. Please update the explanation of the applied storytelling methods once revised visualization elements are in place."]}
 			]
 		},
@@ -646,14 +700,14 @@ var crdIYPTask1 =
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Not Passing","text":["The submission effectively scrapes data from the Cars and Edmunds websites and provides tables with values for the company, personal, and combined criteria, including Safety Features, Maintenance Cost, Price Point, Insurance, Fuel Economy, and Resale attributes. Adequate visualization elements for the for the dashboard are not readily evident, and the presentation of the recommendation for the purchase of a 2017 Honda CR-V for the company and the justification of the elements of effective storytelling used in the presentation are provided with limited detail. To meet standards, revisions are needed for the responses to the Dashboard and Storytelling Methods aspects."]},
+				{"name":"Not Passing","text":["The submission effectively scrapes data from the Cars and Edmunds websites and provides tables with values for the company, personal, and combined criteria, including Safety Features, Maintenance Cost, Price Point, Insurance, Fuel Economy, and Resale attributes. Adequate visualization elements for the for the dashboard are not readily evident, and the presentation of the recommendation for the purchase of a 2019 Honda CR-V for the company and the justification of the elements of effective storytelling used in the presentation are provided with limited detail. To meet standards, revisions are needed for the responses to the Dashboard and Storytelling Methods aspects."]},
 				{"name":"Passing","text":["The submission provides bar charts generated in Tableau to support the comparison of the vehicles in the categories of the company. personal, and combined criteria. Succinct explanations for how the dashboard supports the recommendation to purchase a 2017 Honda CR-V for the company and the use of elements of effective storytelling in the delivery of the recommendation are present. All sections of the work, including Visual Presentation: Criteria 1, Visual Presentation: Criteria 2, Dashboard, Vehicle Selection, and Storytelling Methods, are complete and meet standards."]}
 			]
 		}
 	]
 };
 
-var crdADETask1 = 
+var crdADE2Task1 = 
 {
 	"name": "ADE Task 1",
 	"tsname": "ADE Task 1",
@@ -662,7 +716,7 @@ var crdADETask1 =
 		{
 			"name":"Professional Communication", 
 			"grades": [
-				{"name":"Competent","text":["The work is mechanically sound with only minor grammatical errors detected."]}
+				{"name":"Competent","text":["The work is mechanically sound and free of major errors."]}
 			]
 		},
 		{
@@ -680,13 +734,13 @@ var crdADETask1 =
 		{
 			"name":"C: CLEANED DATA: CRITERIA 1", 
 			"grades": [
-				{"name":"Competent","text":["A table that presents the values of the Insurance, Fuel Economy, and Resale Value attributes of the four vehicle models, weighted at 5, 7, and 3 respectively, are provided in the \"<FILENAME>\" file."]}
+				{"name":"Competent","text":["A table that presents the values of the Safety Features, Maintenance Cost, and Price Point attributes of the four vehicle models, weighted at 10, 5, and 7 respectively, are provided."]}
 			]
 		},
 		{
 			"name":"D: CLEANED DATA: CRITERIA 2", 
 			"grades": [
-				{"name":"Competent","text":["A table that presents the values of the Safety Features, Maintenance Cost, and Price attributes of the four vehicle models, weighted at 10, 5, and 7 respectively, are provided in the \"<FILENAME>\" file."]}
+				{"name":"Competent","text":["An appropriately configured dataset that presents the values of the Insurance, Fuel Economy, and Resale Value attributes of the four vehicle models that the personal criteria respectively weights by [WEIGHTS, e.g. 7, 5, and 10] is provided."]}
 			]
 		},
 		{
@@ -698,7 +752,7 @@ var crdADETask1 =
 		{
 			"name":"F: VISUAL PRESENTATION: CRITERIA 1", 
 			"grades": [
-				{"name":"Competent","text":["The submission presents stacked bar, horizontal bar, and pie charts generated from Tableau to adequately visualize the attributes of the companyâ€™s criterion."]}
+				{"name":"Competent","text":["['A horizontal and a vertical bar chart and a heat map'] effectively support the comparison of the vehicle models against the elements of the company criteria. "]}
 			]
 		},
 		{
@@ -710,37 +764,158 @@ var crdADETask1 =
 		{
 			"name":"H: DASHBOARD", 
 			"grades": [
+				{"name":"Competent","text":["The dashboard presents side-by-side and stand-alone vertical and horizontal bar charts and a heatmap that effectively support the comparison of the selected vehicles against the six aspects of the personal and company criteria."]}, 
 				{"name":"Approaching Competence","text":["The dashboard presents a stacked bar, horizontal bar, pie, and treemap charts. The purpose of the pie chart and the intent of the treemaps are unclear."]}
 			]
 		},
 		{
 			"name":"I: VEHICLE SELECTION", 
 			"grades": [
-				{"name":"Competent","text":["The work clearly recommends the purchase a 2017 Honda CR-V for the company justified by the sum of weighted values for the elements of the combined criterion."]}
+				{"name":"Competent","text":["A sound justification for the recommendation to purchase a [2019 Honda CRV] for the organization is provided."]}
 			]
 		},
 		{
 			"name":"J: STORYTELLING METHODS", 
 			"grades": [
+				{"name":"Competent","text":["The submission provides a detailed explanation of how the chosen visualizations support the selection of a [VEHICLE] and appropriately represents the elements of effective storytelling."]},
 				{"name":"Approaching Competence","text":["The submission notes the Honda CR-V scores best on \"almost all of the six aspects.\" The explanation for how storytelling methods were used to effectively support the presentation of the recommendation is presented with limited detail. Please update the explanation of the applied storytelling methods once revised visualization elements are in place."]}
 			]
 		},
 		{
 			"name":"K: WEB SOURCES", 
 			"grades": [
-				{"name":"Competent","text":["Five web sources are included in the submission to support the scraped data in parts A1 and A2."]}
+				{"name":"Competent","text":["The submission clearly indicates that data from [LIST WEBSITES, e.g. Edmunds, Kelley Blue Book, etc.] have been scraped to support the analysis of the features of the four given vehicle models."]}
+			]
+		},
+		{
+			"name":"Overall Comment",
+			"grades": [
+				{"name":"Not Passing","text":["The submission effectively scrapes data from the Cars and Edmunds websites and provides tables with values for the company, personal, and combined criteria, including Safety Features, Maintenance Cost, Price Point, Insurance, Fuel Economy, and Resale attributes. Adequate visualization elements for the for the dashboard are not readily evident, and the presentation of the recommendation for the purchase of a 2019 Honda CR-V for the company and the justification of the elements of effective storytelling used in the presentation are provided with limited detail. To meet standards, revisions are needed for the responses to the Dashboard and Storytelling Methods aspects."]},
+				{"name":"Passing","text":["The submission scrapes data from the [WEBSITES] and uses the company and personal criteria to support the justification of the recommendation to purchase a 2019 Honda CR-V for the organization. Clear visualizations provide adequate support to the comparison of the vehicles against the elements of the combined criteria. All sections of the work, including Storytelling Methods, are complete and meet standards."]}
+			]
+		}
+	]
+};
+
+var crdACE3Task1 = 
+{
+	"name": "ACE3 Task 1",
+	"tsname": "ACE3 Task 1",
+	"crd": "https://teams.microsoft.com/_#/docx/viewer/teams/https:~2F~2Fwesterngovernorsuniversity.sharepoint.com~2Fsites~2FDecember2018EvaluationTemplates~2FShared%20Documents~2FGeneral~2FACE3,%20IXP1-Task1.docx?threadId=19:7965118048924a8db2e2613ab0b518f1@thread.skype&baseUrl=https:~2F~2Fwesterngovernorsuniversity.sharepoint.com~2Fsites~2FDecember2018EvaluationTemplates&fileId=da1e5926-ce89-43bc-a0ca-306c0e517243&ctx=files&rootContext=items_view&viewerAction=view",
+	"aspects": [
+		{
+			"name":"A: Tool Selection: Benefits", 
+			"grades": [
+				{"name":"Competent","text":["The submission presents a succinct comparative justification for the selection of [SAS OR R OR Python] for the analysis of the churn of the customers of the telecom company over [CHOOSE THE OTHER TWO: Python AND/OR R AND/OR SAS]."]}
+			]
+		},
+		{
+			"name":"B: Tool Selection: Aims", 
+			"grades": [
+				{"name":"Competent","text":["The goal of the analysis to [AS STATED IN THE WORK] is adequately outlined."]}
+			]
+		},
+		{
+			"name":"C: Tool Selection: Prescribed Analysis", 
+			"grades": [
+				{"name":"Competent","text":["The submission clearly identifies [METHOD] as a descriptive, and [METHOD] as a non-descriptive method to support the analysis of the customer attrition."]},
+				{"name":"Approaching Competence","text":["The submission clearly identifies [Logistic Regression] as a non-descriptive technique to use on the given data. While [frequency analysis] is proposed, an appropriate descriptive technique cannot be located. Please identify a method that performs an appropriate descriptive function."]}
+			]
+		},
+		{
+			"name":"D: Data Exploration and Preparation: Target Variable", 
+			"grades": [
+				{"name":"Competent","text":["The target variable Churn is accurately identified."]}
+			]
+		},
+		{
+			"name":"E. Data Exploration and Preparation: Independent predictor", 
+			"grades": [
+				{"name":"Competent","text":["[VARIABLE NAME OR NAMES] [IS/ARE] appropriately identified as predictors represented in the given dataset. "]}
+			]
+		},
+		{
+			"name":"F. Data Exploration and Preparation: Goal", 
+			"grades": [
+				{"name":"Competent","text":["The submission presents data cleaning as a primary goal in the manipulation of the data."]}
+			]
+		},
+		{
+			"name":"G. Data Exploration and Preparation: Statistical Identity", 
+			"grades": [
+				{"name":"Competent","text":["The work describes the characteristics of the predictors in the given dataset and succinctly outlines the phenomenon to be predicted."]}
+			]
+		},
+		{
+			"name":"H. Data Exploration and Preparation: Cleaning", 
+			"grades": [
+				{"name":"Competent","text":["The work presents an adequate overview of the code that is used to prepare the data for the application of the selected methods and provides the cleaned dataset in a separate file."]}
+			]
+		},
+		{
+			"name":"I. Data Analysis: Univariate Statistics", 
+			"grades": [
+				{"name":"Competent","text":["Accurate [histograms OR other types of visualizations] effectively support the univariate distribution analysis of the variables represented in the given dataset."]}
+			]
+		},
+		{
+			"name":"J. Data Analysis: Bivariate Statistics", 
+			"grades": [
+				{"name":"Competent","text":["Accurate [types of visualizations used] effectively support the bivariate analysis of the interrelationship between the predictors and the target variable."]}
+			]
+		},
+		{
+			"name":"K. Data Analysis: Methods ", 
+			"grades": [
+				{"name":"Competent","text":["Annotated and clear applications of the chosen methods, [Logistic Regression and Principal Components Analysis] are applied on the cleaned dataset to explain customer churn."]},
+				{"name":"Approaching Competence","text":["The submission applies and annotates [Logistic Regression] to explain customer churn. The application and interpretation of an appropriate descriptive method cannot be located."]}
+			]
+		},
+		{
+			"name":"L. Data Analysis: Justification", 
+			"grades": [
+				{"name":"Competent","text":["A clear explanation for why the selected methods are appropriate to be used on the given dataset is presented."]}
+			]
+		},
+		{
+			"name":"M. Data Analysis: Visual Representation", 
+			"grades": [
+				{"name":"Competent","text":["The work provides succinct justification for the selection of visualization elements to support the analysis of the customer churn, including [LIST EXAMPLES OF VISUALIZATIONS, such as histograms]."]}
+			]
+		},
+		{
+			"name":"N. Data Summary: Phenomenon", 
+			"grades": [
+				{"name":"Competent","text":[" "]}
+			]
+		},
+		{
+			"name":"O. Data Summary: Detection ", 
+			"grades": [
+				{"name":"Competent","text":["The work clearly identifies [LIST OF VARIABLES] as the predictors that most significantly influence the churn of the customer."]}
+			]
+		},
+		{
+			"name":"P. Sources ", 
+			"grades": [
+				{"name":"Competent","text":["[How many] outside sources that support the work are listed in the References section of the analysis and are appropriately referred to in the narrative."]}
+			]
+		},
+		{
+			"name":"Professional Communication  ", 
+			"grades": [
+				{"name":"Competent","text":["The work is mechanically sound and free of major errors."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
 				{"name":"Not Passing","text":["The submission effectively scrapes data from the Cars and Edmunds websites and provides tables with values for the company, personal, and combined criteria, including Safety Features, Maintenance Cost, Price Point, Insurance, Fuel Economy, and Resale attributes. Adequate visualization elements for the for the dashboard are not readily evident, and the presentation of the recommendation for the purchase of a 2017 Honda CR-V for the company and the justification of the elements of effective storytelling used in the presentation are provided with limited detail. To meet standards, revisions are needed for the responses to the Dashboard and Storytelling Methods aspects."]},
-				{"name":"Passing","text":["The submission provides bar charts generated in Tableau to support the comparison of the vehicles in the categories of the company. personal, and combined criteria. Succinct explanations for how the dashboard supports the recommendation to purchase a 2017 Honda CR-V for the company and the use of elements of effective storytelling in the delivery of the recommendation are present. All sections of the work, including Visual Presentation: Criteria 1, Visual Presentation: Criteria 2, Dashboard, Vehicle Selection, and Storytelling Methods, are complete and meet standards."]}
+				{"name":"Passing","text":["The submission presents an analysis of the attrition phenomenon among the customers of a telecom company that relies on the [LIST THE TWO METHODS, e.g. Principal Component Analysis and Logistic Regression] methods. The stages of the analytical process are overviewed with satisfactory detail and include adequate explanations of the [SAS or R OR Python] code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary: Detection, are complete and meet standards."]}
 			]
 		}
 	]
 };
-
 var crdCIMTask1 = 
 {
 	"name": "CIM1 Task 1", 	//CRD name as it appears in EMA
@@ -750,34 +925,35 @@ var crdCIMTask1 =
 		{
 			"name":"A: Email or Memo", 
 			"grades": [
-				{"name":"Competent","text":["An adequate memorandum that presents a case for the implementation of <SOLUTION> is provided."]}
+				{"name":"Competent","text":["A clear [email OR memorandum] to be sent to the executive leadership of the organization that outlines the proposed implementation of [WHAT IS BEING IMPLEMENTED] is provided."]}
 			]
 		},
 		{
 			"name":"B: Fact Sheet", 
 			"grades": [
-				{"name":"Competent","text":["A well-organized Procedural Fact Sheet that outlines the rationale or implementation, description of a ??, key metrics, and a summary of the implementation process is presented."]}
+				{"name":"Competent","text":["A well-organized Fact Sheet that outlines the implementation of [WHAT IS BEING IMPLEMENTED] and includes [HOW MANY] supporting multimedia elements, is provided."]},
+				{"name":"Approaching Competence","text":["The submission outlines the product, the rationale for implementation, and the plan for implementing [SOLUTION] for the manufacturing company. A graphical element or elements that support the description of the technology solution or the explanation of the implementation plan cannot be located. "]}
 			]
 		},
 		{
 			"name":"C: Writing Process", 
 			"grades": [
-				{"name":"Approaching Competence","text":["It is clear that the email identifies the message and was proofed. Adequate detail for the planning, multiple drafting, and editing is not observed."]},
-				{"name":"Competent","text":["The submission includes a sound summary of the three stages of the writing process for both audiences."]}
+				{"name":"Approaching Competence","text":["The Writing Process section justifies decisions that were made during the planning of the artifacts. Descriptions of the writing processes and their phases that were used to construct the two artifacts cannot be located. Please describe the writing process used to generate each of the artifacts."]},
+				{"name":"Competent","text":["The work presents a succinct overview of the activities completed during the composition of the [email OR memo] and the fact sheet. "]}
 			]
 		},
 		{
 			"name":"D: Audience Summary", 
 			"grades": [
 				{"name":"Approaching Competence","text":["A brief summary of the email and fact sheet is present, which is fitting. Adequate detail for the subject knowledge, position in the organization, personal attitudes, reading style, and types of readers is not observed."]},
-				{"name":"Competent","text":["The submission provides a sound explanation of the attributes for both audiences."]}
+				{"name":"Competent","text":["The submission presents a sound analysis of the attributes of the audiences of the executive leaders and members of the interdepartmental implementation team that informed the creation of the [email OR memo] and the fact sheet."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The submission presents a memorandum and a product sheet that outline the need for the implementation of ??. A fitting analysis of the intended audiences of the artifacts and of the writing process are provided. All sections of the work, including Audience Summary, are complete and meet standards."]},
-				{"name":"Not Passing","text":["The submission presents the communication of technical information for ?? to a variety of audiences. Some aspects of the submission, such as the Fact Sheet, are complete and provide suitable detail. Adequate detail is not observed for the following aspects: Writing Process and Audience Summary."]}
+				{"name":"Passing","text":["The submission presents sound analyses of the audiences and the writing process that resulted in a clear [email OR memo] and a fact sheet that overview the proposed implementation of [PROPOSED PROCESS]. All sections of the work, including Audience Summary, are complete and meet standards. "]},
+				{"name":"Not Passing","text":["The submission provides artifacts that describe the proposed [PROPOSED PROCESS], provides adequate in-text citations that point to the elements of the reference list. A fact sheet that includes an appropriate graphical component, descriptions of the writing processes and adequate audience analyses are not readily evident. A revision of the responses to the task prompts Fact Sheet, Writing Process, and Audience Summary is needed to meet standards."]}
 			]
 		}
 	]
@@ -792,33 +968,86 @@ var crdCIMTask2 =
 		{
 			"name":"A. Title Page", 
 			"grades": [
-				{"name":"Competent","text":["The submission adequately provides a title page with the name of the proposer and all of the required sections. a space for the signature, and clearly states the title as \"<TITLE>.\""]}
+				{"name":"Competent","text":["The submission has a completed Title Page that presents [TITLE HERE] as the project name."]}
 			]
 		},
 		{
 			"name":"B. Table of Contents", 
 			"grades": [
-				{"name":"Competent","text":["A table of contents is present in the proposal which clearly identifies each of the sections of the document including section title and page numbers."]}
+				{"name":"Competent","text":["The submission includes a completed Table of Contents that presents accurate page locators of the sections in the order in which they appear in the proposal."]}
 			]
 		},
 		{
 			"name":"C. Abstract", 
 			"grades": [
-				{"name":"Competent","text":["The abstract competently summarizes the recommended solution to <SUMMARIZE SOLUTION> and aligns with each of the given points for the aspect."]}
+				{"name":"Competent","text":["The salient points of the proposed project to implement [WHAT] for Seamus Company, including the project cost of $[HOW MUCH], are intelligently outlined in the Abstract of the proposal."]}
 			]
 		},
 		{
 			"name":"D1. Proposed Solution", 
 			"grades": [
-				{"name":"Competent","text":["A compelling description of <SOLUTION> and an explanation of its alignment with the requirements stated in the RFP are provided in the work."]}
+				{"name":"Competent","text":["Succinct technical detail of the proposed [TECHNOLOGY SOLUTION SUMMARY] and an outline of its benefits to the Seamus Company are presented."]}
+			]
+		},
+		{
+			"name":"Case Study Reviews",
+			"grades": [
+				{"name":"Competent","text":["A reasonable case study review that summarizes the implementation of key elements of the proposal for [COMPANY 1], [COMPANY 2], and [COMPANY 3] is provided.  "]},
+				{"name":"Approaching Competence", "text":["The submission outlines three outside works. The learnings from the third-party artifacts are presented in limited detail and it is unclear how the case study review informs the proposed project." ]}
+			]
+		},
+		{
+			"name":"Goals, Objectives, and Deliverables",
+			"grades": [
+				{"name":"Competent","text":["The objectives and key anticipated project deliverables supporting the project goal to [SUMMARIZE PROJECT GOAL] are adequately described."]},
+				{"name":"Approaching Competence", "text":["The submission provides a list of goals and supporting objectives with notes of the methods that will be used to meet those objectives. The project deliverables are unclear, and the goal and the objectives are presented in limited detail. A detailed description of the project goal, objectives, and key deliverables is needed to meet standards. " ]}
+			]
+		},
+		{
+			"name":"Projected Timeline",
+			"grades": [
+				{"name":"Competent","text":["Reasonable completion dates for the [HOW MANY] key anticipated project deliverables are presented in a clear timeline."]},
+				{"name":"Approaching Competence", "text":["The work provides a timeline. An appropriate timeline that provides completion dates for each deliverable is not observed." ]}
+			]
+		},
+		{
+			"name":"Resources and Costs",
+			"grades": [
+				{"name":"Competent","text":["A detailed breakdown of the cost of the project that estimates the major contributing factors, including [ELEMENT OF COST], is provided."]}
+			]
+		},
+		{
+			"name":"Measures of Success",
+			"grades": [
+				{"name":"Competent","text":["The [HOW MANY] criteria that comprise the evaluation framework that will be used to assess the success of the project once completed are adequately outlined."]},
+				{"name":"Approaching Competence", "text":["The submission discusses the anticipated project outcomes. A description of the criteria that will be used to assess the success of the project is not observed. " ]}
+			]
+		},
+		{
+			"name":"Justification and Highlights of Proposal",
+			"grades": [
+				{"name":"Competent","text":["A satisfactory summary of the technology solution in the context of Seamus' business priorities is provided."]}
+			]
+		},
+		{
+			"name":"Letter",
+			"grades": [
+				{"name":"Competent","text":["A professional letter to accompany the transmittal of the proposal to [SUMMARIZE PROJECT] to the publisher is provided [in a separate file]."]}
+			]
+		},
+		{
+			"name":"Professional Communication",
+			"grades": [
+				{"name":"Competent","text":["The work is mechanically sound and free of major errors."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The proposal presents a thorough response to the published RFP which describes <SUMMARIZE SOLUTION> and aligns with the company's objectives. The work provides a suitable Title Page, Table of Contents, Abstract, body, and Justification and Highlights of Proposal in APA style and a professional letter of transmittal introducing <STUDENTS COMPANY>. All sections of the work are complete and meet standards."]}
+				{"name":"Passing","text":["The submission presents a proposal to [WHAT] for the Seamus Company and a professional letter to accompany its transmittal to the publisher. The work adequately outlines the proposed technology solution as well as the goals, timeline, and evaluation framework of the project.  All sections of the assessment, including Resources and Costs, are complete and meet standards."]}
 			]
 		}
+		
 	]
 };
 
@@ -1543,33 +1772,33 @@ var crdAKM1Task1 =
 		{
 			"name":"A: Dataset Preparation",
 			"grades": [			
-				{"name":"Not Evident","text":[""]},
+				{"name":"Not Evident","text":["A reduced dataset of 1,046 events is provided in the submission. The dataset includes an observation that is missing information about District/Sector. A cleaned dataset with appropriate handling of all missing or unnecessary data is needed to meet requirements."]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission provides a fitting justification of the row removals from the raw data set that resulted in a table that presents 1,045 events captured from the 911 calls to the Seattle Police department."]}
+				{"name":"Competent","text":["A dataset that provides attributes of [Number of events] events that adequately support the distribution analysis of the incidents captured from the 911 calls to the Seattle Police Department is provided."]}
 			]
 		},
 		{
 			"name":"B: Data Preparation Explanation",
 			"grades": [			
-				{"name":"Not Evident","text":[""]},
+				{"name":"Not Evident","text":["The Data Preparation Explanation aspect will be assessed once a cleaned dataset is in place."]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission provides a fitting justification of the dimensionality reduction which presents XX attributes for 1,045 events captured from the 911 calls to the Seattle Police Department and effectively supports the distribution analysis of the attributes by date, type, and sector."]}
+				{"name":"Competent","text":["The work presents satisfactory justifications of the dimensionality reduction and the [row removal OR the missing sector data imputation] that resulted in the dataset that supports the distribution analysis of the incidents."]}
 			]
 		},
 		{
 			"name":"C: Data Sheets",
 			"grades": [			
-				{"name":"Not Evident","text":[""]},
+				{"name":"Not Evident","text":["The Data Preparation Explanation aspect will be assessed once a cleaned dataset is in place."]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["Accurate tables and clear bar charts effectively support the distribution analysis of the 1,045 events represented in the cleaned dataset by date, type, and sector."]}
+				{"name":"Competent","text":["Accurate tables and clear bar charts effectively support the distribution analysis of the events represented in the cleaned dataset by date, type, or sector."]}
 			]
 		},
 		{
 			"name":"D: Data Sheets Observations Summary",
 			"grades": [			
-				{"name":"Not Evident","text":[""]},
+				{"name":"Not Evident","text":["The Data Preparation Explanation aspect will be assessed once a cleaned dataset is in place."]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["Succinct outlines of observations from the visual inspections of the data sheets, including the observation that Sector H features the highest number of incidents, are provided."]}
+				{"name":"Competent","text":["Relevant observations from the visual inspection of each datasheet are presented. "]}
 			]
 		},
 		{
@@ -1577,7 +1806,7 @@ var crdAKM1Task1 =
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["An adequate description of the fit of the model to its data that observes its coefficient of determination of 88%, is presented."]}
+				{"name":"Competent","text":["A sound analysis of the fit of the model to its data that observes an accurately calculated [coefficient of determination OR other detail] is provided."]}
 			]
 		},
 		{
@@ -1585,7 +1814,7 @@ var crdAKM1Task1 =
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission observes an improved coefficient of determination upon the removal of the unnamed sector and Sector H from consideration in the summary of the impact of the outliers on the model."]}
+				{"name":"Competent","text":["The submission presents an adequate description of the impact of the outliers on the regression model that notes the change of the [coefficient of determination that results from the removal of the outliers from consideration OR other detail]."]}
 			]
 		},
 		{
@@ -1593,7 +1822,7 @@ var crdAKM1Task1 =
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":["The work provides an accurate residual plot. A clear matching explanation that will improve the model is not readily evident."]},
-				{"name":"Competent","text":["A reasonable recommendation to remove the outliers from consideration to improve the fit of the model to its data is summarized in Section G."]}
+				{"name":"Competent","text":["A clear residual plot and a reasonable recommendation to [remove the outliers to improve the fit of the model to its data OR other detail] are provided."]}
 			]
 		},
 		{
@@ -1601,22 +1830,22 @@ var crdAKM1Task1 =
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The work presents a thorough justification for the assessment of the precinct's current ineligibility for funding based on the comparison of the average number of officers at the scene from the cleaned dataset and the funding threshold."]}
 			]
 		},
 		{
 			"name":"I: Precautions or Behaviors",
 			"grades": [			
 				{"name":"Not Evident","text":[""]},
-				{"name":"Approaching","text":["A succinct discussion of the sensitive data in the given dataset is provided in Section H. Adequate descriptions of the specific precautions the precinct is to exercise when both working with and communicating about ist sensitive data are not observed."]},
-				{"name":"Competent","text":["Succinct summaries of precautions to be exercised to safeguard the sensitive data, including XXX, are present."]}
+				{"name":"Approaching","text":["A succinct discussion of the sensitive data in the given dataset is provided. Adequate descriptions of the specific precautions the precinct is to exercise when both working with and communicating about its sensitive data are not observed."]},
+				{"name":"Competent","text":["Descriptions of reasonable precautions the Seattle Police Department is to exercise when working with and communicating about its sensitive data, such as [one example; e.g. sharing the data with authorized parties], are provided."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The submission presents adequate summaries of datasheet observations, descriptions of the fit of the model to its data, a succinct explanation that will improve the model, and descriptions of specific precautions to be exercised to safeguard the sensitive data from the given scenario. All sections of the work, including Data Sheets Observations Summary, Fit, Residuals, and Precautions or Behaviors, are complete and meet standards."]},
-				{"name":"Not Passing","text":["The submission presents adequate datasheets that support the distribution analysis of the 1,045 events captured from the 911 calls to the Seattle Police Department represented in the cleaned dataset; descriptions of the impact of the outliers on the regression model; and assessment of the precinct's current ineligibility for additional state funding. Summaries of datasheet observations, descriptions of the fit of the model to its data, a clear explanation that will improve the model, and descriptions of specific precautions to be exercised to safeguard the sensitive data from the given scenario are not observed. Responses or revisions of the responses to the task prompts Data Sheets Observations Summary, Fit, Residuals, and Precautions or Behaviors are needed to meet standards."]}
+				{"name":"Passing","text":["The submission presents sound analyses of the distribution of [how many] events captured from the 911 calls to the Seattle Police Department by date, type, and sector; the given linear regression model and the behavior of its outliers and residuals; the eligibility of the precinct for additional state funding; and the specific precautions the department is to exercise when working with and communicating about its sensitive data. All aspects of the work, including Fit, are presented in satisfactory detail and meet standards."]},
+				{"name":"Not Passing","text":["The submission presents adequate datasheets that support the distribution analysis of the 1,045 events captured from the 911 calls to the Seattle Police Department represented in the cleaned dataset; descriptions of the impact of the outliers on the regression model; and assessment of the precinct's current ineligibility for additional state funding. Summaries of datasheet observations, descriptions of the fit of the model to its data, a clear explanation that will improve the model, and descriptions of specific precautions to be exercised to safeguard the sensitive data from the given scenario are not observed. A revision of the responses to the task prompts Data Sheets Observations Summary, Fit, Residuals, and Precautions or Behaviors are needed to meet standards."]}
 			]
 		}
 	]
@@ -1845,7 +2074,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The [security OR infrastructure OR type of issue] [NAME OF COMPANY] is experiencing due to [REASON] are succinctly overviewed in the Abstract of the prospectus in the summary of the problem under investigation."]}
 			]
 		},
 		{
@@ -1853,7 +2082,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The solution aptly describes <SOLUTION>."]}
+				{"name":"Competent","text":["An adequately detailed proposal for the implementation of [SOLUTION] for the chosen organization is presented."]}
 			]
 		},
 		{
@@ -1861,7 +2090,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A clear summary of the proposed implementation of [WHAT] is presented."]}
 			]
 		},
 		{
@@ -1869,7 +2098,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A reasonable review of [HOW MANY] published works that provided direction to the project during the development phase is present."]}
 			]
 		},
 		{
@@ -1877,7 +2106,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The submission clearly explains how the [HOW MANY] reviewed outside works supported the contextualization of the problem and provided direction to the project during planning."]}
 			]
 		},
 		{
@@ -1885,7 +2114,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The significance of the project to [NAME COMPANY] is adequately explained in the summary of the project rationale."]}
 			]
 		},
 		{
@@ -1893,7 +2122,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A sound systems analysis for the project deliverables is present."]}
 			]
 		},
 		{
@@ -1901,7 +2130,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["<METHODOLOGY> is appropriately selected as the proposed project methodology."]}
+				{"name":"Competent","text":["The submission provides a succinct explanation of the application of the [WHICH] methodology that has been selected to guide the project to completion."]}
 			]
 		},
 		{
@@ -1909,7 +2138,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The work presents adequate summaries for how the objectives and key anticipated project deliverables supporting the project goal to [SUMMARIZE PROJECT GOAL] will be met."]}
 			]
 		},
 		{
@@ -1917,7 +2146,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["A sufficient discussion of the goals, objectives and deliverables is provided in the submission."]}
+				{"name":"Competent","text":["The objectives and key anticipated project deliverables supporting the project goal to [SUMMARIZE PROJECT GOAL] are adequately described."]}
 			]
 		},
 		{
@@ -1925,7 +2154,7 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["A complete project timeline with start/end dates and milestones is provided."]}
+				{"name":"Competent","text":["Reasonable completion dates for the [HOW MANY] key anticipated project deliverables are presented in a clear timeline."]}
 			]
 		},
 		{
@@ -1933,13 +2162,13 @@ var crdEYP1Task2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A thorough evaluation framework consisting of functionality tests, data integrity tests, and peer reviews is given."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The submission describes a capstone proposal for developing <SOLUTION>. All aspects of the capstone proposal including the solution and timeline are complete with excellent detail and meet task requirements."]},
+				{"name":"Passing","text":["The submission presents a proposal to [WHAT] for [COMPANY]. The work adequately outlines the planning for the project and summarizes the goals, timeline, methodology, and rationale for the implementation. All sections of the assessment, including Review of Other Work, are complete and meet standards."]},
 				{"name":"Not Passing","text":[""]}
 			]
 		}
@@ -1981,7 +2210,7 @@ var crdEYP1Task3 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission presents a thorough description of the <COMPANY> <SOLUTION> project."]}
+				{"name":"Competent","text":["The submission presents a succinct summary of the development [SUMMARIZE PROJECT]."]}
 			]
 		},
 		{
@@ -1989,7 +2218,7 @@ var crdEYP1Task3 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A reasonable review of [HOW MANY] published works that provided direction to the project during the development phase are present."]}
 			]
 		},
 		{
@@ -2005,7 +2234,7 @@ var crdEYP1Task3 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The submission provides a succinct explanation of the application of the [WHICH] methodology that was used to support the execution of the project."]}
 			]
 		},
 		{
@@ -2013,7 +2242,7 @@ var crdEYP1Task3 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The work presents adequate summaries for how the objectives and key anticipated project deliverables supporting the project goal to [SUMMARIZE PROJECT GOAL] were met."]}
 			]
 		},
 		{
@@ -2029,7 +2258,7 @@ var crdEYP1Task3 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["Adequate explanations for how the anomalies that emerged after the project initiated, such as [EXAMPLE], were resolved, are provided."]}
 			]
 		},
 		{
@@ -2037,7 +2266,7 @@ var crdEYP1Task3 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A logical discussion of the completed project and its future effects to [WHICH COMPANY] is present."]}
 			]
 		},
 		{
@@ -2045,13 +2274,13 @@ var crdEYP1Task3 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The submission present actual project artifacts, including [EXAMPLE], [in the appendices of the report/separate file/throughout the report]."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The submission presents a thorough capstone report which describes the implementation of a <SOLUTION> for <COMPANY>. All aspects of the work, such as the Summary and Timeline, are complete and meet task standards."]},
+				{"name":"Passing","text":["The submission describes the implementation of [WHAT] for [COMPANY]. The work presents an adequate summary of the development of the project and presents actual project artifacts that evidence project completion. All sections of the assessment, including Review of Other Work, are complete and meet standards."]},
 				{"name":"Not Passing","text":[""]}
 			]
 		}
@@ -2400,8 +2629,7 @@ var crdIXPTask1 =
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
 				{"name":"Competent","text":[
-					"A succinct justification of the selection of R as the tool supporting the analysis of the customer churn, is provided in the submission.",
-					"The submission succinctly overviews the benefits from using SAS as the tool to support the analysis of the customer churn."]}
+					"The submission presents a succinct comparative justification for the selection of [SAS OR R OR Python] for the analysis of the churn of the customers of the telecom company over [CHOOSE THE OTHER TWO: Python AND/OR R AND/OR SAS]. "]}
 			]
 		},
 		{
@@ -2409,17 +2637,16 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The goal of the analysis to [AS STATED IN THE WORK] is adequately outlined."]}
 			]
 		},
 		{
 			"name":"C: TOOL SELECTION: PRESCRIBED ANALYSIS",
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
-				{"name":"Approaching","text":[""]},	
+				{"name":"Approaching","text":["The submission clearly identifies [Logistic Regression] as a non-descriptive technique to use on the given data. While [frequency analysis] is proposed, an appropriate descriptive technique cannot be located. Please identify a method that performs an appropriate descriptive function."]},	
 				{"name":"Competent","text":[
-					"Factor Analysis of Mixed Data and Logistic Regression are clearly identified as the methods supporting the analysis of the customer churn.",
-					"Multiple Correspondence Analysis and Logistic Regression are clearly identified as the analytical methods used to investigate the research question."]}
+					"The submission clearly identifies [METHOD] as a descriptive, and [METHOD] as a non-descriptive method to support the analysis of the customer attrition."]}
 			]
 		},
 		{
@@ -2427,7 +2654,7 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The target variable Churn is accurately identified."]}
 			]
 		},
 		{
@@ -2435,7 +2662,7 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["[VARIABLE NAME OR NAMES] [IS/ARE] appropriately identified as predictors represented in the given dataset."]}
 			]
 		},
 		{
@@ -2451,7 +2678,7 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The work describes the data in the given dataset and succinctly outlines the phenomenon to be predicted."]}
 			]
 		},
 		{
@@ -2459,7 +2686,7 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The work presents an adequate overview of the code that is used to prepare the data for the application of the selected methods and provides the cleaned dataset in a separate file."]}
 			]
 		},
 		{
@@ -2467,7 +2694,7 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":["Accurate histograms effectively support the distribution analysis of the variables from the cleaned dataset."]}
+				{"name":"Competent","text":["Accurate [histograms OR other types of visualizations] effectively support the univariate distribution analysis of the variables represented in the given dataset."]}
 			]
 		},
 		{
@@ -2475,15 +2702,15 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["Accurate [types of visualizations used] effectively support the bivariate analysis of the interrelationship between the predictors and the target variable. "]}
 			]
 		},
 		{
 			"name":"K: DATA ANALYSIS: METHODS",
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
-				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Approaching","text":["The submission applies and annotates [Logistic Regression] to explain customer churn. The application and interpretation of an appropriate descriptive method cannot be located."]},	
+				{"name":"Competent","text":["Annotated and clear applications of the chosen methods, [Logistic Regression and Principal Components Analysis] are applied on the cleaned dataset to explain customer churn. "]}
 			]
 		},
 		{
@@ -2491,7 +2718,7 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A clear explanation for why the selected methods are appropriate to be used on the given dataset is presented."]}
 			]
 		},
 		{
@@ -2499,7 +2726,7 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":["Succinct explanations of the reasons for selecting visualization elements in the presentation of the analysis, including scree plots, are provided."]}
+				{"name":"Competent","text":["The work provides succinct justification for the selection of visualization elements to support the analysis of the customer churn, including [LIST EXAMPLES OF VISUALIZATIONS, such as histograms]. "]}
 			]
 		},
 		{
@@ -2515,13 +2742,21 @@ var crdIXPTask1 =
 			"grades": [	
 				{"name":"Not Evident","text":[""]}, 
 				{"name":"Approaching","text":[""]},	
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The work clearly identifies [LIST OF VARIABLES] as the predictors that most significantly influence the churn of the customer."]}
+			]
+		},
+		{
+			"name":"P: SOURCES",
+			"grades": [	
+				{"name":"Not Evident","text":[""]}, 
+				{"name":"Approaching","text":[""]},	
+				{"name":"Competent","text":["[How many] outside sources that support the work are listed in the References section of the analysis and are appropriately referred to in the narrative."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The submission presents an analysis of the attrition phenomenon among the customers of the telecom company based on FAMD and Logistic Regression methods executed in an R environment. the work summarizes the phases of the analytical process with adequate explanations of the code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary: Phenomenon, are complete and meet standards."]},
+				{"name":"Passing","text":["The submission presents an analysis of the attrition phenomenon among the customers of a telecom company that relies on the [LIST THE TWO METHODS, e.g. Principal Component Analysis and Logistic Regression] methods. The stages of the analytical process are overviewed with satisfactory detail and include adequate explanations of the [SAS or R OR Python] code, interpretations of the results, and visualizations. All sections of the assessment, including Data Summary: Detection, are complete and meet standards."]},
 				{"name":"Not Passing","text":[""]}
 			]
 		}
@@ -2795,7 +3030,7 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission aptly describes the disaster environment as an earthquake devastated city that has multiple obstacles such as downed trees and buildings hindering rescue."]}
+				{"name":"Competent","text":["The modifications of the environment to [REASON FOR MODIFYING ENVIRONMENT] are succinctly outlined."]}
 			]
 		},
 		{
@@ -2803,7 +3038,7 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The narrative clearly explains how artificial intelligence and training data will be used to identify target objects that are obscured by building rubble and trees in the environment."]}
+				{"name":"Competent","text":["The submission describes how the [WHAT, e.g. ADDITIONAL SENSORS] will provide the functionality to aid in the disaster recovery effort."]}
 			]
 		},
 		{
@@ -2811,7 +3046,7 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission describes removing the robot's wheel, swapping the body, and replacing the proximity sensor with a camera which are appropriate modifications needed to provide the functionality that aligns with disaster recovery efforts."]}
+				{"name":"Competent","text":["Summaries of [HOW MANY] significant modifications of the BubbleRob, including {EXAMPLE OF MODIFICATION], are provided. "]}
 			]
 		},
 		{
@@ -2819,7 +3054,7 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission succinctly describes how the implemented algorithm was optimized over multiple iterations and explains how the optimizations align with the concepts of reasoning and uncertianty."]}
+				{"name":"Competent","text":["The submission adequately describes how the configured robot navigates obstacles, including EXAMPLE, e.g. how the robot assesses if it can fit between two obstacles]. "]}
 			]
 		},
 		{
@@ -2827,7 +3062,7 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission provides an adequate overview of the advantages and limitations by noting potential applications of the bot are not limited to earthquake disaster recovery and the stationary hardware limits the camera's visual range."]}
+				{"name":"Competent","text":["The advantages and limitations, including when the robot performs optimally and when it underperforms, are adequately described."]}
 			]
 		},
 		{
@@ -2835,7 +3070,7 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["Adequate justification for test cases and scenarios, and description of the acceptance criterion for each is provided in the submission."]}
 			]
 		},
 		{
@@ -2843,7 +3078,7 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission describes how adding more data from disaster sites can be used to refine the deep learning model to improve the performance of the prototype."]}
+				{"name":"Competent","text":["Reasonable summaries of the [SUMMARIES, e.g. application of reinforced learning, how the robot can learn what areas are safe terrain, and how the learnings are used to improve the robot’s abilities] are provided. "]}
 			]
 		},
 		{
@@ -2851,7 +3086,7 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A clear copy of the code of the modified BubbleRob agent is provided in a separate file. "]}
 			]
 		},
 		{
@@ -2859,13 +3094,13 @@ var crdNIPTask2 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission aptly provides links to Panopto recordings which summarize the disaster recovery problem and environment and, the robot's goals, architecture, capabilities, and benefits."]}
+				{"name":"Competent","text":["A live link to a [HOW LONG]-minute Panopto recording that demonstrates the actions of the robot in the modified simulated environment, is provided."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The submission presents a thorough portrayal of an earthquake disaster recovery robot including a description of the environment, robot hardware and software architecture, Coppelia Robotics V-REP files, code, and Panopto videos summarizing the work. All aspects of the work, including the Testing and Implementation Plan, are complete and meet standards."]},
+				{"name":"Passing","text":["The submission provides a demonstration of a disaster recovery robot's goal-seeking actions and an analysis of the modifications implemented on the BubbleRob agent and environment. The work outlines the sensory repertoire of the robotic agent and its limitations, as well as the testing, implementation, and optimization phases of the project. All aspects of the work, including Improving the Prototype, are presented with satisfactory support and meet standards."]},
 				{"name":"Not Passing","text":[""]}
 			]
 		}
@@ -2881,56 +3116,56 @@ var crdNIPTask1 =
 		{
 			"name":"A: Description",
 			"grades": [
-				{"name":"Competent","text":["The submission aptly describes functionality to record chat sessions, provides appropriate greetings, identifies jobs for students, and aligns with the needs of the career advisor."]}
+				{"name":"Competent","text":["The submission adequately discusses how the chatbot meets the needs of a career advisor."]}
 			]
 		},
 		{
 			"name":"B: Other Works",
 			"grades": [
-				{"name":"Approaching","text":["The submission aptly summarizes the article <FROM_SUBMISSION> and provides a description of how it relates to the project. A summary of a second third-party work could not be located. Make sure to update the references section in the report once the second summary is in place."]},
-				{"name":"Competent","text":["The work concisely summarizes works by <WORK1> and <WORK2> solutions in the other works section that relate to the key elements of the proposal."]}
+				{"name":"Approaching","text":["The submission provides a relevant summary of a single outside work by [SOURCE]. A review of multiple related chatbot implementations published within the last five years is not readily evident."]},
+				{"name":"Competent","text":["An adequate summary of [HOW MANY] recently published third-party artifacts that contextualize the problem and inform the development of the chatbot is provided."]}
 			]
 		},
 		{
 			"name":"C: Job Types",
 			"grades": [
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["[HOW MANY] job types, including [EXAMPLE], are identified for interaction with the chatbot."]}
 			]
 		},
 		{
 			"name":"D: Training",
 			"grades": [
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["The submission adequately discusses the training cases used to find additional patterns for the chatbot to recognize."]}
 			]
 		},
 		{
 			"name":"E: Optimization",
 			"grades": [
-				{"name":"Competent","text":["The submission describes pattern matching and stateful response optimizations with concise examples of design and workflow.The submission describes pattern matching and stateful response optimizations with concise examples of design and workflow."]}
+				{"name":"Competent","text":["An adequate explanation of the optimization process for the chatbot is provided."]}
 			]
 		},
 		{
 			"name":"F: Installation Manual",
 			"grades": [
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["An easy-to-follow installation manual is provided in a separate file."]}
 			]
 		},
 		{
 			"name":"G: Effectiveness of the Bot",
 			"grades": [
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["A concise explanation for how the chatbot will be monitored and maintained by adding new response categories to reduce incorrect responses is provided in the submission."]}
 			]
 		},
 		{
 			"name":"H: Challenges during Development",
 			"grades": [
-				{"name":"Competent","text":[""]}
+				{"name":"Competent","text":["Concise descriptions of using the UL and LI AIML elements to streamline choices are provided in the work."]}
 			]
 		},
 		{
 			"name":"I: The Bot Development Environment",
 			"grades": [
-				{"name":"Competent","text":["Instant compile and a directory of pre-built bots are documented in the work as strengths of the development environment which supported the development of <BOT_NAME>."]}
+				{"name":"Competent","text":["A succinct analysis of the chatbot development environment identifies the ease of chatbot testing as a strength and the lack of advanced functionality as a weakness."]}
 			]
 		},
 		{
@@ -2938,13 +3173,13 @@ var crdNIPTask1 =
 			"grades": [
 				{"name":"Not Evident","text":[""]},
 				{"name":"Approaching","text":[""]},
-				{"name":"Competent","text":["The submission aptly provides links to Panopto recordings which summarize the disaster recovery problem and environment and, the robot's goals, architecture, capabilities, and benefits. Presentation link: "]}
+				{"name":"Competent","text":["A live link to a [HOW LONG]-minute Panopto recording that demonstrates the actions of the chatbot in interacting with a user, is provided."]}
 			]
 		},
 		{
 			"name":"Overall Comment",
 			"grades": [
-				{"name":"Passing","text":["The submission presents a  report which thoroughly describes a project to develop a chatbot with embedded artificial intelligence to assist career advisors at a university. The work provides a suitable description, reviews of other works, and an excellent Panopto presentation that captures an interactive session with the bot. All sections of the work are complete and meets task requirements."]},
+				{"name":"Passing","text":["The submission adequately presents the advisory chatbot that has been developed to handle Computer Science student's career-based questions. All sections of the work are complete and meet standards."]},
 				{"name":"Not Passing","text":["The submission presents a thorough report which describes a project to develop a chatbot with embedded artificial intelligence to assist career advisors at a university. The work provides a suitable description, explains the training process, and includes a link to an exemplary Panopto presentation that demonstrates an interactive session. One summary of a third-party work is provided in the submission, but, two are required to meet task standards. Please revise the Other Works section to include a second summary of a third-party work and update the Sources aspect if needed."]}
 			]
 		}
@@ -3150,7 +3385,7 @@ var crdKYP2Task2 =
 		{
 			"name":"Program Outcome 5",
 			"grades": [			
-				{"name":"Approaching","text":["The submission provides a discussion describing the compliance logs that will be created to track the research organizationâ€™s responses to NIST controls which is fitting. The description of the data that needs to be collected to support the project is present with limited details."]}
+				{"name":"Approaching","text":["The submission provides a discussion describing the compliance logs that will be created to track the research organization’s responses to NIST controls which is fitting. The description of the data that needs to be collected to support the project is present with limited details."]}
 			]
 		},
 		{
@@ -3228,7 +3463,9 @@ var CRD =
 	crdDDMTask2,
 	crdDDMTask3,
 	crdAAM1Task1,
-	crdADETask1,
+	crdADE2Task1,
+	crdACE3Task1,
+	crdBOM1Task1,
 	crdAEE2Task3,
 	crdAEE2Task2,
 	crdAEE2Task1,
@@ -3237,7 +3474,8 @@ var CRD =
 	crdMDP1Task1,
 	sourcesAspectTS,
 	sourcesAspectEMA,
-	cIReferral
+	cIReferral,
+	pcAspect
 ];
 
 
