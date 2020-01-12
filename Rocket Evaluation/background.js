@@ -14,7 +14,7 @@ function init()
 	//console.log("background_script chrome.runtime.onStartup happened");
 	
 	var contexts = ["editable"];
-	var n1 = chrome.contextMenus.create({"title": "Insert Date", "contexts": contexts, "id": "n1"});
+	//var n1 = chrome.contextMenus.create({"title": "Insert Date", "contexts": contexts, "id": "n1"});
 	
 	gradeTexts = [];
 	thisCRD = "";
@@ -107,36 +107,7 @@ function init()
 				}
 			}							
 		}
-		
-		t = sourcesAspectTS;
-		var n4 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n4"});
-		var aspect = t.aspects[0];
-		var id = n4;
 			
-		for(var g = 0; g < aspect.grades.length; g++)
-		{
-			var grade = aspect.grades[g];
-			var gid = "g"+id+g;
-		
-			if(grade.text.length == 1)
-			{
-				var txt = grade.text[0];
-				chrome.contextMenus.create({"title": grade.name+": "+txt, "parentId": id, "contexts": contexts, "id": gid});
-				gradeTexts.push({"title": txt, "id": gid});
-			}
-			else
-			{		
-				chrome.contextMenus.create({"title": grade.name, "parentId": id, "contexts": contexts, "id": gid});
-				for(var e = 0; e < grade.text.length; e++)
-				{
-					var txt = grade.text[e];
-					var	eid = "t"+gid+e;
-					chrome.contextMenus.create({"title": txt, "parentId": gid, "contexts": contexts, "id": eid});
-					gradeTexts.push({"title": txt, "id": eid});
-				}
-			}							
-		}
-		
 		t = cIReferral;
 		var n5 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n5"});
 		var aspect = t.aspects[0];
