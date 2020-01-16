@@ -14,7 +14,7 @@ function init()
 	//console.log("background_script chrome.runtime.onStartup happened");
 	
 	var contexts = ["editable"];
-	var n1 = chrome.contextMenus.create({"title": "Insert Date", "contexts": contexts, "id": "n1"});
+	//var n1 = chrome.contextMenus.create({"title": "Insert Date", "contexts": contexts, "id": "n1"});
 	
 	gradeTexts = [];
 	thisCRD = "";
@@ -108,35 +108,6 @@ function init()
 			}							
 		}
 		
-		t = sourcesAspectTS;
-		var n4 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n4"});
-		var aspect = t.aspects[0];
-		var id = n4;
-			
-		for(var g = 0; g < aspect.grades.length; g++)
-		{
-			var grade = aspect.grades[g];
-			var gid = "g"+id+g;
-		
-			if(grade.text.length == 1)
-			{
-				var txt = grade.text[0];
-				chrome.contextMenus.create({"title": grade.name+": "+txt, "parentId": id, "contexts": contexts, "id": gid});
-				gradeTexts.push({"title": txt, "id": gid});
-			}
-			else
-			{		
-				chrome.contextMenus.create({"title": grade.name, "parentId": id, "contexts": contexts, "id": gid});
-				for(var e = 0; e < grade.text.length; e++)
-				{
-					var txt = grade.text[e];
-					var	eid = "t"+gid+e;
-					chrome.contextMenus.create({"title": txt, "parentId": gid, "contexts": contexts, "id": eid});
-					gradeTexts.push({"title": txt, "id": eid});
-				}
-			}							
-		}
-		
 		t = cIReferral;
 		var n5 = chrome.contextMenus.create({"title": t.name, "contexts": contexts, "id": "n5"});
 		var aspect = t.aspects[0];
@@ -166,7 +137,6 @@ function init()
 			}							
 		}
 	}
-	
 	var cc = chrome.contextMenus.create({"title": "Clear Cache and Reload", "contexts": ["all"], "id": "cc"});
 }
 
@@ -204,7 +174,6 @@ function onClick(info, tab) {
 			}
 			else if(info.menuItemId == "crd" && thisCRD != "")
 			{
-				//chrome.windows.create({url: thisCRD, type: "popup", width: (screen.availWidth*.4), height: screen.availHeight, top: 0, left: screen.availWidth-(screen.availWidth*.4)});
 				chrome.windows.create({url: thisCRD, type: "normal", width: (screen.availWidth*.5), height: screen.availHeight, top: 0, left: 0});
 			}
 			else if(info.menuItemId == "cc") //Clear the browser cache
@@ -241,10 +210,7 @@ function onClick(info, tab) {
 				{
 					if(info.menuItemId == gradeTexts[x].id)
 					{
-						//console.log(dateToDDMMYYYY(new Date()) + gradeTexts[x].title);
-						//chrome.tabs.sendMessage(tabs[0].id, {text: dateToDDMMYYYY(new Date()) + gradeTexts[x].title}, function(response) {}); 
 						chrome.tabs.sendMessage(tabs[0].id, {text: gradeTexts[x].title}); //No more dates as of 07/19/2019
-						//chrome.tabs.executeScript({code:'document.activeElement.value = "' + gradeTexts[x].title + '"; var event = new Event(\'compositionend\', { \'bubbles\': false, \'composed\': false }); document.activeElement.dispatchEvent(event);'});
 						break;
 					}
 				}
@@ -260,36 +226,18 @@ function onClick(info, tab) {
 
 chrome.contextMenus.onClicked.addListener(onClick);
 
-var sourcesAspectTS = 
-{
-	"name": "Sources (TS)",
-	"tsname": "Sources (TS)",
-	"aspects": [
-		{
-			"name":"Sources (TS)", 
-			"grades": [
-				{"name":"Missing Some References","text":["Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
-				{"name":"Missing In-text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
-				{"name":"Missing Ref List for Citations","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
-				{"name":"Missing APA Formatting","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please refer to the APA web link in Taskstream or visit WGU’s Writing Center by following this link: <a href=\"https://lrps.wgu.edu/provision/71484321\" target=\"_blank\">https://lrps.wgu.edu/provision/71484321</a>."]},
-				{"name":"Competent","text":["XX outside sources that support the work are listed in the References section of the proposal and are referred to in-text without observable departures from the APA style conventions."]}
-			]
-		}
-	]
-};
-
 var sourcesAspectEMA = 
 {
-	"name": "Sources (EMA)",
-	"tsname": "Sources (EMA)",
+	"name": "Sources",
+	"tsname": "Sources",
 	"aspects": [
 		{
 			"name":"Sources (EMA)", 
 			"grades": [
-				{"name":"Missing Some References","text":["Sources have been directly quoted or paraphrased in this submission. Quotations, citations, and references are not detected for all quoted or paraphrased content. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
-				{"name":"Missing In-text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
-				{"name":"Missing Ref List for Citations","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
-				{"name":"Missing APA Formatting","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For instruction on in-text and reference list citations, please visit WGU’s Writing Center by following this link https://lrps.wgu.edu/provision/71484321."]},
+				{"name":"No Documentation","text":["Sources have been directly quoted or paraphrased in this submission.  Quotations, citations, and references are not detected for all quoted or paraphrased content. For specific instruction on in-text and reference list citations, click on the link located next to the Sources rubric aspect (looks like an arrow).  Please contact the WGU Writing Center if further assistance is needed."]},
+				{"name":"Reference List, but no In-Text Citations","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. In-text citations could not be found for portions of the task that have been quoted or paraphrased. For specific instruction on in-text and reference list citations, click on the link located next to the Sources rubric aspect (looks like an arrow).  Please contact the WGU Writing Center if further assistance is needed."]},
+				{"name":"In-Text Citations, No Reference List","text":["Sources have been directly quoted or paraphrased in this submission, and in-text citations are present. A reference list could not be found. For specific instruction on in-text and reference list citations, click on the link located next to the Sources rubric aspect (looks like an arrow).  Please contact the WGU Writing Center if further assistance is needed."]},
+				{"name":"Major Errors","text":["Sources have been directly quoted or paraphrased in this submission, and a reference list is present. Citations in the text are also included. Major deviations from formatting are present, which make retrieval difficult. For specific instruction on in-text and reference list citations, click on the link located next to the Sources rubric aspect (looks like an arrow).  Please contact the WGU Writing Center if further assistance is needed."]},
 				{"name":"Competent","text":["XX outside sources that support the work are listed in the References section of the proposal and are referred to in-text without observable departures from the APA style conventions."]}
 			]
 		}
@@ -327,7 +275,7 @@ var crdBEMTask1 =
 {
 	"name": "BEM1 Task 1: Estimating Population Size",
 	"tsname": "BEM1 Task 1",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C742%20Data%20Analysis%20Tools%20and%20Techniques%20(ABE2,%20BEM1,%20IWP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C742%20Data%20Analysis%20Tools%20and%20Techniques%20(ABE2,%20BEM1,%20IWP2)",
 	"aspects": [
 		{
 			"name":"B. Python: Criteria Used", 
@@ -391,7 +339,7 @@ var crdAAM1Task1 =
 {
 	"name": "AAM1 Task 1: Estimating Population Size",
 	"tsname": "AAM1 Task 1",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C996%20Programming%20in%20Python%20(AAM1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C996%20Programming%20in%20Python%20(AAM1)",
 	"aspects": [
 		{
 			"name":"A. Python: How the Program Extracts Links", 
@@ -503,7 +451,7 @@ var crdEWPTask1 =
 {
 	"name": "EWP1 Task 1",
 	"tsname": "EWP Task 1",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C768%20Technical%20Communication%20(CIM1,%20EWP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C768%20Technical%20Communication%20(CIM1,%20EWP1)",
 	"aspects": [
 		{
 			"name":"A:  AUDIENCE ANALYSIS", 
@@ -524,7 +472,7 @@ var crdEWPTask2 =
 {
 	"name": "EWP1 Task 2",
 	"tsname": "EWP Task 2",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C768%20Technical%20Communication%20(CIM1,%20EWP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C768%20Technical%20Communication%20(CIM1,%20EWP1)",
 	"aspects": [
 		{
 			"name":"APA Style", 
@@ -569,7 +517,7 @@ var crdIYPTask1 =
 {
 	"name": "IYP Task 1",
 	"tsname": "IYP Task 1",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C745%20Advanced%20Data%20Visualization%20(ADE2,%20IYP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C745%20Advanced%20Data%20Visualization%20(ADE2,%20IYP2)",
 	"aspects": [
 		{
 			"name":"Professional Communication", 
@@ -657,7 +605,7 @@ var crdADETask1 =
 {
 	"name": "ADE Task 1",
 	"tsname": "ADE Task 1",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C745%20Advanced%20Data%20Visualization%20(ADE2,%20IYP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C745%20Advanced%20Data%20Visualization%20(ADE2,%20IYP2)",
 	"aspects": [
 		{
 			"name":"Professional Communication", 
@@ -745,7 +693,7 @@ var crdCIMTask1 =
 {
 	"name": "CIM1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "CIM1 Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C768%20Technical%20Communication%20(CIM1,%20EWP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C768%20Technical%20Communication%20(CIM1,%20EWP1)",
 	"aspects": [
 		{
 			"name":"A: Email or Memo", 
@@ -787,7 +735,7 @@ var crdCIMTask2 =
 {
 	"name": "CIM1 Task 2", 	//CRD name as it appears in EMA
 	"tsname": "CIM1 Task 2",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C768%20Technical%20Communication%20(CIM1,%20EWP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C768%20Technical%20Communication%20(CIM1,%20EWP1)",
 	"aspects": [
 		{
 			"name":"A. Title Page", 
@@ -826,7 +774,7 @@ var crdLQTTask3 =
 {
 	"name": "LQT2 Task 3", 	//CRD name as it appears in EMA
 	"tsname": "MSISA Capstone Written Project",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -926,7 +874,7 @@ var crdDDMTask3 =
 {
 	"name": "DDM Task 3", 	//CRD name as it appears in EMA
 	"tsname": "MSISA Capstone Written Project",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -1026,7 +974,7 @@ var crdLQTTask2 =
 {
 	"name": "LQT2 Task 2", 	//CRD name as it appears in EMA
 	"tsname": "MSISA Capstone Prospectus",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE",
@@ -1250,7 +1198,7 @@ var crdDDMTask2 =
 {
 	"name": "DDM Task 2", 	//CRD name as it appears in EMA
 	"tsname": "MSISA Capstone Prospectus",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE",
@@ -1474,7 +1422,7 @@ var crdLQTTask4 =
 {
 	"name": "LQT2 Task 4", 	//CRD name as it appears in EMA
 	"tsname": "Oral Presentation: Multimedia Presentation",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -1538,7 +1486,7 @@ var crdAKM1Task1 =
 {
 	"name": "AKM1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "AKM1 Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C740%20Fundamentals%20of%20Data%20Analytics%20(AAE2,%20AKM1,%20IVP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C740%20Fundamentals%20of%20Data%20Analytics%20(AAE2,%20AKM1,%20IVP2)",
 	"aspects": [
 		{
 			"name":"A: Dataset Preparation",
@@ -2532,7 +2480,7 @@ var crdJNPTask2 =
 {
 	"name": "JNP Task 2",
 	"tsname": "JNP Task 2",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
 	"aspects": [
 		{
 			"name":"A: RESEARCH QUESTION",
@@ -2995,7 +2943,7 @@ var crdDDMTask1 =
 {
 	"name": "DDM Task 1",
 	"tsname": "DDM Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
 	"aspects": [
 		{
 			"name":"Timeline Form",
@@ -3022,7 +2970,7 @@ var crdLQTTask1 =
 {
 	"name": "LQT2 Task 1",
 	"tsname": "LQT2 Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/LQT2%20MS%20Information%20Security%20and%20Assurance%20Capstone%20Project%20(DDM1,%20LQT2)",
 	"aspects": [
 		{
 			"name":"Timeline Form",
@@ -3235,7 +3183,6 @@ var CRD =
 	crdKYP2Task2,
 	crdKYP2Task1,
 	crdMDP1Task1,
-	sourcesAspectTS,
 	sourcesAspectEMA,
 	cIReferral
 ];
