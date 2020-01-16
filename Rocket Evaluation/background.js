@@ -1574,7 +1574,7 @@ var crdGWA2Task3 =
 {
 	"name": "GWA2 Task 3",
 	"tsname": "GWA2 Task 3",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C498%20MS%20IT%20Management%20Capstone%20(HIT2,%20GWA2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C498%20MS%20IT%20Management%20Capstone%20(HIT2,%20GWA2)",
 	"aspects": [
 		{
 			"name":"Program Outcome 1",
@@ -1646,7 +1646,7 @@ var crdGWA2Task2 =
 {
 	"name": "GWA2 Task 2",
 	"tsname": "GWA2 Task 2",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C498%20MS%20IT%20Management%20Capstone%20(HIT2,%20GWA2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C498%20MS%20IT%20Management%20Capstone%20(HIT2,%20GWA2)",
 	"aspects": [
 		{
 			"name":"Program Outcome 1",
@@ -1718,7 +1718,7 @@ var crdEYP1Task1 =
 {
 	"name": "EYP1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "EYP Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C769%20IT%20Capstone%20Written%20Project%20(EYP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C769%20IT%20Capstone%20Written%20Project%20(EYP1)",
 	"aspects": [
 		{
 			"name":"A. TOPIC APPROVAL FORM", 
@@ -1762,7 +1762,7 @@ var crdEYP1Task2 =
 {
 	"name": "EYP1 Task 2", 	//CRD name as it appears in EMA
 	"tsname": "EYP Task 2",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C769%20IT%20Capstone%20Written%20Project%20(EYP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C769%20IT%20Capstone%20Written%20Project%20(EYP1)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -1898,7 +1898,7 @@ var crdEYP1Task3 =
 {
 	"name": "EYP1 Task 3", 	//CRD name as it appears in EMA
 	"tsname": "EYP Task 3",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C769%20IT%20Capstone%20Written%20Project%20(EYP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C769%20IT%20Capstone%20Written%20Project%20(EYP1)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -2010,7 +2010,7 @@ var crdDDT1Task1 =
 {
 	"name": "DDT1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "DDT1 Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C435%20Technical%20Writing%20(DDT1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C435%20Technical%20Writing%20(DDT1)",
 	"aspects": [
 		{
 			"name":"A. IT CAPSTONE WAIVER", 
@@ -2042,7 +2042,7 @@ var crdDDT1Task2 =
 {
 	"name": "DDT1 Task 2", 	//CRD name as it appears in EMA
 	"tsname": "DDT1 Task 2",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C435%20Technical%20Writing%20(DDT1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C435%20Technical%20Writing%20(DDT1)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -2165,7 +2165,7 @@ var crdENT1Task1 =
 {
 	"name": "ENT1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "ENT1 Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C436%20IT%20Capstone%20Written%20Project%20(ENT1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C436%20IT%20Capstone%20Written%20Project%20(ENT1)",
 	"aspects": [
 		{
 			"name":"A. IT CAPSTONE WAIVER", 
@@ -2197,7 +2197,7 @@ var crdENT1Task2 =
 {
 	"name": "ENT1 Task 2", 	//CRD name as it appears in EMA
 	"tsname": "ENT1 Task 2",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C436%20IT%20Capstone%20Written%20Project%20(ENT1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C436%20IT%20Capstone%20Written%20Project%20(ENT1)",
 	"aspects": [
 		{
 			"name":"ARTICULATION OF RESPONSE", 
@@ -2340,7 +2340,7 @@ var crdIXPTask1 =
 {
 	"name": "IXP Task 1",
 	"tsname": "IXP Task 1",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C744%20Data%20Mining%20and%20Analytics%20II%20(ACE3,%20IXP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C744%20Data%20Mining%20and%20Analytics%20II%20(ACE3,%20IXP2)",
 	"aspects": [
 		{
 			"name":"A: TOOL SELECTION: BENEFITS",
@@ -2518,7 +2518,7 @@ var crdAEE2Task1 =
 {
 	"name": "AEE2 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "AEE2 Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
 	"aspects": [
 		{
 			"name":"A. TOPIC APPROVAL FORM", 
@@ -2548,7 +2548,7 @@ var crdMDP1Task1 =
 {
 	"name": "MDP1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "MDP1 Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C964%20Computer%20Science%20Capstone%20(MDP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C964%20Computer%20Science%20Capstone%20(MDP1)",
 	"aspects": [
 		{
 			"name":"A. Topic Approval Form", 
@@ -2586,7 +2586,7 @@ var crdKYP2Task1 =
 {
 	"name": "KYP2 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "KYP2 Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C796%20Cybersecurity%20Graduate%20Capstone%20(KYP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C796%20Cybersecurity%20Graduate%20Capstone%20(KYP2)",
 	"aspects": [
 		{
 			"name":"A. Topic Approval Form", 
@@ -2616,7 +2616,7 @@ var crdAEE2Task2 =
 {
 	"name": "AEE2 Task 2",
 	"tsname": "AEE2 Task 2",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
 	"aspects": [
 		{
 			"name":"A: RESEARCH QUESTION",
@@ -2660,7 +2660,7 @@ var crdJNPTask3 =
 {
 	"name": "JNP Task 3",
 	"tsname": "JNP Task 3",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
 	"aspects": [
 		{
 			"name":"A: EXECUTIVE SUMMARY AND IMPLICATIONS",
@@ -2698,7 +2698,7 @@ var crdAEE2Task3 =
 {
 	"name": "AEE2 Task 3",
 	"tsname": "AEE2 Task 3",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C772%20Data%20Analytics%20Graduate%20Capstone%20(AEE2,%20JNP2)",
 	"aspects": [
 		{
 			"name":"A: EXECUTIVE SUMMARY AND IMPLICATIONS",
@@ -2736,7 +2736,7 @@ var crdNIPTask2 =
 {
 	"name": "NIP1 Task 2",
 	"tsname": "NIP1 Task 2",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C951%20Introduction%20to%20Artificial%20Intelligence%20(NIP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C951%20Introduction%20to%20Artificial%20Intelligence%20(NIP1)",
 	"aspects": [
 		{
 			"name":"A: Problem",
@@ -2824,7 +2824,7 @@ var crdNIPTask1 =
 {
 	"name": "NIP1 Task 1",
 	"tsname": "NIP1 Task 1",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C951%20Introduction%20to%20Artificial%20Intelligence%20(NIP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C951%20Introduction%20to%20Artificial%20Intelligence%20(NIP1)",
 	"aspects": [
 		{
 			"name":"A: Description",
@@ -2903,7 +2903,7 @@ var crdGWA2Task1 =
 {
 	"name": "GWA2 Task 1",
 	"tsname": "GWA2 Task 1",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C498%20MS%20IT%20Management%20Capstone%20(HIT2,%20GWA2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C498%20MS%20IT%20Management%20Capstone%20(HIT2,%20GWA2)",
 	"aspects": [
 		{
 			"name":"Topic Approval Form",
@@ -3025,7 +3025,7 @@ var crdEZP1Task1 =
 {
 	"name": "EZP1 Task 1", 	//CRD name as it appears in EMA
 	"tsname": "EZP Task 1",	//CRD name as it appears in TaskStream
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C868%20Software%20Development%20Capstone%20(EZP1)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C868%20Software%20Development%20Capstone%20(EZP1)",
 	"aspects": [
 		{
 			"name":"A. TOPIC APPROVAL FORM", 
@@ -3069,7 +3069,7 @@ var crdKYP2Task2 =
 {
 	"name": "KYP2 Task 2", 
 	"tsname": "KYP2 Task 2",
-	"crd": "https://westerngovernorsuniversity.sharepoint.com/sites/GoransPlayground/Shared%20Documents/CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C796%20Cybersecurity%20Graduate%20Capstone%20(KYP2)",
+	"crd": "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20CAPSTONES%20and%20PROGRAMMING/Capstones%20CRDs/C796%20Cybersecurity%20Graduate%20Capstone%20(KYP2)",
 	"aspects": [
 		{
 			"name":"Program Outcome 1",
