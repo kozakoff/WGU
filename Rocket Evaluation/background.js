@@ -2927,7 +2927,7 @@ var crdNHPTask1 =
 		{
 			"name":"B2: Application of Programming Models",
 			"grades": [		
-				{"name":["The submission appropriately identifies the Greedy Algorithm. A discussion that includes details to describe how the program exchanges data and of the host environment where the application runs is not readily evident."]},
+				{"name":"Approaching/Not Evident","text":["The submission appropriately identifies the Greedy Algorithm. A discussion that includes details to describe how the program exchanges data and of the host environment where the application runs is not readily evident."]},
 				{"name":"Competent","text":["The submission clearly describes the communication protocol used to exchange data with the CSV file and demonstrates the application of programming models in the provided code."]}
 			]
 		},
