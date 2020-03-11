@@ -3092,7 +3092,7 @@ var crdNHPTask1 =
 		{
 			"name":"K2: Other Data Structures",
 			"grades": [			
-				{"name":"Competent","text":["[DATA STRUCT 1] and [DATA STRUCT 2] are identified as alternative data structures, which is fitting."]}
+				{"name":"Competent","text":["[DATA STRUCT 1] and [DATA STRUCT 2] are appropriately identified as alternative data structures."]}
 			]
 		},
 		{
