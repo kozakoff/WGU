@@ -14,11 +14,8 @@ let thisCRD = "";
 
 function init() {
   // Create one test item for each context type.
-  console.log("welcome to init");
-
   let aspect,
     task = null;
-  console.log(`aspect: ${aspect}\ntask: ${task}`);
   let contexts = ["editable"];
 
   gradeTexts = [];
@@ -26,8 +23,6 @@ function init() {
 
   if (thisTask != "") {
     task = setCRDTask(thisTask, CRD);
-    console.log(`var task should be object, but is actually: ${task}`);
-
     if (task != null) {
       if (task.crd != null) {
         menuUtils.createMenuForTask(task);
@@ -45,7 +40,7 @@ function init() {
       aspect = task.aspects[i];
       if (aspect.grades.length > 0) {
         let id = "m_" + i;
-        const menuItem = chrome.contextMenus.create({
+        chrome.contextMenus.create({
           title: aspect.name,
           parentId: n2,
           contexts: contexts,
@@ -65,7 +60,7 @@ function init() {
   aspect = task.aspects[0];
   menuUtils.createSubMenu(aspect, n5, gradeTexts, contexts);
 
-  let cc = chrome.contextMenus.create({
+  chrome.contextMenus.create({
     title: "Clear Cache and Reload",
     contexts: ["all"],
     id: "cc",
@@ -73,14 +68,10 @@ function init() {
 }
 
 chrome.runtime.onMessage.addListener((req, sender, res) => {
-  console.log("background_script heard: " + req.text);
-
   if (thisTask != req.text) {
     thisTask = req.text;
     chrome.contextMenus.removeAll(init);
   }
-  console.log(`this task is set to: ${thisTask}\n`);
-  console.log(`CRD array is: ${CRD}`);
 });
 
 // Get the date formatted like "MM/DD/YYYY:"
