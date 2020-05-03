@@ -1,17 +1,49 @@
-This repository is for Rocket Evaluation (a Chrome Extension). This extension is being developed to accelerate evaluation processes and standardize evaluation texts for WGU Evaluation Faculty. This is a work in progress and by no means complete. If you have suggestions or feedback, please feel free to email me. -Thanks
+# Rocket Evaluation
 
-****Rocket Evaluation Extension Installation****
+Rocket Evaluation is a **Chrome extension** designed for use by the WGU Evaluation Faculty. Installing this extension will accelarte the evaluation processes by standardizing the available evaluation texts.
 
-To install the Rocket Evaluation extension in Chrome:
--Download the project files into a folder.
--Open Chrome and navigate to Menu >> More tools >> Extensions.
--In the Extensions tab click "Load Unpacked" and select the folder where you saved the files.
--This will install the extension in developer mode. The future plan is to publish this extension in the Google store.
+If you have suggestions or feedback, please feel free to email me. -Thanks
 
-****Adding CRDs to the Rocket Evaluation Extension****
+### Installation
 
-To add CRDs for use in the extension, you will need to edit the file background.js. Close to the bottom of the file is a template CRD object named crdXXXTaskX with pretty good comments.
+The following steps will walk you through installing Rocket Evaluation:
 
-If you email me the CRDs you want, I will include them in this project.
+**Install in Developer mode:**
 
-If you know some Javascript and would like to help build this project, email me and I will add you as a contributor.
+1. Download the project files to your local machine
+   ![image](https://user-images.githubusercontent.com/38021615/80907547-fa5f7b80-8ccc-11ea-8217-50906248112c.png)
+1. Open **Google Chrome** and navigate to the [extensions tab](chrome://extensions/)
+1. Once you are at the extenstions tab, ensure **Developer mode** is enabled
+   ![image](https://user-images.githubusercontent.com/38021615/80907626-693cd480-8ccd-11ea-87ee-4cec1c0b91b8.png)
+1. After enabling **Developer mode** you'll see a button to \*\*Load Unpacked", click that and select the location that you saved this project to
+   ![image](https://user-images.githubusercontent.com/38021615/80907656-95585580-8ccd-11ea-9a62-1ab51a783d9c.png)
+
+**Install from Chrome Web Store:**
+
+1. Visit the [Rocket Evaluation](https://chrome.google.com/webstore/detail/rocket-evaluation/nebfnljbhmienkjgobfdehfkjhikchof?hl=en-US) Chrome Web Store.
+1. Click the **Add to Chrome** button
+   ![image](https://user-images.githubusercontent.com/38021615/80907689-d2bce300-8ccd-11ea-8878-7e13fbbd6e1d.png)
+
+### Adding to the project
+
+This project uses [webpack](https://webpack.js.org/) which requires any changes you make to be rebuilt, follow this process to do so.
+
+1. Download the project locally
+1. Navigate to the `Rocket Evaluation` directory
+1. Run `npm install` to download the webpack dependencies
+1. Delete the `dist` folder
+1. Make desired changes
+1. Build the project with webpack, `NODE_ENV='production' npm run build`
+1. Delete `node_modules`
+1. **Load Unpacked** from Chrome extensions tab
+
+_If you know some Javascript and would like to help build this project, email me and I will add you as a contributor._
+
+### Need a CRD added?
+
+To add CRDs for use in the extension:
+
+1. Edit the file `lib/models.js`.
+1. Near the bottom of the file is a template CRD object named `crdXXXTaskX` with pretty good comments explaining what to add.
+
+_If you email me the CRDs you want, I will include them in this project._
