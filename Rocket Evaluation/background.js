@@ -14,14 +14,15 @@ let thisCRD = "";
 
 function init() {
   // Create one test item for each context type.
-  let aspect;
+  let aspect,
+    task = null;
   let contexts = ["editable"];
 
   gradeTexts = [];
   thisCRD = "";
 
   if (thisTask != "") {
-    let task = setCRDTask(thisTask, CRD);
+    task = setCRDTask(thisTask, CRD);
 
     if (task != null) {
       if (task.crd != null) {
