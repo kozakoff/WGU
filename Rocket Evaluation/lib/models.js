@@ -5112,7 +5112,7 @@ const crdXXXTaskX = {
   ],
 };
 
-const CRD = [
+export const CRD = [
   crdBEMTask1,
   crdEWPTask1,
   crdEWPTask2,
@@ -5155,5 +5155,3 @@ const CRD = [
   sourcesAspectEMA,
   cIReferral,
 ];
-
-module.exports = { CRD };

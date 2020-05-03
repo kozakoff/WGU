@@ -1,6 +1,6 @@
 {
-  "name": "Rocket Revision",
-  "short_name": "Rocket Rev",
+  "name": "Rocket Evaluation",
+  "short_name": "Rocket Eval",
 
   "version": "1.2",
   "description": "Adds evaluation templates to the context menu in Chrome for EMA and TaskStream.",
@@ -13,7 +13,7 @@
     "browsingData"
   ],
   "background": {
-    "page": "src/index.html",
+    "scripts": ["dist/background.js"],
     "persistent": true
   },
   "content_scripts": [
@@ -21,7 +21,7 @@
       "matches": ["https://ema.wgu.edu/*", "https://staffdev.taskstream.com/*"],
       "run_at": "document_idle",
       "all_frames": true,
-      "js": ["content.js"]
+      "js": ["dist/content.js"]
     }
   ],
   "browser_action": {

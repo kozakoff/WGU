@@ -1,4 +1,4 @@
-function createParentMenu(title, ctx, id) {
+export function createParentMenu(title, ctx, id) {
   return chrome.contextMenus.create({
     title: title,
     contexts: ctx,
@@ -6,7 +6,7 @@ function createParentMenu(title, ctx, id) {
   });
 }
 
-function createMenuForTask(task) {
+export function createMenuForTask(task) {
   chrome.contextMenus.create({
     title: "Open CRD folder for " + task.name,
     contexts: ["all"],
@@ -14,7 +14,7 @@ function createMenuForTask(task) {
   });
 }
 
-function createSubMenu(aspect, id, gradeArr, ctx) {
+export function createSubMenu(aspect, id, gradeArr, ctx) {
   for (let g = 0; g < aspect.grades.length; g++) {
     const grade = aspect.grades[g];
     const gid = "g" + id + g;
@@ -49,9 +49,3 @@ function createSubMenu(aspect, id, gradeArr, ctx) {
     }
   }
 }
-
-module.exports = {
-  createParentMenu,
-  createMenuForTask,
-  createSubMenu,
-};

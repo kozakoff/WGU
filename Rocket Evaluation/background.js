@@ -6,7 +6,6 @@
 
 import { CRD } from "./lib/models";
 import { setCRDTask } from "./lib/taskUtils";
-// const menuUtils = requrie("./lib/menuUtils");
 import * as menuUtils from "./lib/menuUtils";
 
 let thisTask = "";

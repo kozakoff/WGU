@@ -1,0 +1,24 @@
+{
+  "name": "rocket-evaluation",
+  "version": "1.2.0",
+  "description": "Adds evaluation templates to the context menu in Chrome for EMA and TaskStream.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozakoff/WGU.git"
+  },
+  "author": "Steve Kozakoff",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/kozakoff/WGU/issues"
+  },
+  "homepage": "https://github.com/kozakoff/WGU#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
