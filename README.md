@@ -31,7 +31,8 @@ The following steps will walk you through installing Rocket Evaluation:
 
 This project uses [webpack](https://webpack.js.org/) which requires any changes you make to be rebuilt, follow this process to do so.
 
-1. Download the project locally
+1. Fork this repo
+1. Download the forked project locally
 1. Navigate to the `Rocket Evaluation` directory
 1. Run `npm install` to download the webpack dependencies
 1. Delete the `dist` folder
@@ -39,6 +40,7 @@ This project uses [webpack](https://webpack.js.org/) which requires any changes 
 1. Build the project with webpack, `NODE_ENV='production' npm run build`
 1. Delete `node_modules`
 1. **Load Unpacked** from Chrome extensions tab
+1. Create a pull request from your forked repo back to this one, be sure to include documentation about your changes.
 
 _If you know some Javascript and would like to help build this project, email me and I will add you as a contributor._
 
