@@ -68,7 +68,7 @@ function init() {
 }
 
 chrome.runtime.onMessage.addListener((req, sender, res) => {
-  console.log("background_script heard: " + request.text);
+  console.log("background_script heard: " + req.text);
 
   if (thisTask != req.text) {
     thisTask = req.text;
