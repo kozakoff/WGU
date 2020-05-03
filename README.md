@@ -4,7 +4,7 @@ Rocket Evaluation is a **Chrome extension** designed for use by the WGU Evaluati
 
 If you have suggestions or feedback, please feel free to email me. -Thanks
 
-### Installation
+## Installation
 
 The following steps will walk you through installing Rocket Evaluation:
 
@@ -16,7 +16,7 @@ The following steps will walk you through installing Rocket Evaluation:
 1. Once you are at the extenstions tab, ensure **Developer mode** is enabled
 
    ![image](https://user-images.githubusercontent.com/38021615/80907626-693cd480-8ccd-11ea-87ee-4cec1c0b91b8.png)
-   
+
 1. After enabling **Developer mode** you'll see a button to **Load unpacked**, click that and select the location that you saved this project to
 
    ![image](https://user-images.githubusercontent.com/38021615/80907656-95585580-8ccd-11ea-9a62-1ab51a783d9c.png)
@@ -27,7 +27,7 @@ The following steps will walk you through installing Rocket Evaluation:
 1. Click the **Add to Chrome** button
    ![image](https://user-images.githubusercontent.com/38021615/80907689-d2bce300-8ccd-11ea-8878-7e13fbbd6e1d.png)
 
-### Adding to the project
+## Adding to the project
 
 This project uses [webpack](https://webpack.js.org/) which requires any changes you make to be rebuilt, follow this process to do so.
 
@@ -42,7 +42,7 @@ This project uses [webpack](https://webpack.js.org/) which requires any changes 
 
 _If you know some Javascript and would like to help build this project, email me and I will add you as a contributor._
 
-### Need a CRD added?
+## Need a CRD added?
 
 To add CRDs for use in the extension:
 
