@@ -4,9 +4,10 @@
 
 "use strict";
 
-const taskModels = require("./lib/models");
-const taskUtils = require("./lib/taskUtils");
-const menuUtils = requrie("./lib/menuUtils");
+import { CRD } from "./lib/models";
+import { setCRDTask } from "./lib/taskUtils";
+// const menuUtils = requrie("./lib/menuUtils");
+import * as menuUtils from "./lib/menuUtils";
 
 let thisTask = "";
 let gradeTexts = [];
@@ -21,7 +22,7 @@ function init() {
   thisCRD = "";
 
   if (thisTask != "") {
-    let task = taskUtils.setCRDTask(thisTask, taskModels.CRD);
+    let task = setCRDTask(thisTask, CRD);
 
     if (task != null) {
       if (task.crd != null) {
@@ -50,12 +51,12 @@ function init() {
       }
     }
   }
-  task = taskModels.CRD.find((model) => model.name == "Sources");
+  task = CRD.find((model) => model.name == "Sources");
   const n3 = menuUtils.createParentMenu(task.name, contexts, "n3");
   aspect = task.aspects[0];
   menuUtils.createSubMenu(aspect, n3, gradeTexts, contexts);
 
-  task = taskModels.CRD.find((model) => model.name == "CI Referral");
+  task = CRD.find((model) => model.name == "CI Referral");
   const n5 = menuUtils.createParentMenu(task.name, contexts, "n5");
   aspect = task.aspects[0];
   menuUtils.createSubMenu(aspect, n5, gradeTexts, contexts);
