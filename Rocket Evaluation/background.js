@@ -14,8 +14,11 @@ let thisCRD = "";
 
 function init() {
   // Create one test item for each context type.
+  console.log("welcome to init");
+
   let aspect,
     task = null;
+  console.log(`aspect: ${aspect}\ntask: ${task}`);
   let contexts = ["editable"];
 
   gradeTexts = [];
@@ -23,6 +26,7 @@ function init() {
 
   if (thisTask != "") {
     task = setCRDTask(thisTask, CRD);
+    console.log(`var task should be object, but is actually: ${task}`);
 
     if (task != null) {
       if (task.crd != null) {
