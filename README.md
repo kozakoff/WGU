@@ -12,7 +12,7 @@ The following steps will walk you through installing Rocket Evaluation:
 
 1. Download the project files to your local machine
    ![image](https://user-images.githubusercontent.com/38021615/80907547-fa5f7b80-8ccc-11ea-8217-50906248112c.png)
-1. Open **Google Chrome** and navigate to the [extensions tab](chrome://extensions/)
+1. Open **Google Chrome** and navigate to the **extensions tab**.
 1. Once you are at the extenstions tab, ensure **Developer mode** is enabled
 
    ![image](https://user-images.githubusercontent.com/38021615/80907626-693cd480-8ccd-11ea-87ee-4cec1c0b91b8.png)
