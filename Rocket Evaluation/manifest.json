@@ -13,7 +13,7 @@
     "browsingData"
   ],
   "background": {
-    "scripts": ["background.js"],
+    "page": "src/index.html",
     "persistent": true
   },
   "content_scripts": [
