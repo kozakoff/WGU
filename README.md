@@ -50,5 +50,6 @@ To add CRDs for use in the extension:
 
 1. Edit the file `lib/models.js`.
 1. Near the bottom of the file is a template CRD object named `crdXXXTaskX` with pretty good comments explaining what to add.
+1. Be sure to rebuild the project following the **Adding to the project** instructions after adding a **CRD**
 
 _If you email me the CRDs you want, I will include them in this project._
