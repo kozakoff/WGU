@@ -75,7 +75,8 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
     thisTask = req.text;
     chrome.contextMenus.removeAll(init);
   }
-  return true;
+  console.log(`this task is set to: ${thisTask}\n`);
+  console.log(`CRD array is: ${CRD}`);
 });
 
 // Get the date formatted like "MM/DD/YYYY:"
