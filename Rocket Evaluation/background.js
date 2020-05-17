@@ -28,6 +28,8 @@ function init() {
         menuUtils.createMenuForTask(task);
         thisCRD = task.crd;
       }
+    } else {
+      return;
     }
 
     const n2 = menuUtils.createParentMenu(

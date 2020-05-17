@@ -77,11 +77,11 @@ const pcAspect = {
   ],
 };
 
-const crdBEMTask1 = {
-  name: "BEM1 Task 1: Estimating Population Size",
-  tsname: "BEM1 Task 1",
+const crdBOMTask1 = {
+  name: "BOM1 Task 1: Estimating Population Size",
+  tsname: "BOM1 Task 1",
   crd:
-    "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C742%20Data%20Analysis%20Tools%20and%20Techniques%20(ABE2,%20BEM1,%20IWP2)",
+    "https://westerngovernorsuniversity.sharepoint.com/:f:/r/sites/ITTeamcopy/Shared%20Documents/B.%20Data%20Analytics/CRDs/C742%20Data%20Analysis%20Tools%20and%20Techniques%20(ABE2,%20BOM1,%20IWP2)",
   aspects: [
     {
       name: "A. Python: How the Program Extracts Links",
@@ -5113,7 +5113,7 @@ const crdXXXTaskX = {
 };
 
 export const CRD = [
-  crdBEMTask1,
+  crdBOMTask1,
   crdEWPTask1,
   crdEWPTask2,
   crdIYPTask1,
